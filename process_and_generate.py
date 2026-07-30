@@ -7,6 +7,8 @@ import difflib
 import openpyxl
 from openpyxl.styles import Font, Alignment, Border, Side
 import docx
+from docx.oxml import OxmlElement
+from docx.oxml.ns import qn
 
 def write_centered_score(cell, text):
     cell.text = text
@@ -55,7 +57,7 @@ def is_max_pts_refined(val):
     return False
 
 # 3. Load master template active rows
-master_doc_path = os.path.join(workspace, "master.docx")
+master_doc_path = os.path.join(workspace, "master_v2.docx")
 master_doc = docx.Document(master_doc_path)
 master_table = master_doc.tables[1]
 master_rows_info = {} # normalized_desc -> {row_idx, max_pts_str}
@@ -238,42 +240,8 @@ for s in students_db:
             write_centered_score(doc.tables[1].rows[r].cells[7], "0")
             write_centered_score(doc.tables[1].rows[r].cells[8], "0")
             write_centered_score(doc.tables[1].rows[r].cells[11], "0")
-        # Split student name into 2 words per line if 3 or more words
-        words = s['name'].split()
-        if len(words) >= 3:
-            line1 = " ".join(words[:2])
-            line2 = " ".join(words[2:])
-        else:
-            line1 = s['name']
-            line2 = ""
-            
-        # Write line 1
-        pad1 = 37 + (14 - len(line1)) // 2
-        doc.paragraphs[11].runs[6].text = f"\t" + " " * pad1 + line1
-        
-        # Write line 2 (in new Paragraph 12) if it exists
-        if line2:
-            p12 = doc.add_paragraph()
-            p12.paragraph_format.space_before = docx.shared.Pt(0)
-            p12.paragraph_format.space_after = docx.shared.Pt(0)
-            p12.paragraph_format.line_spacing = 1.15
-            pad2 = 117 + (11 - len(line2)) // 2
-            r12 = p12.add_run(" " * pad2 + line2)
-            # Copy font from Ngô Trí Long run
-            r_src = doc.paragraphs[11].runs[4]
-            r12.font.name = r_src.font.name
-            r12.font.size = r_src.font.size
-            r12.font.bold = r_src.font.bold
-            r12.font.italic = r_src.font.italic
-            r12.font.color.rgb = r_src.font.color.rgb
-            
-        # Clear student signature textbox placeholders (indexes 2 and 3)
-        txbxs = doc.element.xpath('//w:txbxContent')
-        for idx in [2, 3]:
-            if idx < len(txbxs):
-                t_elms = txbxs[idx].xpath('.//*[local-name()="t"]')
-                for t in t_elms:
-                    t.text = ""
+        # Write student name into signature table (tables[2], row 1, col 3)
+        write_centered_score(doc.tables[2].rows[1].cells[3], s['name'])
         doc.save(dest_doc_path)
         
         processed_students.append(student_record)
@@ -383,42 +351,8 @@ for s in students_db:
     write_centered_score(table_out.rows[53].cells[8], gt_str)
     write_centered_score(table_out.rows[53].cells[11], gt_str)
     
-    # Split student name into 2 words per line if 3 or more words
-    words = s['name'].split()
-    if len(words) >= 3:
-        line1 = " ".join(words[:2])
-        line2 = " ".join(words[2:])
-    else:
-        line1 = s['name']
-        line2 = ""
-        
-    # Write line 1
-    pad1 = 37 + (14 - len(line1)) // 2
-    doc_out.paragraphs[11].runs[6].text = f"\t" + " " * pad1 + line1
-    
-    # Write line 2 (in new Paragraph 12) if it exists
-    if line2:
-        p12 = doc_out.add_paragraph()
-        p12.paragraph_format.space_before = docx.shared.Pt(0)
-        p12.paragraph_format.space_after = docx.shared.Pt(0)
-        p12.paragraph_format.line_spacing = 1.15
-        pad2 = 117 + (11 - len(line2)) // 2
-        r12 = p12.add_run(" " * pad2 + line2)
-        # Copy font from Ngô Trí Long run
-        r_src = doc_out.paragraphs[11].runs[4]
-        r12.font.name = r_src.font.name
-        r12.font.size = r_src.font.size
-        r12.font.bold = r_src.font.bold
-        r12.font.italic = r_src.font.italic
-        r12.font.color.rgb = r_src.font.color.rgb
-        
-    # Clear student signature textbox placeholders (indexes 2 and 3)
-    txbxs_out = doc_out.element.xpath('//w:txbxContent')
-    for idx in [2, 3]:
-        if idx < len(txbxs_out):
-            t_elms = txbxs_out[idx].xpath('.//*[local-name()="t"]')
-            for t in t_elms:
-                t.text = ""
+    # Write student name into signature table (tables[2], row 1, col 3)
+    write_centered_score(doc_out.tables[2].rows[1].cells[3], s['name'])
     doc_out.save(dest_doc_path)
     processed_students.append(student_record)
 
