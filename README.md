@@ -1,6 +1,8 @@
-# Student Training Point (Kết quả rèn luyện - KQRL) Processing Pipeline
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9f763c1e-c2aa-4499-b52a-6b4f98144c69" /># Student Training Point (Kết quả rèn luyện - KQRL) Processing Pipeline
 
 Automated pipeline for processing student training evaluation sheets (*Phiếu đánh giá kết quả rèn luyện*) for class **E25CQCE02-N**. Parses student self-evaluations, cross-references official scores, generates final Word documents for all 37 students, and compiles a detailed sub-section Excel report.
+
+quick result can be found here on [Google Drive](https://docs.google.com/document/d/1EBcRCFQ5teoBeHXYPzOqpDBr-USL0J2B/edit?usp=sharing&ouid=109372832204939230581&rtpof=true&sd=true)
 
 ## 📋 Table of Contents
 * [Overview](#-overview)
