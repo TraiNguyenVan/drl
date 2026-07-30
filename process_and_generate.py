@@ -7,6 +7,8 @@ import difflib
 import openpyxl
 from openpyxl.styles import Font, Alignment, Border, Side
 import docx
+from docx.oxml import OxmlElement
+from docx.oxml.ns import qn
 
 def write_centered_score(cell, text):
     cell.text = text
@@ -55,9 +57,9 @@ def is_max_pts_refined(val):
     return False
 
 # 3. Load master template active rows
-master_doc_path = os.path.join(workspace, "master.docx")
+master_doc_path = os.path.join(workspace, "master_v2.docx")
 master_doc = docx.Document(master_doc_path)
-master_table = master_doc.tables[1]
+master_table = master_doc.tables[2]
 master_rows_info = {} # normalized_desc -> {row_idx, max_pts_str}
 
 for r_idx, row in enumerate(master_table.rows):
@@ -211,13 +213,16 @@ for s in students_db:
         dest_doc_path = os.path.join(output_dir, f"{s['name']}_{s['msv']}.docx")
         shutil.copy2(master_doc_path, dest_doc_path)
         doc = docx.Document(dest_doc_path)
-        doc.paragraphs[4].runs[0].text = f"Họ và tên: {s['name']}"
-        doc.paragraphs[5].runs[0].text = f"Mã số sinh viên: {s['msv']}  "
-        # Set all active scores columns (Student, Class, Advisor) to empty
-        for r_idx in range(len(doc.tables[1].rows)):
+        # Fill info table (tables[1]): name, clear DOB placeholder, student ID
+        doc.tables[1].rows[0].cells[0].text = f"Họ và tên: {s['name']}"
+        doc.tables[1].rows[0].cells[1].text = "Ngày sinh:"
+        doc.tables[1].rows[0].cells[1].paragraphs[0].alignment = 2  # RIGHT
+        doc.tables[1].rows[1].cells[0].text = f"Mã số sinh viên: {s['msv']}"
+        # Set all active scores columns in grading table (tables[2]) to empty
+        for r_idx in range(len(doc.tables[2].rows)):
             unique_cells = []
             seen_tcs = set()
-            for cell in doc.tables[1].rows[r_idx].cells:
+            for cell in doc.tables[2].rows[r_idx].cells:
                 tc_id = id(cell._tc)
                 if tc_id not in seen_tcs:
                     seen_tcs.add(tc_id)
@@ -235,45 +240,11 @@ for s in students_db:
                 if max_idx + 3 < len(unique_cells): unique_cells[max_idx + 3].text = ""
         # Write criteria totals and grand total as 0
         for r in [20, 30, 37, 45, 52, 53]:
-            write_centered_score(doc.tables[1].rows[r].cells[7], "0")
-            write_centered_score(doc.tables[1].rows[r].cells[8], "0")
-            write_centered_score(doc.tables[1].rows[r].cells[11], "0")
-        # Split student name into 2 words per line if 3 or more words
-        words = s['name'].split()
-        if len(words) >= 3:
-            line1 = " ".join(words[:2])
-            line2 = " ".join(words[2:])
-        else:
-            line1 = s['name']
-            line2 = ""
-            
-        # Write line 1
-        pad1 = 37 + (14 - len(line1)) // 2
-        doc.paragraphs[11].runs[6].text = f"\t" + " " * pad1 + line1
-        
-        # Write line 2 (in new Paragraph 12) if it exists
-        if line2:
-            p12 = doc.add_paragraph()
-            p12.paragraph_format.space_before = docx.shared.Pt(0)
-            p12.paragraph_format.space_after = docx.shared.Pt(0)
-            p12.paragraph_format.line_spacing = 1.15
-            pad2 = 117 + (11 - len(line2)) // 2
-            r12 = p12.add_run(" " * pad2 + line2)
-            # Copy font from Ngô Trí Long run
-            r_src = doc.paragraphs[11].runs[4]
-            r12.font.name = r_src.font.name
-            r12.font.size = r_src.font.size
-            r12.font.bold = r_src.font.bold
-            r12.font.italic = r_src.font.italic
-            r12.font.color.rgb = r_src.font.color.rgb
-            
-        # Clear student signature textbox placeholders (indexes 2 and 3)
-        txbxs = doc.element.xpath('//w:txbxContent')
-        for idx in [2, 3]:
-            if idx < len(txbxs):
-                t_elms = txbxs[idx].xpath('.//*[local-name()="t"]')
-                for t in t_elms:
-                    t.text = ""
+            write_centered_score(doc.tables[2].rows[r].cells[7], "0")
+            write_centered_score(doc.tables[2].rows[r].cells[8], "0")
+            write_centered_score(doc.tables[2].rows[r].cells[11], "0")
+        # Write student name into signature table (tables[3], row 1, col 3)
+        write_centered_score(doc.tables[3].rows[1].cells[3], s['name'])
         doc.save(dest_doc_path)
         
         processed_students.append(student_record)
@@ -349,12 +320,15 @@ for s in students_db:
     doc_out = docx.Document(dest_doc_path)
     
     # Fill personal info paragraphs
-    doc_out.paragraphs[4].runs[0].text = f"Họ và tên: {s['name']}"
-    doc_out.paragraphs[4].runs[7].text = f"Ngày sinh: {dob_val}"
-    doc_out.paragraphs[5].runs[0].text = f"Mã số sinh viên: {s['msv']}  "
+    # Fill info table (tables[1]): name, DOB, student ID
+    doc_out.tables[1].rows[0].cells[0].text = f"Họ và tên: {s['name']}"
+    cell_dob = doc_out.tables[1].rows[0].cells[1]
+    cell_dob.text = f"Ngày sinh: {dob_val}"
+    cell_dob.paragraphs[0].alignment = 2  # RIGHT
+    doc_out.tables[1].rows[1].cells[0].text = f"Mã số sinh viên: {s['msv']}"
     
-    # Fill Table 1 scores
-    table_out = doc_out.tables[1]
+    # Fill Table 1 scores (grading table is now tables[2])
+    table_out = doc_out.tables[2]
     
     # Grading rows
     all_grading_rows = []
@@ -383,42 +357,8 @@ for s in students_db:
     write_centered_score(table_out.rows[53].cells[8], gt_str)
     write_centered_score(table_out.rows[53].cells[11], gt_str)
     
-    # Split student name into 2 words per line if 3 or more words
-    words = s['name'].split()
-    if len(words) >= 3:
-        line1 = " ".join(words[:2])
-        line2 = " ".join(words[2:])
-    else:
-        line1 = s['name']
-        line2 = ""
-        
-    # Write line 1
-    pad1 = 37 + (14 - len(line1)) // 2
-    doc_out.paragraphs[11].runs[6].text = f"\t" + " " * pad1 + line1
-    
-    # Write line 2 (in new Paragraph 12) if it exists
-    if line2:
-        p12 = doc_out.add_paragraph()
-        p12.paragraph_format.space_before = docx.shared.Pt(0)
-        p12.paragraph_format.space_after = docx.shared.Pt(0)
-        p12.paragraph_format.line_spacing = 1.15
-        pad2 = 117 + (11 - len(line2)) // 2
-        r12 = p12.add_run(" " * pad2 + line2)
-        # Copy font from Ngô Trí Long run
-        r_src = doc_out.paragraphs[11].runs[4]
-        r12.font.name = r_src.font.name
-        r12.font.size = r_src.font.size
-        r12.font.bold = r_src.font.bold
-        r12.font.italic = r_src.font.italic
-        r12.font.color.rgb = r_src.font.color.rgb
-        
-    # Clear student signature textbox placeholders (indexes 2 and 3)
-    txbxs_out = doc_out.element.xpath('//w:txbxContent')
-    for idx in [2, 3]:
-        if idx < len(txbxs_out):
-            t_elms = txbxs_out[idx].xpath('.//*[local-name()="t"]')
-            for t in t_elms:
-                t.text = ""
+    # Write student name into signature table (tables[3], row 1, col 3)
+    write_centered_score(doc_out.tables[3].rows[1].cells[3], s['name'])
     doc_out.save(dest_doc_path)
     processed_students.append(student_record)
 

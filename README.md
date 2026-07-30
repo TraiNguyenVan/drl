@@ -1,12 +1,13 @@
 # Student Training Point (Kết quả rèn luyện - KQRL) Processing Pipeline
 
-A robust, automated pipeline for processing student training point papers (Kết quả rèn luyện) for the class **E25CQCE02-N**. The system parses student self-evaluations, computes subsections and totals, matches scores with the official database, generates clean aligned Word documents for all 37 students, and compiles a comprehensive sub-section report spreadsheet.
+Automated pipeline for processing student training evaluation sheets (*Phiếu đánh giá kết quả rèn luyện*) for class **E25CQCE02-N**. Parses student self-evaluations, cross-references official scores, generates final Word documents for all 37 students, and compiles a detailed sub-section Excel report.
 
 ## 📋 Table of Contents
 * [Overview](#-overview)
 * [Codebase Structure](#-codebase-structure)
-* [Pipeline Workflow (`process_and_generate.py`)](#-pipeline-workflow-process_and_generatepy)
-* [Key Features & Technical Implementations](#-key-features--technical-implementations)
+* [Document Architecture](#-document-architecture-master_v2docx)
+* [Pipeline Workflow](#-pipeline-workflow)
+* [Key Technical Details](#-key-technical-details)
 * [Setup & Installation](#-setup--installation)
 * [Usage](#-usage)
 
@@ -14,81 +15,133 @@ A robust, automated pipeline for processing student training point papers (Kết
 
 ## 🔍 Overview
 
-At the end of each semester, students submit their training point evaluation documents (either as `.doc` or `.docx`). The manual compilation of these scores into a unified report and the generation of formatted final papers is tedious and error-prone. 
+At the end of each semester, students submit training point evaluation documents (`.doc` or `.docx`). This pipeline automates:
 
-This pipeline automates the entire process:
-1. **Converts & Normalizes**: Automatically batch-converts old `.doc` binary formats to modern `.docx` using LibreOffice.
-2. **Parses & Extracts**: Extracts the student's name, Date of Birth (DOB), and individual criteria scores from their paper using fuzzy matching to handle typos.
-3. **Cross-References**: Cross-references parsed scores with the official ground-truth scores in the summary sheet.
-4. **Generates Final Word Papers**: Creates polished final evaluation sheets for all 37 students (including absent ones) with centered cell alignments, correct totals, and centered plain-text signatures.
-5. **Compiles Detailed Excel Report**: Generates a new summary spreadsheet containing all 22 sub-sections, styled with exact borders, color fills, summary counts, and footer signature blocks.
+1. **Batch-converts** `.doc` files to `.docx` via headless LibreOffice
+2. **Parses & extracts** student name, DOB, and per-criteria scores with fuzzy matching (handles typos)
+3. **Cross-references** parsed scores against the official ground-truth Excel summary
+4. **Generates** final formatted Word documents for all students (present and absent)
+5. **Compiles** a detailed sub-section Excel report with styling, borders, and signature blocks
 
 ---
 
 ## 📁 Codebase Structure
 
-* **`master.docx`**: The base template file used to generate final student Word papers.
-* **`HV_Mau 2_Tong hop KQRL cua SV.xlsx`**: The official summary sheet containing final ground-truth scores for the 37 students.
-* **`HV_Mau 2_Chi tiet KQRL.xlsx`** *(Generated)*: Compiled report containing all 22 sub-sections with styling, borders, and footer signatures.
-* **`process_and_generate.py`**: The main executable Python script containing the pipeline logic.
-* **`STRUCTURE.md`**: Layout mapping of Word paragraphs and Excel cells.
-* **`students/`**: Directory containing raw student papers in `.doc` and `.docx`.
-* **`generated_students/`** *(Generated)*: Output folder containing final Word files for all students.
+| File / Folder | Description |
+|---|---|
+| `master_v2.docx` | **Active template** — Google Docs-compatible, no floating textboxes |
+| `master.docx` | Original template (preserved, used by `main` branch) |
+| `HV_Mau 2_Tong hop KQRL cua SV.xlsx` | **Source of truth** — official final scores (do not modify) |
+| `HV_Mau 2_Chi tiet KQRL.xlsx` | *(Generated)* Detailed sub-section report |
+| `process_and_generate.py` | Main pipeline script |
+| `STRUCTURE.md` | Document layout map (paragraph/table indices, cell mappings) |
+| `GEMINI.md` | AI agent rules and constraints for this project |
+| `students/` | Raw student papers (`.doc` / `.docx`) |
+| `generated_students/` | *(Generated)* Final output Word files |
 
 ---
 
-## ⚙️ Pipeline Workflow (`process_and_generate.py`)
+## 📐 Document Architecture (`master_v2.docx`)
 
-1. **Batched Conversion**: Checks the `students/` folder, converting all `.doc` files to `.docx` via headless LibreOffice and copies existing `.docx` files to a temporary workspace.
-2. **Database Load**: Reads the student roster, names, IDs, dates of birth, and final scores from the official summary Excel sheet.
-3. **Data Extraction**:
-   * Extracts date of birth.
-   * Parses the 3 columns of scores (Student, Class, Advisor) for each of the 53 criteria rows in Table 1.
-   * Uses fuzzy matching (difflib, ratio $\ge 0.8$) to find equivalent criteria rows even when typos exist (e.g. `nghiệm túc` vs `nghiệp túc`).
-4. **Sub-section Aggregation**: Sums up criteria points to calculate scores for all 22 sub-sections (e.g., 1.1, 1.2, 1.3... 5.3) using Advisor scores as final, with Class/Student scores as fallback.
-5. **Word Document Generation**:
-   * **Present Students**: Populates name, ID, and DOB. Overwrites score cells in Table 1, centers all score alignments, computes totals, and prints the student's name at the bottom.
-   * **Absent Students**: Generates blank templates with name/ID, fills all score columns with `0`, rating as `Kém`, and prints the name at the bottom.
-   * **Signature Alignment**: Splits student names with 3+ words into 2 lines, aligning both lines center under the `SINH VIÊN` header using tab-stops and spaces, while clearing overlapping textbox placeholders.
-6. **Detailed Spreadsheet Compilation**: Writes all sub-sections to a styled report, applying summary statistics, fonts, cell borders, fill colors, and merged footer signatures.
+Every generated file is a copy of `master_v2.docx` with student data filled in. The document body contains **5 paragraphs** and **4 tables** in the following order:
 
----
-
-## ✨ Key Features & Technical Implementations
-
-### 1. Centered Score Alignments
-By default, overwriting table text in `python-docx` resets paragraphs to left-aligned. The script overrides this behavior using:
-```python
-def write_centered_score(cell, text):
-    cell.text = text
-    if cell.paragraphs:
-        cell.paragraphs[0].alignment = 1 # WD_ALIGN_PARAGRAPH.CENTER
 ```
-This applies to every criteria score, subsection total, and grand total.
+Para 0   — empty spacer
+Para 1   — spaces (layout padding)
+Table 0  — Logo & header block (institution name + national motto)
+Para 2   — Title: "PHIẾU ĐÁNH GIÁ KẾT QUẢ RÈN LUYỆN"
+Para 3   — Term & year: "Học kỳ: II      Năm học: 2025-2026"
+Table 1  — Info table [2 rows × 2 cols, borderless]
+Para 4   — empty spacer
+Table 2  — Grading criteria matrix [56 rows × 12–15 cols]
+Table 3  — Signature table [2 rows × 4 cols, borderless]
+```
 
-### 2. Wrapped Two-Line Centered Signatures
-To avoid overlapping textboxes and prevent page overflows while keeping names centered under the `SINH VIÊN` header:
-* Splits names into a maximum of 2 words per line (e.g., `Nguyễn Phương` and `Quốc Vương`).
-* Centers Line 1 on Paragraph 11 using dynamic space padding: `f"\t" + " " * pad1 + line1`.
-* Appends a new Paragraph 12 with matching font style (size 13, Calibri/Times New Roman) and pads spaces from the left margin to center Line 2 under Line 1.
-* Clears the legacy student signature textbox XML tags (`w:txbxContent`) to make them invisible.
+### Table 1 — Info Table (borderless)
+| Cell | Content | Alignment |
+|---|---|---|
+| `rows[0].cells[0]` | `Họ và tên: <name>` | Left |
+| `rows[0].cells[1]` | `Ngày sinh: <dob>` | Right |
+| `rows[1].cells[0]` | `Mã số sinh viên: <msv>` | Left |
+| `rows[1].cells[1]` | `Lớp: E25CQCE02-N` | Right |
 
-### 3. Absent Student Formatting
-The two absent students (`Nguyễn Trương Minh Triết` and `Vương Hà Hải Đăng`) are auto-detected by their missing files. The script fills their score columns with `0` and sets their final rating to `Kém` (Poor) in both the Word files and the Excel sheet.
+### Table 2 — Grading Criteria Matrix
+- 56 rows (indices 0–55)
+- Score columns (constant regardless of horizontal merges):
+  - `cells[7]` — Student self-score
+  - `cells[8]` — Class score
+  - `cells[11]` — Advisor score
+- Key rows: `20, 30, 37, 45, 52` = section totals; `53` = grand total
+
+### Table 3 — Signature Table (borderless)
+| Col | Content | Source |
+|---|---|---|
+| `rows[1].cells[0]` | `Nguyễn Trung Hiếu` | Fixed in template |
+| `rows[1].cells[1]` | `Ngô Trí Long` | Fixed in template |
+| `rows[1].cells[2]` | `Nguyễn Phương Quốc Vương` | Fixed in template |
+| `rows[1].cells[3]` | `<student name>` | Written by pipeline |
+
+---
+
+## ⚙️ Pipeline Workflow
+
+### Step 1 — Conversion
+Scans `students/` and batch-converts `.doc` → `.docx` using `soffice --headless`.
+
+### Step 2 — Database load
+Reads `HV_Mau 2_Tong hop KQRL cua SV.xlsx`:
+- Student roster: TT index, full name, MSV, DOB, section scores (cols E–J), classification (col K)
+
+### Step 3 — Per-student processing
+
+**Present students** (file found):
+1. Parse DOB from student's raw file paragraph text
+2. Extract scores from `doc_student.tables[1]` (grading table in raw student file, which still uses the old template structure)
+3. Fuzzy-match criteria descriptions (ratio ≥ 0.8) to handle typos
+4. Copy `master_v2.docx` → `generated_students/<name>_<msv>.docx`
+5. Fill **Table 1** (info): name, DOB, MSV
+6. Fill **Table 2** (grading): overwrite score cells + section totals + grand total, all centered
+7. Fill **Table 3** (signature): write student name to `rows[1].cells[3]`
+
+**Absent students** (no file):
+1. Copy `master_v2.docx` → `generated_students/<name>_<msv>.docx`
+2. Fill **Table 1**: name and MSV (DOB left as `Ngày sinh:`)
+3. Set all score cells in **Table 2** to `0`
+4. Fill **Table 3**: write student name to `rows[1].cells[3]`
+
+### Step 4 — Excel report
+Compiles all 22 sub-sections into `HV_Mau 2_Chi tiet KQRL.xlsx` with borders, color fills, and footer signatures.
+
+---
+
+## ✨ Key Technical Details
+
+### Centered scores
+`write_centered_score(cell, text)` writes text and explicitly sets `alignment = WD_ALIGN_PARAGRAPH.CENTER`. Overwriting `.text` resets alignment to `None` in python-docx, so every score write uses this helper.
+
+### Google Docs compatibility (`google-docs-compat` branch)
+The `main` branch uses `master.docx` with floating textboxes (`wp:anchor`) for signatures. These render inconsistently in Google Docs (ghost duplicates, page splits).
+
+`master_v2.docx` (this branch) resolves this by:
+- **Removing all floating textboxes** — no `wp:anchor` / VML `w:pict` shapes
+- **Info section** — replaced tab-stop paragraphs with a borderless 2×2 table (tabs render differently per app)
+- **Signature section** — replaced absolute-position floats with a borderless 2×4 table
+
+### Absent student detection
+Students `Nguyễn Trương Minh Triết (N25DECE071)` and `Vương Hà Hải Đăng (N25DECE078)` have no files in `students/`. They are auto-detected and given blank templates with all scores set to `0`.
 
 ---
 
 ## 🛠️ Setup & Installation
 
-Ensure you have Python 3 and LibreOffice installed on your system.
+Requires Python 3 and LibreOffice.
 
-### 1. System Dependencies (Debian/Ubuntu)
+### System dependencies (Debian/Ubuntu)
 ```bash
-sudo apt update
-sudo apt install libreoffice python3-pip
+sudo apt update && sudo apt install libreoffice
 ```
 
-### 2. Python Packages
+### Python packages
 ```bash
 pip3 install python-docx openpyxl lxml
 ```
@@ -97,13 +150,12 @@ pip3 install python-docx openpyxl lxml
 
 ## 🚀 Usage
 
-Simply run the script from the root workspace:
 ```bash
 python3 process_and_generate.py
 ```
 
-The script will print progress and generate the files:
-```text
+Expected output:
+```
 Converting and preparing raw student files...
 Preparation completed.
 
