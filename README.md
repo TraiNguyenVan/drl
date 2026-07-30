@@ -1,6 +1,6 @@
 Automated pipeline for processing student training evaluation sheets (*Phiếu đánh giá kết quả rèn luyện*) for class **E25CQCE02-N**. Parses student self-evaluations, cross-references official scores, generates final Word documents for all 37 students, and compiles a detailed sub-section Excel report.
 
-quick result can be found here on (Google Drive)[[https://docs.google.com/document/d/1EBcRCFQ5teoBeHXYPzOqpDBr-USL0J2B/edit?usp=sharing&ouid=109372832204939230581&rtpof=true&sd=true](https://drive.google.com/drive/folders/16J6rIboK8c9o4W_eTQlUI6b4l9qazNNB?usp=sharing)]
+quick result can be found here on [Google Drive](https://drive.google.com/drive/folders/16J6rIboK8c9o4W_eTQlUI6b4l9qazNNB?usp=sharing)
 
 ## 📋 Table of Contents
 * [Overview](#-overview)
