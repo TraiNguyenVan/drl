@@ -15,6 +15,14 @@ def write_centered_score(cell, text):
     if cell.paragraphs:
         cell.paragraphs[0].alignment = 1  # WD_ALIGN_PARAGRAPH.CENTER
 
+def format_signature_name(name):
+    words = name.split()
+    if len(words) >= 3:
+        line1 = " ".join(words[:2])
+        line2 = " ".join(words[2:])
+        return f"{line1}\n{line2}"
+    return name
+
 # Directories
 workspace = "/home/trai/workspace/drl"
 students_dir = os.path.join(workspace, "students")
@@ -244,7 +252,7 @@ for s in students_db:
             write_centered_score(doc.tables[2].rows[r].cells[8], "0")
             write_centered_score(doc.tables[2].rows[r].cells[11], "0")
         # Write student name into signature table (tables[3], row 1, col 3)
-        write_centered_score(doc.tables[3].rows[1].cells[3], s['name'])
+        write_centered_score(doc.tables[3].rows[1].cells[3], format_signature_name(s['name']))
         doc.save(dest_doc_path)
         
         processed_students.append(student_record)
@@ -358,7 +366,7 @@ for s in students_db:
     write_centered_score(table_out.rows[53].cells[11], gt_str)
     
     # Write student name into signature table (tables[3], row 1, col 3)
-    write_centered_score(doc_out.tables[3].rows[1].cells[3], s['name'])
+    write_centered_score(doc_out.tables[3].rows[1].cells[3], format_signature_name(s['name']))
     doc_out.save(dest_doc_path)
     processed_students.append(student_record)
 
