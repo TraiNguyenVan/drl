@@ -15,6 +15,17 @@ def write_centered_score(cell, text):
     if cell.paragraphs:
         cell.paragraphs[0].alignment = 1  # WD_ALIGN_PARAGRAPH.CENTER
 
+def write_signature_name(cell, name):
+    cell.text = ""
+    p = cell.paragraphs[0]
+    p.alignment = 1  # WD_ALIGN_PARAGRAPH.CENTER
+    p.paragraph_format.space_before = docx.shared.Pt(0)
+    p.paragraph_format.space_after = docx.shared.Pt(0)
+    p.paragraph_format.line_spacing = 1.0
+    run = p.add_run(name)
+    run.font.size = docx.shared.Pt(13)
+    run.font.name = "Times New Roman"
+
 def format_signature_name(name):
     words = name.split()
     if len(words) >= 3:
@@ -252,7 +263,7 @@ for s in students_db:
             write_centered_score(doc.tables[2].rows[r].cells[8], "0")
             write_centered_score(doc.tables[2].rows[r].cells[11], "0")
         # Write student name into signature table (tables[3], row 1, col 3)
-        write_centered_score(doc.tables[3].rows[1].cells[3], format_signature_name(s['name']))
+        write_signature_name(doc.tables[3].rows[1].cells[3], format_signature_name(s['name']))
         doc.save(dest_doc_path)
         
         processed_students.append(student_record)
@@ -366,7 +377,7 @@ for s in students_db:
     write_centered_score(table_out.rows[53].cells[11], gt_str)
     
     # Write student name into signature table (tables[3], row 1, col 3)
-    write_centered_score(doc_out.tables[3].rows[1].cells[3], format_signature_name(s['name']))
+    write_signature_name(doc_out.tables[3].rows[1].cells[3], format_signature_name(s['name']))
     doc_out.save(dest_doc_path)
     processed_students.append(student_record)
 
