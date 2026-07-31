@@ -1,5 +1,6 @@
 import os
 import re
+import csv
 import subprocess
 import shutil
 import copy
@@ -14,6 +15,61 @@ def write_centered_score(cell, text):
     cell.text = text
     if cell.paragraphs:
         cell.paragraphs[0].alignment = 1  # WD_ALIGN_PARAGRAPH.CENTER
+
+def write_signature_name(cell, name):
+    cell.text = ""
+    p = cell.paragraphs[0]
+    p.alignment = 1  # WD_ALIGN_PARAGRAPH.CENTER
+    p.paragraph_format.space_before = docx.shared.Pt(0)
+    p.paragraph_format.space_after = docx.shared.Pt(0)
+    p.paragraph_format.line_spacing = 1.0
+    run = p.add_run(name)
+    run.font.size = docx.shared.Pt(13)
+    run.font.name = "Times New Roman"
+
+def format_signature_name(name):
+    words = name.split()
+    if len(words) >= 3:
+        line1 = " ".join(words[:2])
+        line2 = " ".join(words[2:])
+        return f"{line1}\n{line2}"
+    return name
+
+def fill_info(doc, name, msv, dob_val):
+    # Paragraph 4: Name and DOB
+    p4 = doc.paragraphs[4]
+    for r in p4.runs:
+        if "##NAME##" in r.text:
+            r.text = r.text.replace("##NAME##", name)
+        if "Ngày sinh:" in r.text:
+            if dob_val:
+                r.text = f"Ngày sinh: {dob_val}"
+            else:
+                r.text = "Ngày sinh:"
+                
+    # Paragraph 5: Student ID
+    p5 = doc.paragraphs[5]
+    for r in p5.runs:
+        if "##MSV##" in r.text:
+            r.text = r.text.replace("##MSV##", msv)
+            
+    # Floating Textbox Student Name replacement (split into 2 lines)
+    words = name.split()
+    if len(words) >= 3:
+        line1 = " ".join(words[:2])
+        line2 = " ".join(words[2:])
+    else:
+        line1 = name
+        line2 = ""
+        
+    p_elms = doc.element.xpath('.//*[local-name()="p"]')
+    for p_elm in p_elms:
+        p = docx.text.paragraph.Paragraph(p_elm, doc)
+        for r in p.runs:
+            if "##STUDENT" in r.text:
+                r.text = r.text.replace("##STUDENT", line1)
+            if "_NAME##" in r.text:
+                r.text = r.text.replace("_NAME##", line2)
 
 # Directories
 workspace = "/home/trai/workspace/drl"
@@ -59,7 +115,7 @@ def is_max_pts_refined(val):
 # 3. Load master template active rows
 master_doc_path = os.path.join(workspace, "master_v2.docx")
 master_doc = docx.Document(master_doc_path)
-master_table = master_doc.tables[2]
+master_table = master_doc.tables[1]
 master_rows_info = {} # normalized_desc -> {row_idx, max_pts_str}
 
 for r_idx, row in enumerate(master_table.rows):
@@ -157,11 +213,27 @@ for r in range(14, sheet_db.max_row + 1):
                 "first_name": str(first_name).strip(),
                 "name": full_name,
                 "msv": msv_str,
-                "excel_tc": tc_scores,      # E-I in Excel
-                "excel_total": total_score, # J in Excel
-                "excel_rating": rating,     # K in Excel
-                "excel_notes": notes        # L in Excel
+                "excel_tc": tc_scores,
+                "excel_total": total_score,
+                "excel_rating": rating,
+                "excel_notes": notes
             })
+
+# 4b. Load new vertical format ai_studio_code.csv
+csv_path = os.path.join(workspace, "ai_studio_code.csv")
+csv_scores_by_msv = {}
+if os.path.exists(csv_path):
+    with open(csv_path, newline="", encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            msv = row["student_id"].strip()
+            crit_id = row["criterion_id"].strip()
+            if msv not in csv_scores_by_msv:
+                csv_scores_by_msv[msv] = {}
+            csv_scores_by_msv[msv][crit_id] = {
+                "sv": row["student_score"].strip() if row.get("student_score") is not None else "",
+                "lop": row["class_score"].strip() if row.get("class_score") is not None else "",
+                "cvht": row["advisor_score"].strip() if row.get("advisor_score") is not None else ""
+            }
 
 # Subsection Row Mappings in master.docx Table 1
 subsection_mapping = {
@@ -189,6 +261,99 @@ subsection_mapping = {
     "5.3": [50, 51]
 }
 
+# Helper to write score from CSV to table cells
+def write_csv_score_to_table(table, criterion_id, role_col, score_str):
+    if not score_str:
+        return
+        
+    try:
+        val = float(score_str)
+        if val.is_integer():
+            val_str = str(int(val))
+        else:
+            val_str = str(val)
+    except ValueError:
+        val_str = score_str
+        val = 0.0
+
+    # Map criterion_id to row index and write
+    if criterion_id == "1.1":
+        write_centered_score(table.rows[4].cells[role_col], val_str)
+    elif criterion_id == "1.2":
+        if val == 10:
+            write_centered_score(table.rows[6].cells[role_col], "10")
+        elif val == 8:
+            write_centered_score(table.rows[7].cells[role_col], "8")
+        elif val == 6:
+            write_centered_score(table.rows[8].cells[role_col], "6")
+        elif val == 4:
+            write_centered_score(table.rows[9].cells[role_col], "4")
+        elif val == 0:
+            write_centered_score(table.rows[10].cells[role_col], "0")
+    elif criterion_id == "1.3":
+        write_centered_score(table.rows[12].cells[role_col], "4")
+        if val < 4:
+            penalty = int(val - 4)
+            write_centered_score(table.rows[14].cells[role_col], str(penalty))
+    elif criterion_id == "1.4":
+        write_centered_score(table.rows[18].cells[role_col], val_str)
+    elif criterion_id == "1.5":
+        write_centered_score(table.rows[19].cells[role_col], val_str)
+    elif criterion_id == "2.1":
+        write_centered_score(table.rows[22].cells[role_col], "15")
+        if val < 15:
+            penalty = int(val - 15)
+            write_centered_score(table.rows[24].cells[role_col], str(penalty))
+    elif criterion_id == "2.2":
+        write_centered_score(table.rows[26].cells[role_col], "5")
+        if val < 5:
+            penalty = int(val - 5)
+            write_centered_score(table.rows[27].cells[role_col], str(penalty))
+    elif criterion_id == "2.3":
+        if val > 0:
+            write_centered_score(table.rows[28].cells[role_col], val_str)
+        else:
+            write_centered_score(table.rows[28].cells[role_col], "0")
+    elif criterion_id == "3.1":
+        write_centered_score(table.rows[32].cells[role_col], val_str)
+    elif criterion_id == "3.2":
+        write_centered_score(table.rows[33].cells[role_col], val_str)
+    elif criterion_id == "3.3":
+        write_centered_score(table.rows[34].cells[role_col], val_str)
+    elif criterion_id == "3.4":
+        write_centered_score(table.rows[35].cells[role_col], val_str)
+    elif criterion_id == "4.1":
+        write_centered_score(table.rows[39].cells[role_col], val_str)
+    elif criterion_id == "4.2":
+        write_centered_score(table.rows[40].cells[role_col], val_str)
+    elif criterion_id == "4.3":
+        write_centered_score(table.rows[41].cells[role_col], val_str)
+    elif criterion_id == "4.4":
+        write_centered_score(table.rows[42].cells[role_col], val_str)
+    elif criterion_id == "4.5":
+        write_centered_score(table.rows[43].cells[role_col], val_str)
+    elif criterion_id == "5.1":
+        write_centered_score(table.rows[47].cells[role_col], val_str)
+    elif criterion_id == "5.2":
+        write_centered_score(table.rows[48].cells[role_col], val_str)
+    elif criterion_id == "5.3":
+        if val > 0:
+            write_centered_score(table.rows[50].cells[role_col], val_str)
+        else:
+            write_centered_score(table.rows[50].cells[role_col], "0")
+    elif criterion_id == "TC1":
+        write_centered_score(table.rows[20].cells[role_col], val_str)
+    elif criterion_id == "TC2":
+        write_centered_score(table.rows[30].cells[role_col], val_str)
+    elif criterion_id == "TC3":
+        write_centered_score(table.rows[37].cells[role_col], val_str)
+    elif criterion_id == "TC4":
+        write_centered_score(table.rows[45].cells[role_col], val_str)
+    elif criterion_id == "TC5":
+        write_centered_score(table.rows[52].cells[role_col], val_str)
+    elif criterion_id == "TOTAL":
+        write_centered_score(table.rows[53].cells[role_col], val_str)
+
 # 5. Process each student and generate docx and collect scores
 print("\nProcessing student files...")
 processed_students = []
@@ -203,162 +368,82 @@ for s in students_db:
             
     student_record = copy.deepcopy(s)
     student_record["dob"] = ""
-    # Initialize subsections as 0.0
     for sub in subsection_mapping.keys():
         student_record[f"sub_{sub}"] = 0.0
         
-    if not found_file:
-        print(f"  TT={s['tt']}: {s['name']} ({s['msv']}) -> MISSING FILE (Absent)")
-        # Generate word copy (blank template with name and ID only)
-        dest_doc_path = os.path.join(output_dir, f"{s['name']}_{s['msv']}.docx")
-        shutil.copy2(master_doc_path, dest_doc_path)
-        doc = docx.Document(dest_doc_path)
-        # Fill info table (tables[1]): name, clear DOB placeholder, student ID
-        doc.tables[1].rows[0].cells[0].text = f"Họ và tên: {s['name']}"
-        doc.tables[1].rows[0].cells[1].text = "Ngày sinh:"
-        doc.tables[1].rows[0].cells[1].paragraphs[0].alignment = 2  # RIGHT
-        doc.tables[1].rows[1].cells[0].text = f"Mã số sinh viên: {s['msv']}"
-        # Set all active scores columns in grading table (tables[2]) to empty
-        for r_idx in range(len(doc.tables[2].rows)):
-            unique_cells = []
-            seen_tcs = set()
-            for cell in doc.tables[2].rows[r_idx].cells:
-                tc_id = id(cell._tc)
-                if tc_id not in seen_tcs:
-                    seen_tcs.add(tc_id)
-                    unique_cells.append(cell)
-            max_idx = None
-            for idx, cell in enumerate(unique_cells):
-                val = cell.text.strip()
-                if is_max_pts_refined(val):
-                    max_idx = idx
-                    break
-            if max_idx is not None and max_idx > 0:
-                # set score columns to blank
-                if max_idx + 1 < len(unique_cells): unique_cells[max_idx + 1].text = ""
-                if max_idx + 2 < len(unique_cells): unique_cells[max_idx + 2].text = ""
-                if max_idx + 3 < len(unique_cells): unique_cells[max_idx + 3].text = ""
-        # Write criteria totals and grand total as 0
-        for r in [20, 30, 37, 45, 52, 53]:
-            write_centered_score(doc.tables[2].rows[r].cells[7], "0")
-            write_centered_score(doc.tables[2].rows[r].cells[8], "0")
-            write_centered_score(doc.tables[2].rows[r].cells[11], "0")
-        # Write student name into signature table (tables[3], row 1, col 3)
-        write_centered_score(doc.tables[3].rows[1].cells[3], s['name'])
-        doc.save(dest_doc_path)
-        
-        processed_students.append(student_record)
-        continue
-
-    # File present: Load and parse details
-    doc_student = docx.Document(found_file)
-    
-    # 1. DOB extraction
     dob_val = ""
-    for p in doc_student.paragraphs:
-        txt = p.text.strip()
-        if "ngày sinh" in txt.lower():
-            match = re.search(r"Ngày\s+sinh\s*:\s*([^\t\n\r]+)", txt, re.IGNORECASE)
-            if match:
-                dob_val = match.group(1).strip()
-                break
+    if found_file:
+        doc_student = docx.Document(found_file)
+        # Extract DOB
+        for p in doc_student.paragraphs:
+            txt = p.text.strip()
+            if "ngày sinh" in txt.lower():
+                match = re.search(r"Ngày\s+sinh\s*:\s*([^\t\n\r]+)", txt, re.IGNORECASE)
+                if match:
+                    dob_val = match.group(1).strip()
+                    break
     student_record["dob"] = dob_val
     
-    # 2. Score extraction table by table
-    table_st = doc_student.tables[1]
-    scores_by_master_row = {} # row_idx -> {student, class, advisor}
+    if not found_file:
+        print(f"  TT={s['tt']}: {s['name']} ({s['msv']}) -> MISSING FILE (Absent)")
     
-    for r_idx, row in enumerate(table_st.rows):
-        unique_cells = []
-        seen_tcs = set()
-        for cell in row.cells:
-            tc_id = id(cell._tc)
-            if tc_id not in seen_tcs:
-                seen_tcs.add(tc_id)
-                unique_cells.append(cell)
-                
-        max_idx = None
-        for idx, cell in enumerate(unique_cells):
-            val = cell.text.strip().replace('\n', ' ')
-            if is_max_pts_refined(val):
-                max_idx = idx
-                break
-                
-        if max_idx is not None and max_idx > 0:
-            desc = unique_cells[max_idx - 1].text.strip().replace('\n', ' ')
-            norm_desc = normalize_desc(desc)
-            
-            student_val = unique_cells[max_idx + 1].text.strip() if max_idx + 1 < len(unique_cells) else ""
-            class_val = unique_cells[max_idx + 2].text.strip() if max_idx + 2 < len(unique_cells) else ""
-            advisor_val = unique_cells[max_idx + 3].text.strip() if max_idx + 3 < len(unique_cells) else ""
-            
-            # Resolve fuzzy match
-            matched_norm = get_best_master_match(norm_desc, master_rows_info.keys())
-            if matched_norm:
-                target_r = master_rows_info[matched_norm]["row_idx"]
-                scores_by_master_row[target_r] = {
-                    "student": student_val,
-                    "class": class_val,
-                    "advisor": advisor_val
-                }
-            else:
-                print(f"    Warning: unmatched description in {s['msv']}: '{desc[:30]}...'")
-
-    # 3. Sum up subsection scores (using Advisor score as final, class/student fallback)
-    for sub, rows in subsection_mapping.items():
-        sub_sum = 0.0
-        for r in rows:
-            if r in scores_by_master_row:
-                s_dict = scores_by_master_row[r]
-                final_val = s_dict["advisor"] if s_dict["advisor"] else (s_dict["class"] if s_dict["class"] else s_dict["student"])
-                sub_sum += parse_score_val(final_val)
-        student_record[f"sub_{sub}"] = sub_sum
-        
-    # 4. Generate clean word document copy
+    # Generate clean word document copy
     dest_doc_path = os.path.join(output_dir, f"{s['name']}_{s['msv']}.docx")
     shutil.copy2(master_doc_path, dest_doc_path)
     doc_out = docx.Document(dest_doc_path)
     
-    # Fill personal info paragraphs
-    # Fill info table (tables[1]): name, DOB, student ID
-    doc_out.tables[1].rows[0].cells[0].text = f"Họ và tên: {s['name']}"
-    cell_dob = doc_out.tables[1].rows[0].cells[1]
-    cell_dob.text = f"Ngày sinh: {dob_val}"
-    cell_dob.paragraphs[0].alignment = 2  # RIGHT
-    doc_out.tables[1].rows[1].cells[0].text = f"Mã số sinh viên: {s['msv']}"
+    # Fill personal info paragraphs and student signature name textbox
+    fill_info(doc_out, s['name'], s['msv'], dob_val)
     
-    # Fill Table 1 scores (grading table is now tables[2])
-    table_out = doc_out.tables[2]
-    
-    # Grading rows
-    all_grading_rows = []
-    for sub_rows in subsection_mapping.values():
-        all_grading_rows.extend(sub_rows)
-        
-    for r_idx in all_grading_rows:
-        if r_idx in scores_by_master_row:
-            s_dict = scores_by_master_row[r_idx]
-            # Write student, class, advisor columns
-            write_centered_score(table_out.rows[r_idx].cells[7], s_dict["student"])
-            write_centered_score(table_out.rows[r_idx].cells[8], s_dict["class"])
-            write_centered_score(table_out.rows[r_idx].cells[11], s_dict["advisor"])
+    # Set all active scores columns in grading table (tables[1]) to empty
+    table_out = doc_out.tables[1]
+    for r_idx in range(len(table_out.rows)):
+        unique_cells = []
+        seen_tcs = set()
+        for cell in table_out.rows[r_idx].cells:
+            tc_id = id(cell._tc)
+            if tc_id not in seen_tcs:
+                seen_tcs.add(tc_id)
+                unique_cells.append(cell)
+        max_idx = None
+        for idx, cell in enumerate(unique_cells):
+            val = cell.text.strip()
+            if is_max_pts_refined(val):
+                max_idx = idx
+                break
+        if max_idx is not None and max_idx > 0:
+            if max_idx + 1 < len(unique_cells): unique_cells[max_idx + 1].text = ""
+            if max_idx + 2 < len(unique_cells): unique_cells[max_idx + 2].text = ""
+            if max_idx + 3 < len(unique_cells): unique_cells[max_idx + 3].text = ""
             
-    # Write criteria totals from Excel database (which is ALWAYS correct)
+    # Write scores from CSV
+    student_csv = csv_scores_by_msv.get(s["msv"])
+    if student_csv:
+        for crit_id, roles in student_csv.items():
+            write_csv_score_to_table(table_out, crit_id, 7, roles["sv"])
+            write_csv_score_to_table(table_out, crit_id, 8, roles["lop"])
+            write_csv_score_to_table(table_out, crit_id, 11, roles["cvht"])
+            
+    # Sum up subsection scores from CSV (using Advisor score as final, class/student fallback)
+    for sub in subsection_mapping.keys():
+        sub_sum = 0.0
+        if student_csv and sub in student_csv:
+            s_dict = student_csv[sub]
+            final_val = s_dict["cvht"] if s_dict["cvht"] else (s_dict["lop"] if s_dict["lop"] else s_dict["sv"])
+            sub_sum = parse_score_val(final_val)
+        student_record[f"sub_{sub}"] = sub_sum
+        
+    # Overwrite Class and Advisor totals/grand totals with master Excel values
     totals_rows = [20, 30, 37, 45, 52]
     for idx, r_idx in enumerate(totals_rows):
-        val_str = str(s["excel_tc"][idx]).replace('.0', '')
-        write_centered_score(table_out.rows[r_idx].cells[7], val_str)
-        write_centered_score(table_out.rows[r_idx].cells[8], val_str)
-        write_centered_score(table_out.rows[r_idx].cells[11], val_str)
+        val_str = str(s["excel_tc"][idx]).replace(".0", "")
+        write_centered_score(table_out.rows[r_idx].cells[8], val_str)   # Class column
+        write_centered_score(table_out.rows[r_idx].cells[11], val_str)  # Advisor column
         
-    # Write Grand Total
-    gt_str = str(s["excel_total"]).replace('.0', '')
-    write_centered_score(table_out.rows[53].cells[7], gt_str)
-    write_centered_score(table_out.rows[53].cells[8], gt_str)
-    write_centered_score(table_out.rows[53].cells[11], gt_str)
-    
-    # Write student name into signature table (tables[3], row 1, col 3)
-    write_centered_score(doc_out.tables[3].rows[1].cells[3], s['name'])
+    gt_str = str(s["excel_total"]).replace(".0", "")
+    write_centered_score(table_out.rows[53].cells[8], gt_str)   # Class column
+    write_centered_score(table_out.rows[53].cells[11], gt_str)  # Advisor column
+        
     doc_out.save(dest_doc_path)
     processed_students.append(student_record)
 
@@ -680,4 +765,30 @@ print(f"Successfully generated detailed Excel report at {dest_excel_path}")
 # 7. Cleanup temp files
 shutil.rmtree(temp_dir)
 print("Temporary files cleaned up.")
+
+# 8. Sync generated files to Google Drive if mounted
+gdrive_dir = "/mnt/googledrive/generated_students"
+if os.path.exists(gdrive_dir):
+    print("\nSyncing generated student files to Google Drive...")
+    try:
+        # Clear existing files in the GDrive directory to prevent duplicates/obsolete entries
+        for filename in os.listdir(gdrive_dir):
+            file_path = os.path.join(gdrive_dir, filename)
+            if os.path.isfile(file_path):
+                os.remove(file_path)
+            elif os.path.isdir(file_path):
+                shutil.rmtree(file_path)
+        
+        # Copy newly generated files
+        for filename in os.listdir(output_dir):
+            src_file = os.path.join(output_dir, filename)
+            dest_file = os.path.join(gdrive_dir, filename)
+            if os.path.isfile(src_file):
+                shutil.copy2(src_file, dest_file)
+        print("Sync to Google Drive completed successfully.")
+    except Exception as e:
+        print(f"Warning: Failed to sync with Google Drive: {e}")
+else:
+    print("\nNote: Google Drive mount point at /mnt/googledrive/generated_students not found. Skipping sync.")
+
 print("Pipeline run finished successfully!")
