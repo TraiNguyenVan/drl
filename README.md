@@ -5,7 +5,7 @@ Automated pipeline for processing student training evaluation sheets (*Phiếu �
 ## 📋 Table of Contents
 * [Overview](#-overview)
 * [Codebase Structure](#-codebase-structure)
-* [Document Architecture](#-document-architecture-master_v2docx)
+* [Document Architecture](#-document-architecture-masterdocx)
 * [Pipeline Workflow](#-pipeline-workflow)
 * [Key Technical Details](#-key-technical-details)
 * [Setup & Installation](#-setup--installation)
@@ -29,8 +29,7 @@ At the end of each semester, students submit training point evaluation documents
 
 | File / Folder | Description |
 |---|---|
-| `master_v2.docx` | **Active template** — Google Docs-compatible, uses paragraph-based info block and shape-wrapped textbox for name |
-| `master.docx` | Original template (preserved, used by `main` branch) |
+| `master.docx` | **Active template** — Google Docs-compatible, uses paragraph-based info block and shape-wrapped textbox for name |
 | `HV_Mau 2_Tong hop KQRL cua SV.xlsx` | **Source of truth** — official final scores (do not modify) |
 | `HV_Mau 2_Chi tiet KQRL.xlsx` | *(Generated)* Detailed sub-section report |
 | `process_and_generate.py` | Main pipeline script |
@@ -41,9 +40,9 @@ At the end of each semester, students submit training point evaluation documents
 
 ---
 
-## 📐 Document Architecture (`master_v2.docx`)
+## 📐 Document Architecture (`master.docx`)
 
-Every generated file is a copy of `master_v2.docx` with student data filled in. The document body contains **12 paragraphs** and **2 tables** in the following order:
+Every generated file is a copy of `master.docx` with student data filled in. The document body contains **12 paragraphs** and **2 tables** in the following order:
 
 ```
 Para 0   — empty spacer

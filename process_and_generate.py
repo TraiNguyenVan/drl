@@ -154,7 +154,7 @@ def is_max_pts_refined(val):
     return False
 
 # 3. Load master template active rows
-master_doc_path = os.path.join(workspace, "master_v2.docx")
+master_doc_path = os.path.join(workspace, "master.docx")
 master_doc = docx.Document(master_doc_path)
 master_table = master_doc.tables[1]
 master_rows_info = {} # normalized_desc -> {row_idx, max_pts_str}

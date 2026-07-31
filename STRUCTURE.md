@@ -1,6 +1,6 @@
-# Structural Analysis of `master_v2.docx` & Pipeline Layout
+# Structural Analysis of `master.docx` & Pipeline Layout
 
-`master_v2.docx` is the active template for the `google-docs-compat` branch. It utilizes paragraph-based student info lines with custom tab stops for precise layout alignment, a logo table, a single main grading criteria table (which includes the signature headers), and a compatibility-wrapped shape textbox for the student's name signature.
+`master.docx` is the active template. It utilizes paragraph-based student info lines with custom tab stops for precise layout alignment, a logo table, a single main grading criteria table (which includes the signature headers), and a compatibility-wrapped shape textbox for the student's name signature.
 
 ---
 
