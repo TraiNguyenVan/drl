@@ -35,6 +35,42 @@ def format_signature_name(name):
         return f"{line1}\n{line2}"
     return name
 
+def fill_info(doc, name, msv, dob_val):
+    # Paragraph 4: Name and DOB
+    p4 = doc.paragraphs[4]
+    for r in p4.runs:
+        if "##NAME##" in r.text:
+            r.text = r.text.replace("##NAME##", name)
+        if "Ngày sinh:" in r.text:
+            if dob_val:
+                r.text = f"Ngày sinh: {dob_val}"
+            else:
+                r.text = "Ngày sinh:"
+                
+    # Paragraph 5: Student ID
+    p5 = doc.paragraphs[5]
+    for r in p5.runs:
+        if "##MSV##" in r.text:
+            r.text = r.text.replace("##MSV##", msv)
+            
+    # Floating Textbox Student Name replacement (split into 2 lines)
+    words = name.split()
+    if len(words) >= 3:
+        line1 = " ".join(words[:2])
+        line2 = " ".join(words[2:])
+    else:
+        line1 = name
+        line2 = ""
+        
+    p_elms = doc.element.xpath('.//*[local-name()="p"]')
+    for p_elm in p_elms:
+        p = docx.text.paragraph.Paragraph(p_elm, doc)
+        for r in p.runs:
+            if "##STUDENT" in r.text:
+                r.text = r.text.replace("##STUDENT", line1)
+            if "_NAME##" in r.text:
+                r.text = r.text.replace("_NAME##", line2)
+
 # Directories
 workspace = "/home/trai/workspace/drl"
 students_dir = os.path.join(workspace, "students")
@@ -79,7 +115,7 @@ def is_max_pts_refined(val):
 # 3. Load master template active rows
 master_doc_path = os.path.join(workspace, "master_v2.docx")
 master_doc = docx.Document(master_doc_path)
-master_table = master_doc.tables[2]
+master_table = master_doc.tables[1]
 master_rows_info = {} # normalized_desc -> {row_idx, max_pts_str}
 
 for r_idx, row in enumerate(master_table.rows):
@@ -265,16 +301,13 @@ for s in students_db:
         dest_doc_path = os.path.join(output_dir, f"{s['name']}_{s['msv']}.docx")
         shutil.copy2(master_doc_path, dest_doc_path)
         doc = docx.Document(dest_doc_path)
-        # Fill info table (tables[1]): name, clear DOB placeholder, student ID
-        doc.tables[1].rows[0].cells[0].text = f"Họ và tên: {s['name']}"
-        doc.tables[1].rows[0].cells[1].text = "Ngày sinh:"
-        doc.tables[1].rows[0].cells[1].paragraphs[0].alignment = 2  # RIGHT
-        doc.tables[1].rows[1].cells[0].text = f"Mã số sinh viên: {s['msv']}"
-        # Set all active scores columns in grading table (tables[2]) to empty
-        for r_idx in range(len(doc.tables[2].rows)):
+        # Fill info paragraphs and student signature name
+        fill_info(doc, s['name'], s['msv'], "")
+        # Set all active scores columns in grading table (tables[1]) to empty
+        for r_idx in range(len(doc.tables[1].rows)):
             unique_cells = []
             seen_tcs = set()
-            for cell in doc.tables[2].rows[r_idx].cells:
+            for cell in doc.tables[1].rows[r_idx].cells:
                 tc_id = id(cell._tc)
                 if tc_id not in seen_tcs:
                     seen_tcs.add(tc_id)
@@ -292,11 +325,9 @@ for s in students_db:
                 if max_idx + 3 < len(unique_cells): unique_cells[max_idx + 3].text = ""
         # Write criteria totals and grand total as 0
         for r in [20, 30, 37, 45, 52, 53]:
-            write_centered_score(doc.tables[2].rows[r].cells[7], "0")
-            write_centered_score(doc.tables[2].rows[r].cells[8], "0")
-            write_centered_score(doc.tables[2].rows[r].cells[11], "0")
-        # Write student name into signature table (tables[3], row 3, col 10)
-        write_signature_name(doc.tables[3].rows[3].cells[10], format_signature_name(s['name']))
+            write_centered_score(doc.tables[1].rows[r].cells[7], "0")
+            write_centered_score(doc.tables[1].rows[r].cells[8], "0")
+            write_centered_score(doc.tables[1].rows[r].cells[11], "0")
         doc.save(dest_doc_path)
         
         processed_students.append(student_record)
@@ -371,16 +402,11 @@ for s in students_db:
     shutil.copy2(master_doc_path, dest_doc_path)
     doc_out = docx.Document(dest_doc_path)
     
-    # Fill personal info paragraphs
-    # Fill info table (tables[1]): name, DOB, student ID
-    doc_out.tables[1].rows[0].cells[0].text = f"Họ và tên: {s['name']}"
-    cell_dob = doc_out.tables[1].rows[0].cells[1]
-    cell_dob.text = f"Ngày sinh: {dob_val}"
-    cell_dob.paragraphs[0].alignment = 2  # RIGHT
-    doc_out.tables[1].rows[1].cells[0].text = f"Mã số sinh viên: {s['msv']}"
+    # Fill personal info paragraphs and student signature name
+    fill_info(doc_out, s['name'], s['msv'], dob_val)
     
-    # Fill Table 1 scores (grading table is now tables[2])
-    table_out = doc_out.tables[2]
+    # Fill Table 1 scores (grading table is now tables[1])
+    table_out = doc_out.tables[1]
     
     # Grading rows
     all_grading_rows = []
@@ -421,9 +447,6 @@ for s in students_db:
         write_centered_score(table_out.rows[53].cells[7], gt_str)
         write_centered_score(table_out.rows[53].cells[8], gt_str)
         write_centered_score(table_out.rows[53].cells[11], gt_str)
-    
-    # Write student name into signature table (tables[3], row 3, col 10)
-    write_signature_name(doc_out.tables[3].rows[3].cells[10], format_signature_name(s['name']))
     doc_out.save(dest_doc_path)
     processed_students.append(student_record)
 
