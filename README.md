@@ -130,6 +130,17 @@ pip3 install python-docx openpyxl lxml pillow
 
 ## 🚀 Usage
 
+Run the complete pipeline:
 ```bash
 python3 process_and_generate.py
+```
+
+### Command Line Flags
+You can customize the pipeline run using the following flags:
+* `--disable-excel`: Skip generating the detailed Excel sub-section report (`HV_Mau 2_Chi tiet KQRL.xlsx`).
+* `--disable-gdrive`: Skip syncing the generated student files to Google Drive.
+
+**Example:**
+```bash
+python3 process_and_generate.py --disable-excel --disable-gdrive
 ```
