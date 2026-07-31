@@ -38,20 +38,54 @@ def format_signature_name(name):
 def fill_info(doc, name, msv, dob_val):
     # Paragraph 4: Name and DOB
     p4 = doc.paragraphs[4]
-    for r in p4.runs:
-        if "##NAME##" in r.text:
-            r.text = r.text.replace("##NAME##", name)
-        if "Ngày sinh:" in r.text:
-            if dob_val:
-                r.text = f"Ngày sinh: {dob_val}"
-            else:
-                r.text = "Ngày sinh:"
-                
-    # Paragraph 5: Student ID
+    p4.text = "" # Clear all text/runs
+    
+    # Set the custom tab stop on p4 (3.8 inches is 9.65 cm)
+    p4.paragraph_format.tab_stops.add_tab_stop(docx.shared.Inches(3.8), docx.enum.text.WD_TAB_ALIGNMENT.LEFT)
+    
+    r_name_label = p4.add_run("Họ và tên: ")
+    r_name_label.font.name = "Times New Roman"
+    r_name_label.font.size = docx.shared.Pt(13)
+    
+    r_name_val = p4.add_run(name)
+    r_name_val.font.name = "Times New Roman"
+    r_name_val.font.size = docx.shared.Pt(13)
+    
+    p4.add_run("\t") # Tab to jump to 3.8 inches
+    
+    r_dob_label = p4.add_run("Ngày sinh: ")
+    r_dob_label.font.name = "Times New Roman"
+    r_dob_label.font.size = docx.shared.Pt(13)
+    
+    if dob_val:
+        r_dob_val = p4.add_run(dob_val)
+        r_dob_val.font.name = "Times New Roman"
+        r_dob_val.font.size = docx.shared.Pt(13)
+        
+    # Paragraph 5: Student ID and Class
     p5 = doc.paragraphs[5]
-    for r in p5.runs:
-        if "##MSV##" in r.text:
-            r.text = r.text.replace("##MSV##", msv)
+    p5.text = "" # Clear all text/runs
+    
+    # Set the custom tab stop on p5
+    p5.paragraph_format.tab_stops.add_tab_stop(docx.shared.Inches(3.8), docx.enum.text.WD_TAB_ALIGNMENT.LEFT)
+    
+    r_msv_label = p5.add_run("Mã số sinh viên: ")
+    r_msv_label.font.name = "Times New Roman"
+    r_msv_label.font.size = docx.shared.Pt(13)
+    
+    r_msv_val = p5.add_run(msv)
+    r_msv_val.font.name = "Times New Roman"
+    r_msv_val.font.size = docx.shared.Pt(13)
+    
+    p5.add_run("\t") # Tab to jump to 3.8 inches
+    
+    r_class_label = p5.add_run("Lớp: ")
+    r_class_label.font.name = "Times New Roman"
+    r_class_label.font.size = docx.shared.Pt(13)
+    
+    r_class_val = p5.add_run("E25CQCE02-N")
+    r_class_val.font.name = "Times New Roman"
+    r_class_val.font.size = docx.shared.Pt(13)
             
     # Floating Textbox Student Name replacement (split into 2 lines)
     words = name.split()
