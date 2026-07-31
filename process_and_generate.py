@@ -1,5 +1,6 @@
 import os
 import re
+import csv
 import subprocess
 import shutil
 import copy
@@ -182,6 +183,38 @@ for r in range(14, sheet_db.max_row + 1):
                 "excel_notes": notes        # L in Excel
             })
 
+# 4b. Load ai_studio_code.csv as the score source (verbatim, no calculation)
+csv_path = os.path.join(workspace, "ai_studio_code.csv")
+csv_by_msv = {}
+csv_by_name = {}
+if os.path.exists(csv_path):
+    with open(csv_path, newline="", encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            rec = {
+                "tc": [
+                    {"sv": row.get("TC1_SV", ""), "lop": row.get("TC1_Lop", ""), "cvht": row.get("TC1_CVHT", "")},
+                    {"sv": row.get("TC2_SV", ""), "lop": row.get("TC2_Lop", ""), "cvht": row.get("TC2_CVHT", "")},
+                    {"sv": row.get("TC3_SV", ""), "lop": row.get("TC3_Lop", ""), "cvht": row.get("TC3_CVHT", "")},
+                    {"sv": row.get("TC4_SV", ""), "lop": row.get("TC4_Lop", ""), "cvht": row.get("TC4_CVHT", "")},
+                    {"sv": row.get("TC5_SV", ""), "lop": row.get("TC5_Lop", ""), "cvht": row.get("TC5_CVHT", "")},
+                ],
+                "total": {
+                    "sv": row.get("GRAND_TOTAL_SV", ""),
+                    "lop": row.get("GRAND_TOTAL_Lop", ""),
+                    "cvht": row.get("GRAND_TOTAL_CVHT", ""),
+                },
+            }
+            msv_val = (row.get("Student_ID") or "").strip()
+            if msv_val:
+                csv_by_msv[msv_val] = rec
+            name_val = (row.get("Student_Name") or "").strip()
+            if name_val:
+                csv_by_name[normalize_desc(name_val)] = rec
+
+# Attach CSV scores to each student record (match by MSV first, then by name)
+for s in students_db:
+    s["csv_scores"] = csv_by_msv.get(s["msv"]) or csv_by_name.get(normalize_desc(s["name"]))
+
 # Subsection Row Mappings in master.docx Table 1
 subsection_mapping = {
     "1.1": [4],
@@ -262,8 +295,8 @@ for s in students_db:
             write_centered_score(doc.tables[2].rows[r].cells[7], "0")
             write_centered_score(doc.tables[2].rows[r].cells[8], "0")
             write_centered_score(doc.tables[2].rows[r].cells[11], "0")
-        # Write student name into signature table (tables[2], row 57, col 10)
-        write_signature_name(doc.tables[2].rows[57].cells[10], format_signature_name(s['name']))
+        # Write student name into signature table (tables[3], row 3, col 10)
+        write_signature_name(doc.tables[3].rows[3].cells[10], format_signature_name(s['name']))
         doc.save(dest_doc_path)
         
         processed_students.append(student_record)
@@ -362,22 +395,35 @@ for s in students_db:
             write_centered_score(table_out.rows[r_idx].cells[8], s_dict["class"])
             write_centered_score(table_out.rows[r_idx].cells[11], s_dict["advisor"])
             
-    # Write criteria totals from Excel database (which is ALWAYS correct)
+    # Write criteria totals from ai_studio_code.csv (verbatim) or Excel fallback
     totals_rows = [20, 30, 37, 45, 52]
+    csv_scores = s.get("csv_scores")
     for idx, r_idx in enumerate(totals_rows):
-        val_str = str(s["excel_tc"][idx]).replace('.0', '')
-        write_centered_score(table_out.rows[r_idx].cells[7], val_str)
-        write_centered_score(table_out.rows[r_idx].cells[8], val_str)
-        write_centered_score(table_out.rows[r_idx].cells[11], val_str)
+        if csv_scores:
+            tc = csv_scores["tc"][idx]
+            write_centered_score(table_out.rows[r_idx].cells[7], tc["sv"])
+            write_centered_score(table_out.rows[r_idx].cells[8], tc["lop"])
+            write_centered_score(table_out.rows[r_idx].cells[11], tc["cvht"])
+        else:
+            val_str = str(s["excel_tc"][idx]).replace('.0', '')
+            write_centered_score(table_out.rows[r_idx].cells[7], val_str)
+            write_centered_score(table_out.rows[r_idx].cells[8], val_str)
+            write_centered_score(table_out.rows[r_idx].cells[11], val_str)
         
     # Write Grand Total
-    gt_str = str(s["excel_total"]).replace('.0', '')
-    write_centered_score(table_out.rows[53].cells[7], gt_str)
-    write_centered_score(table_out.rows[53].cells[8], gt_str)
-    write_centered_score(table_out.rows[53].cells[11], gt_str)
+    if csv_scores:
+        gt = csv_scores["total"]
+        write_centered_score(table_out.rows[53].cells[7], gt["sv"])
+        write_centered_score(table_out.rows[53].cells[8], gt["lop"])
+        write_centered_score(table_out.rows[53].cells[11], gt["cvht"])
+    else:
+        gt_str = str(s["excel_total"]).replace('.0', '')
+        write_centered_score(table_out.rows[53].cells[7], gt_str)
+        write_centered_score(table_out.rows[53].cells[8], gt_str)
+        write_centered_score(table_out.rows[53].cells[11], gt_str)
     
-    # Write student name into signature table (tables[2], row 57, col 10)
-    write_signature_name(doc_out.tables[2].rows[57].cells[10], format_signature_name(s['name']))
+    # Write student name into signature table (tables[3], row 3, col 10)
+    write_signature_name(doc_out.tables[3].rows[3].cells[10], format_signature_name(s['name']))
     doc_out.save(dest_doc_path)
     processed_students.append(student_record)
 
