@@ -433,6 +433,17 @@ for s in students_db:
             sub_sum = parse_score_val(final_val)
         student_record[f"sub_{sub}"] = sub_sum
         
+    # Overwrite Class and Advisor totals/grand totals with master Excel values
+    totals_rows = [20, 30, 37, 45, 52]
+    for idx, r_idx in enumerate(totals_rows):
+        val_str = str(s["excel_tc"][idx]).replace(".0", "")
+        write_centered_score(table_out.rows[r_idx].cells[8], val_str)   # Class column
+        write_centered_score(table_out.rows[r_idx].cells[11], val_str)  # Advisor column
+        
+    gt_str = str(s["excel_total"]).replace(".0", "")
+    write_centered_score(table_out.rows[53].cells[8], gt_str)   # Class column
+    write_centered_score(table_out.rows[53].cells[11], gt_str)  # Advisor column
+        
     doc_out.save(dest_doc_path)
     processed_students.append(student_record)
 
