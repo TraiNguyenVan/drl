@@ -262,8 +262,8 @@ for s in students_db:
             write_centered_score(doc.tables[2].rows[r].cells[7], "0")
             write_centered_score(doc.tables[2].rows[r].cells[8], "0")
             write_centered_score(doc.tables[2].rows[r].cells[11], "0")
-        # Write student name into signature table (tables[3], row 1, col 3)
-        write_signature_name(doc.tables[3].rows[1].cells[3], format_signature_name(s['name']))
+        # Write student name into signature table (tables[2], row 57, col 10)
+        write_signature_name(doc.tables[2].rows[57].cells[10], format_signature_name(s['name']))
         doc.save(dest_doc_path)
         
         processed_students.append(student_record)
@@ -376,8 +376,8 @@ for s in students_db:
     write_centered_score(table_out.rows[53].cells[8], gt_str)
     write_centered_score(table_out.rows[53].cells[11], gt_str)
     
-    # Write student name into signature table (tables[3], row 1, col 3)
-    write_signature_name(doc_out.tables[3].rows[1].cells[3], format_signature_name(s['name']))
+    # Write student name into signature table (tables[2], row 57, col 10)
+    write_signature_name(doc_out.tables[2].rows[57].cells[10], format_signature_name(s['name']))
     doc_out.save(dest_doc_path)
     processed_students.append(student_record)
 
