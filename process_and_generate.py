@@ -29,11 +29,12 @@ def write_signature_name(cell, name):
 
 def format_signature_name(name):
     words = name.split()
-    if len(words) >= 3:
+    if len(words) <= 3:
+        return name
+    else:
         line1 = " ".join(words[:2])
         line2 = " ".join(words[2:])
         return f"{line1}\n{line2}"
-    return name
 
 def fill_info(doc, name, msv, dob_val):
     # Paragraph 4: Name and DOB
@@ -89,12 +90,12 @@ def fill_info(doc, name, msv, dob_val):
             
     # Floating Textbox Student Name replacement (split into 2 lines)
     words = name.split()
-    if len(words) >= 3:
-        line1 = " ".join(words[:2])
-        line2 = " ".join(words[2:])
-    else:
+    if len(words) <= 3:
         line1 = name
         line2 = ""
+    else:
+        line1 = " ".join(words[:2])
+        line2 = " ".join(words[2:])
         
     p_elms = doc.element.xpath('.//*[local-name()="p"]')
     for p_elm in p_elms:

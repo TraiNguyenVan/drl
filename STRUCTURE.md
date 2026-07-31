@@ -96,7 +96,7 @@ For all criteria rows:
 To handle absolute layout positioning of the student's name under the signature header without using a table layout:
 - The template uses a compatibility-wrapped shape textbox in a drawing container.
 - It contains two text boxes with placeholders `##STUDENT` and `_NAME##` (representing the modern `<wps:txbx>` element and the legacy `<v:textbox>` element respectively).
-- The pipeline splits the student's name (first two words in `##STUDENT`, remaining words in `_NAME##`) and replaces them.
+- The pipeline splits the student's name: if the student has 3 or fewer words in their name, the entire name is placed in `##STUDENT` (and `_NAME##` is cleared). If the student has 4 or more words, the first two words are placed in `##STUDENT` and the remaining words in `_NAME##`.
 
 ---
 
