@@ -17,11 +17,9 @@ quick result can be found here on [Google Drive](https://drive.google.com/drive/
 
 At the end of each semester, students submit training point evaluation documents (`.doc` or `.docx`). This pipeline automates:
 
-1. **Batch-converts** `.doc` files to `.docx` via headless LibreOffice
-2. **Parses & extracts** student name, DOB, and per-criteria scores from converted student sheets
-3. **Cross-references** parsed scores and loads values from `ai_studio_code.csv` and the official ground-truth Excel summary
-4. **Generates** final formatted Word documents for all students (present and absent) using custom tab stops for info alignment
-5. **Compiles** a detailed sub-section Excel report with styling, borders, statistical charts, and signature blocks
+1. **Loads scores & DOB** directly from `ai_studio_code.csv` and the official roster summary.
+2. **Generates** final formatted Word documents for all 37 students (present and absent) using custom tab stops for info alignment.
+3. **Renders** statistics charts and compiles an interactive performance HTML dashboard.
 
 ---
 
@@ -31,7 +29,7 @@ At the end of each semester, students submit training point evaluation documents
 |---|---|
 | `master.docx` | **Active template** — Google Docs-compatible, uses paragraph-based info block and shape-wrapped textbox for name |
 | `HV_Mau 2_Tong hop KQRL cua SV.xlsx` | **Source of truth** — official final scores (do not modify) |
-| `HV_Mau 2_Chi tiet KQRL.xlsx` | *(Generated)* Detailed sub-section report |
+| `HV_Mau 2_Chi tiet KQRL.xlsx` | *(Legacy)* Detailed sub-section report (no longer generated) |
 | `process_and_generate.py` | Main pipeline script |
 | `render_charts.py` | Module for generating static DRL chart images |
 | `render_html.py` | Module for generating the interactive DRL HTML dashboard |
@@ -92,10 +90,7 @@ Uses a compatibility-wrapped shape textbox in drawing container (`##STUDENT` / `
 5. Split the student name into the signature textbox (`##STUDENT` / `_NAME##`).
 6. Save the final document in `generated_students/`.
 
-### Step 3 — Excel report
-Compiles all 22 sub-sections and distribution statistics (ratings, percentages, signature blocks) into `HV_Mau 2_Chi tiet KQRL.xlsx`.
-
-### Step 4 — Charts & Dashboard Generation
+### Step 3 — Charts & Dashboard Generation
 - Unless `--disable-charts` is passed, runs `render_charts.py` to generate statistical charts (score distribution, rating breakdown, criteria averages) in `charts/`.
 - Runs `render_html.py` to generate the interactive, highly optimized `drl_dashboard.html`.
 
