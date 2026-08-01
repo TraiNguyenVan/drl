@@ -1,8 +1,19 @@
 # render_html.py
 import os
 import json
+import urllib.request
 
-def generate_html_dashboard(students, workspace_dir):
+def get_script_content(url):
+    try:
+        print(f"Fetching local copy of {url} for offline compatibility...")
+        req = urllib.request.Request(url, headers={'User-Agent': 'Antigravity-Dashboard-Compiler/1.0'})
+        with urllib.request.urlopen(req, timeout=5) as response:
+            return response.read().decode('utf-8')
+    except Exception as e:
+        print(f"Warning: Could not fetch {url} ({e}). Falling back to CDN link.")
+        return None
+
+def generate_html_dashboard(students, workspace_dir, chart_base64_images=None):
     """
     Generates an interactive, zero-dependency HTML dashboard file 
     incorporating Chart.js for data visualization and a modern, 
@@ -11,6 +22,34 @@ def generate_html_dashboard(students, workspace_dir):
     dashboard_path = os.path.join(workspace_dir, "drl_dashboard.html")
     students_json = json.dumps(students, ensure_ascii=False)
     
+    if not chart_base64_images:
+        chart_base64_images = {}
+        
+    img_score_dist = chart_base64_images.get("score_distribution", "")
+    img_rating_dist = chart_base64_images.get("rating_distribution", "")
+    img_criteria_avg = chart_base64_images.get("criteria_averages", "")
+    img_dashboard = chart_base64_images.get("dashboard", "")
+    img_linechart = chart_base64_images.get("student_subcriteria_linechart", "")
+    
+    img_dashboard_tag = f'<img src="{img_dashboard}" alt="Báo cáo thống kê tổng hợp">' if img_dashboard else '<p style="color: var(--text-muted); padding: 40px 0;">Không tìm thấy ảnh báo cáo tổng hợp</p>'
+    img_linechart_tag = f'<img src="{img_linechart}" alt="Biểu đồ chi tiết tiêu chí con">' if img_linechart else '<p style="color: var(--text-muted); padding: 40px 0;">Không tìm thấy ảnh biểu đồ tiêu chí con</p>'
+    img_score_dist_tag = f'<img src="{img_score_dist}" alt="Phân phối điểm số">' if img_score_dist else '<p style="color: var(--text-muted); padding: 20px 0;">N/A</p>'
+    img_rating_dist_tag = f'<img src="{img_rating_dist}" alt="Tỉ lệ xếp loại">' if img_rating_dist else '<p style="color: var(--text-muted); padding: 20px 0;">N/A</p>'
+    img_criteria_avg_tag = f'<img src="{img_criteria_avg}" alt="Trung bình tiêu chí">' if img_criteria_avg else '<p style="color: var(--text-muted); padding: 20px 0;">N/A</p>'
+
+    # Fetch scripts for inlining (offline support)
+    chartjs_url = "https://cdn.jsdelivr.net/npm/chart.js"
+    hammer_url = "https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min.js"
+    zoom_url = "https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@1.2.1/dist/chartjs-plugin-zoom.min.js"
+    
+    chartjs_content = get_script_content(chartjs_url)
+    hammer_content = get_script_content(hammer_url)
+    zoom_content = get_script_content(zoom_url)
+    
+    chartjs_tag = f"<script>{chartjs_content}</script>" if chartjs_content else f'<script src="{chartjs_url}"></script>'
+    hammer_tag = f"<script>{hammer_content}</script>" if hammer_content else f'<script src="{hammer_url}"></script>'
+    zoom_tag = f"<script>{zoom_content}</script>" if zoom_content else f'<script src="{zoom_url}"></script>'
+
     html_content = f"""<!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -19,9 +58,9 @@ def generate_html_dashboard(students, workspace_dir):
     <title>Báo cáo Kết quả Rèn luyện E25CQCE02-N</title>
     
     <!-- Load Chart.js, Hammer.js (for panning/pinching), Zoom plugin and Google Fonts -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@1.2.1/dist/chartjs-plugin-zoom.min.js"></script>
+    {chartjs_tag}
+    {hammer_tag}
+    {zoom_tag}
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
@@ -441,6 +480,94 @@ def generate_html_dashboard(students, workspace_dir):
             border-top: 1px solid #cbd5e1;
         }}
 
+        /* View Selector Styles */
+        .view-selector-container {{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 25px;
+        }}
+        
+        .view-selector {{
+            background: rgba(226, 232, 240, 0.6);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            padding: 4px;
+            border-radius: 12px;
+            display: inline-flex;
+            gap: 4px;
+            box-shadow: var(--shadow-soft);
+        }}
+        
+        .view-btn {{
+            background: transparent;
+            border: none;
+            padding: 8px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-muted);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }}
+        
+        .view-btn:hover {{
+            color: var(--text-main);
+        }}
+        
+        .view-btn.active {{
+            background: white;
+            color: var(--accent-blue);
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+        }}
+        
+        .view-section {{
+            display: block;
+        }}
+        
+        .view-section.hidden {{
+            display: none;
+        }}
+        
+        /* Static report images grid */
+        .static-grid {{
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 30px;
+            margin-bottom: 30px;
+        }}
+        
+        .static-card {{
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: var(--shadow-soft);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: var(--transition-smooth);
+        }}
+        
+        .static-card:hover {{
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }}
+        
+        .static-card img {{
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }}
+        
+        .static-card.col-4 {{ grid-column: span 4; }}
+        .static-card.col-6 {{ grid-column: span 6; }}
+        .static-card.col-12 {{ grid-column: span 12; }}
+
         @media (max-width: 1024px) {{
             .chart-card.col-6 {{ grid-column: span 12; }}
             .chart-card.col-4 {{ grid-column: span 12; }}
@@ -448,6 +575,9 @@ def generate_html_dashboard(students, workspace_dir):
             .chart-card.col-12 {{ grid-column: span 12; }}
             .scorecard-flex {{ flex-direction: column; }}
             .student-profile-pane {{ border-right: none; border-bottom: 1px solid #e2e8f0; padding-right: 0; padding-bottom: 20px; }}
+            .static-card.col-4 {{ grid-column: span 12; }}
+            .static-card.col-6 {{ grid-column: span 12; }}
+            .static-card.col-12 {{ grid-column: span 12; }}
         }}
     </style>
 </head>
@@ -505,6 +635,21 @@ def generate_html_dashboard(students, workspace_dir):
             </select>
         </div>
     </div>
+
+    <!-- View Switcher -->
+    <div class="view-selector-container">
+        <div class="view-selector">
+            <button class="view-btn active" id="btn-interactive" onclick="switchView('interactive')">
+                📊 Biểu đồ tương tác
+            </button>
+            <button class="view-btn" id="btn-static" onclick="switchView('static')">
+                🖼️ Báo cáo ảnh tĩnh
+            </button>
+        </div>
+    </div>
+
+    <!-- Interactive Charts Section -->
+    <div id="interactive-section" class="view-section">
 
     <!-- Charts Grid Row 1 -->
     <div class="chart-grid">
@@ -614,6 +759,62 @@ def generate_html_dashboard(students, workspace_dir):
             </div>
             <div class="chart-container-large">
                 <canvas id="subcriteriaLineChart"></canvas>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Static Charts Section -->
+    <div id="static-section" class="view-section hidden">
+        <div class="static-grid">
+            <!-- Combined Dashboard Card -->
+            <div class="static-card col-12">
+                <div class="card-header" style="width: 100%;">
+                    <div class="card-title">
+                        <h3>Bảng Thống Kê Tổng Hợp (Matplotlib Dashboard)</h3>
+                        <p>Báo cáo tĩnh tích hợp phân phối điểm, xếp loại, trung bình tiêu chí và bảng số liệu</p>
+                    </div>
+                </div>
+                {img_dashboard_tag}
+            </div>
+            
+            <!-- Student Subcriteria Line Chart Card -->
+            <div class="static-card col-12">
+                <div class="card-header" style="width: 100%;">
+                    <div class="card-title">
+                        <h3>Biểu Đồ Chi Tiết Theo Tiêu Chí Con (Matplotlib Line Chart)</h3>
+                        <p>Đường biểu diễn điểm của tất cả sinh viên được chuẩn hóa theo phần trăm</p>
+                    </div>
+                </div>
+                {img_linechart_tag}
+            </div>
+        </div>
+        
+        <!-- Row of individual charts -->
+        <div class="static-grid" style="margin-top: 30px;">
+            <div class="static-card col-4">
+                <div class="card-header" style="width: 100%;">
+                    <div class="card-title">
+                        <h3>Phân Phối Điểm Số</h3>
+                    </div>
+                </div>
+                {img_score_dist_tag}
+            </div>
+            <div class="static-card col-4">
+                <div class="card-header" style="width: 100%;">
+                    <div class="card-title">
+                        <h3>Tỉ Lệ Xếp Loại</h3>
+                    </div>
+                </div>
+                {img_rating_dist_tag}
+            </div>
+            <div class="static-card col-4">
+                <div class="card-header" style="width: 100%;">
+                    <div class="card-title">
+                        <h3>Trung Bình Tiêu Chí</h3>
+                    </div>
+                </div>
+                {img_criteria_avg_tag}
             </div>
         </div>
     </div>
@@ -739,6 +940,47 @@ def generate_html_dashboard(students, workspace_dir):
             updateDashboardData();
             setupEventListeners();
             loadStudentProfile(selectedStudentMsv);
+            
+            // Auto-fallback if Chart.js is not loaded
+            if (typeof Chart === 'undefined') {{
+                console.warn("Chart.js failed to load. Falling back to static report.");
+                const btnInteractive = document.getElementById("btn-interactive");
+                if (btnInteractive) btnInteractive.style.display = "none";
+                switchView('static');
+                
+                // Show offline notice banner
+                const notice = document.createElement("div");
+                notice.style.background = "#fffbeb";
+                notice.style.border = "1px solid #fef3c7";
+                notice.style.color = "#b45309";
+                notice.style.padding = "12px 20px";
+                notice.style.borderRadius = "12px";
+                notice.style.marginBottom = "20px";
+                notice.style.fontSize = "14px";
+                notice.style.fontWeight = "500";
+                notice.textContent = "Lưu ý: Không thể tải thư viện vẽ biểu đồ tương tác (chế độ offline). Đang hiển thị báo cáo ảnh tĩnh độ phân giải cao.";
+                document.body.insertBefore(notice, document.body.firstChild);
+            }}
+        }}
+
+        // Switch between interactive dashboard and static report
+        function switchView(view) {{
+            const interactiveSec = document.getElementById("interactive-section");
+            const staticSec = document.getElementById("static-section");
+            const btnInteractive = document.getElementById("btn-interactive");
+            const btnStatic = document.getElementById("btn-static");
+            
+            if (view === 'interactive') {{
+                if (interactiveSec) interactiveSec.classList.remove("hidden");
+                if (staticSec) staticSec.classList.add("hidden");
+                if (btnInteractive) btnInteractive.classList.add("active");
+                if (btnStatic) btnStatic.classList.remove("active");
+            }} else {{
+                if (interactiveSec) interactiveSec.classList.add("hidden");
+                if (staticSec) staticSec.classList.remove("hidden");
+                if (btnInteractive) btnInteractive.classList.remove("active");
+                if (btnStatic) btnStatic.classList.add("active");
+            }}
         }}
 
         // Populate student selector list
@@ -996,6 +1238,7 @@ def generate_html_dashboard(students, workspace_dir):
 
         // Calculate DRL score range distributions
         function renderDistributionChart() {{
+            if (typeof Chart === 'undefined') return;
             const ctx = document.getElementById('distChart').getContext('2d');
             
             const bins = ["Dưới 50đ", "50 - 59đ", "60 - 69đ", "70 - 79đ", "80 - 89đ", "90 - 100đ"];
@@ -1040,6 +1283,7 @@ def generate_html_dashboard(students, workspace_dir):
 
         // Donut Chart for Ratings distribution
         function renderRatingChart() {{
+            if (typeof Chart === 'undefined') return;
             const ctx = document.getElementById('ratingChart').getContext('2d');
             
             const ratingsList = ["Xuất sắc", "Tốt", "Khá", "Trung bình", "Yếu", "Kém"];
@@ -1089,6 +1333,7 @@ def generate_html_dashboard(students, workspace_dir):
 
         // Categories Averages progress chart
         function renderCriteriaAveragesChart() {{
+            if (typeof Chart === 'undefined') return;
             const ctx = document.getElementById('criteriaChart').getContext('2d');
             
             const tcLabels = [
@@ -1153,6 +1398,7 @@ def generate_html_dashboard(students, workspace_dir):
 
         // Radar chart for selected student
         function renderStudentRadarChart(student) {{
+            if (typeof Chart === 'undefined') return;
             const ctx = document.getElementById('studentRadarChart').getContext('2d');
             
             const labels = ["TC1: Học tập", "TC2: Quy chế", "TC3: Hoạt động", "TC4: Công dân", "TC5: Cán sự"];
@@ -1232,6 +1478,7 @@ def generate_html_dashboard(students, workspace_dir):
         // OPTIMIZED: uses chart.update() instead of destroy/recreate, pre-computed caches,
         // and O(1) Map lookups instead of O(n) find() scans.
         function renderSubcriteriaLineChart() {{
+            if (typeof Chart === 'undefined') return;
             if (!lineChartCtx) {{
                 lineChartCtx = document.getElementById('subcriteriaLineChart').getContext('2d');
             }}

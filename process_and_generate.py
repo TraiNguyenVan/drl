@@ -466,12 +466,12 @@ if not args.disable_charts:
     # 6. Generate DRL statistics charts
     print("\nGenerating DRL statistics charts...")
     from render_charts import generate_all_charts
-    generate_all_charts(processed_students, workspace)
+    chart_base64_images = generate_all_charts(processed_students, workspace)
     
     # 6b. Generate interactive DRL HTML dashboard
     print("Generating DRL interactive HTML dashboard...")
     from render_html import generate_html_dashboard
-    generate_html_dashboard(processed_students, workspace)
+    generate_html_dashboard(processed_students, workspace, chart_base64_images)
 
 # 7. Cleanup temp files (no-op as temp directory is not used anymore)
 

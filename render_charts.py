@@ -107,6 +107,13 @@ def generate_all_charts(students, workspace_dir):
     
     plt.tight_layout()
     plt.savefig(os.path.join(charts_dir, "score_distribution.png"), dpi=150, facecolor=fig.get_facecolor(), edgecolor='none')
+    
+    import io
+    import base64
+    buf = io.BytesIO()
+    plt.savefig(buf, format='png', dpi=150, facecolor=fig.get_facecolor(), edgecolor='none')
+    buf.seek(0)
+    score_dist_b64 = f"data:image/png;base64,{base64.b64encode(buf.read()).decode('utf-8')}"
     plt.close()
     
     # ----------------------------------------------------
@@ -148,6 +155,13 @@ def generate_all_charts(students, workspace_dir):
     
     plt.tight_layout()
     plt.savefig(os.path.join(charts_dir, "rating_distribution.png"), dpi=150, facecolor=fig.get_facecolor(), edgecolor='none')
+    
+    import io
+    import base64
+    buf = io.BytesIO()
+    plt.savefig(buf, format='png', dpi=150, facecolor=fig.get_facecolor(), edgecolor='none')
+    buf.seek(0)
+    rating_dist_b64 = f"data:image/png;base64,{base64.b64encode(buf.read()).decode('utf-8')}"
     plt.close()
     
     # ----------------------------------------------------
@@ -188,6 +202,13 @@ def generate_all_charts(students, workspace_dir):
     
     plt.tight_layout()
     plt.savefig(os.path.join(charts_dir, "criteria_averages.png"), dpi=150, facecolor=fig.get_facecolor(), edgecolor='none')
+    
+    import io
+    import base64
+    buf = io.BytesIO()
+    plt.savefig(buf, format='png', dpi=150, facecolor=fig.get_facecolor(), edgecolor='none')
+    buf.seek(0)
+    criteria_avg_b64 = f"data:image/png;base64,{base64.b64encode(buf.read()).decode('utf-8')}"
     plt.close()
     
     # ----------------------------------------------------
@@ -295,12 +316,26 @@ def generate_all_charts(students, workspace_dir):
     
     plt.subplots_adjust(top=0.88, bottom=0.08, left=0.08, right=0.95, hspace=0.25, wspace=0.22)
     plt.savefig(os.path.join(charts_dir, "dashboard.png"), dpi=200, facecolor=fig.get_facecolor(), edgecolor='none')
+    
+    import io
+    import base64
+    buf = io.BytesIO()
+    plt.savefig(buf, format='png', dpi=200, facecolor=fig.get_facecolor(), edgecolor='none')
+    buf.seek(0)
+    dashboard_b64 = f"data:image/png;base64,{base64.b64encode(buf.read()).decode('utf-8')}"
     plt.close()
     
     # Generate the detailed sub-criteria line chart
-    generate_subcriteria_linechart(students, workspace_dir)
+    linechart_b64 = generate_subcriteria_linechart(students, workspace_dir)
     
     print(f"Successfully generated all DRL charts in: {charts_dir}")
+    return {
+        "score_distribution": score_dist_b64,
+        "rating_distribution": rating_dist_b64,
+        "criteria_averages": criteria_avg_b64,
+        "dashboard": dashboard_b64,
+        "student_subcriteria_linechart": linechart_b64
+    }
 
 def generate_subcriteria_linechart(students, workspace_dir):
     """
@@ -431,5 +466,13 @@ def generate_subcriteria_linechart(students, workspace_dir):
     
     plt.tight_layout()
     plt.savefig(os.path.join(charts_dir, "student_subcriteria_linechart.png"), dpi=200, bbox_inches='tight')
+    
+    import io
+    import base64
+    buf = io.BytesIO()
+    plt.savefig(buf, format='png', dpi=200, bbox_inches='tight')
+    buf.seek(0)
+    linechart_b64 = f"data:image/png;base64,{base64.b64encode(buf.read()).decode('utf-8')}"
     plt.close()
+    return linechart_b64
 
