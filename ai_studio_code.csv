@@ -1,963 +1,963 @@
-student_id,semester,criterion_id,criterion_name,max_points,student_score,class_score,advisor_score,note
-N25DECE061,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE061,II,1.2,Kết quả học tập trong kỳ học,10,6,6,6,
-N25DECE061,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE061,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,0,0,0,
-N25DECE061,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,
-N25DECE061,II,TC1,Mức điểm tối đa Tiêu chí 1,20,14,14,14,
-N25DECE061,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE061,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,
-N25DECE061,II,2.3,Tham gia các buổi hội thảo việc làm,5,0,0,0,
-N25DECE061,II,TC2,Mức điểm tối đa Tiêu chí 2,25,20,20,20,
-N25DECE061,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,0,4,4,
-N25DECE061,II,3.2,Tham gia công tác xã hội,4,0,1,1,
-N25DECE061,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,0,0,0,
-N25DECE061,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE061,II,TC3,Mức điểm tối đa Tiêu chí 3,20,3,8,8,
-N25DECE061,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE061,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE061,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE061,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE061,II,4.5,Được biểu dương khen thưởng,2,0,0,0,
-N25DECE061,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,
-N25DECE061,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,0,0,
-N25DECE061,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,0,0,
-N25DECE061,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,0,0,
-N25DECE061,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,
-N25DECE061,II,TOTAL,TỔNG CỘNG,100,60,65,65,
-N25DECE084,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE084,II,1.2,Kết quả học tập trong kỳ học,10,8,8,8,
-N25DECE084,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE084,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,1.5,1,1,
-N25DECE084,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,
-N25DECE084,II,TC1,Mức điểm tối đa Tiêu chí 1,20,17.5,17,17,
-N25DECE084,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE084,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,
-N25DECE084,II,2.3,Tham gia các buổi hội thảo việc làm,5,4,2,2,
-N25DECE084,II,TC2,Mức điểm tối đa Tiêu chí 2,25,24,22,22,
-N25DECE084,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,2,2,
-N25DECE084,II,3.2,Tham gia công tác xã hội,4,0,0,0,
-N25DECE084,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,
-N25DECE084,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE084,II,TC3,Mức điểm tối đa Tiêu chí 3,20,16,8,8,
-N25DECE084,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE084,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE084,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE084,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE084,II,4.5,Được biểu dương khen thưởng,2,0,,0,
-N25DECE084,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,
-N25DECE084,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,0,0,
-N25DECE084,II,5.2,Thành viên tham gia các Câu lạc bộ,3,3,0,0,
-N25DECE084,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,
-N25DECE084,II,TC5,Mức điểm tối đa Tiêu chí 5,10,3,0,0,
-N25DECE084,II,TOTAL,TỔNG CỘNG,100,83.5,70,70,
-N25DECE062,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE062,II,1.2,Kết quả học tập trong kỳ học,10,8,8,8,
-N25DECE062,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE062,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,1,1,1,
-N25DECE062,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,
-N25DECE062,II,TC1,Mức điểm tối đa Tiêu chí 1,20,17,17,17,
-N25DECE062,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE062,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,
-N25DECE062,II,2.3,Tham gia các buổi hội thảo việc làm,5,1,1,1,
-N25DECE062,II,TC2,Mức điểm tối đa Tiêu chí 2,25,21,21,21,
-N25DECE062,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,6,6,
-N25DECE062,II,3.2,Tham gia công tác xã hội,4,0,0,0,
-N25DECE062,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,
-N25DECE062,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE062,II,TC3,Mức điểm tối đa Tiêu chí 3,20,16,12,12,
-N25DECE062,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE062,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE062,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE062,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE062,II,4.5,Được biểu dương khen thưởng,2,0,0,0,
-N25DECE062,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,
-N25DECE062,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,0,0,
-N25DECE062,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,0,0,
-N25DECE062,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,0,0,
-N25DECE062,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,
-N25DECE062,II,TOTAL,TỔNG CỘNG,100,77,73,73,
-N25DECE057,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE057,II,1.2,Kết quả học tập trong kỳ học,10,6,8,8,
-N25DECE057,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE057,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,,,
-N25DECE057,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,
-N25DECE057,II,TC1,Mức điểm tối đa Tiêu chí 1,20,16,16,16,
-N25DECE057,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE057,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,
-N25DECE057,II,2.3,Tham gia các buổi hội thảo việc làm,5,3,2,2,
-N25DECE057,II,TC2,Mức điểm tối đa Tiêu chí 2,25,23,22,22,
-N25DECE057,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,10,10,
-N25DECE057,II,3.2,Tham gia công tác xã hội,4,1,0,0,
-N25DECE057,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,
-N25DECE057,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE057,II,TC3,Mức điểm tối đa Tiêu chí 3,20,17,16,16,
-N25DECE057,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE057,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE057,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE057,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE057,II,4.5,Được biểu dương khen thưởng,2,0,,0,
-N25DECE057,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,
-N25DECE057,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,
-N25DECE057,II,5.2,Thành viên tham gia các Câu lạc bộ,3,3,3,3,
-N25DECE057,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,
-N25DECE057,II,TC5,Mức điểm tối đa Tiêu chí 5,10,3,3,3,
-N25DECE057,II,TOTAL,TỔNG CỘNG,100,82,80,80,
-N25DECE058,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE058,II,1.2,Kết quả học tập trong kỳ học,10,6,6,6,
-N25DECE058,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE058,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,2,2,
-N25DECE058,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,
-N25DECE058,II,TC1,Mức điểm tối đa Tiêu chí 1,20,16,16,16,
-N25DECE058,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE058,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,
-N25DECE058,II,2.3,Tham gia các buổi hội thảo việc làm,5,3,3,3,
-N25DECE058,II,TC2,Mức điểm tối đa Tiêu chí 2,25,23,23,23,
-N25DECE058,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,10,10,
-N25DECE058,II,3.2,Tham gia công tác xã hội,4,1,1,1,
-N25DECE058,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,
-N25DECE058,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE058,II,TC3,Mức điểm tối đa Tiêu chí 3,20,17,17,17,
-N25DECE058,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE058,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE058,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE058,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE058,II,4.5,Được biểu dương khen thưởng,2,0,,0,
-N25DECE058,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,
-N25DECE058,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,
-N25DECE058,II,5.2,Thành viên tham gia các Câu lạc bộ,3,3,3,3,
-N25DECE058,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,
-N25DECE058,II,TC5,Mức điểm tối đa Tiêu chí 5,10,3,3,3,
-N25DECE058,II,TOTAL,TỔNG CỘNG,100,82,82,82,
-N25DECE083,II,1.1,Ý thức và thái độ trong học tập,3,3,2,2,
-N25DECE083,II,1.2,Kết quả học tập trong kỳ học,10,10,8,8,
-N25DECE083,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE083,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,1,1,1,
-N25DECE083,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,0,0,
-N25DECE083,II,TC1,Mức điểm tối đa Tiêu chí 1,20,19,15,15,
-N25DECE083,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE083,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,4,4,
-N25DECE083,II,2.3,Tham gia các buổi hội thảo việc làm,5,3,0,0,
-N25DECE083,II,TC2,Mức điểm tối đa Tiêu chí 2,25,23,19,19,
-N25DECE083,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,2,2,
-N25DECE083,II,3.2,Tham gia công tác xã hội,4,4,0,0,
-N25DECE083,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,
-N25DECE083,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE083,II,TC3,Mức điểm tối đa Tiêu chí 3,20,20,8,8,
-N25DECE083,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE083,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE083,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE083,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE083,II,4.5,Được biểu dương khen thưởng,2,0,0,0,
-N25DECE083,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,
-N25DECE083,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,0,0,
-N25DECE083,II,5.2,Thành viên tham gia các Câu lạc bộ,3,3,0,0,
-N25DECE083,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,0,0,
-N25DECE083,II,TC5,Mức điểm tối đa Tiêu chí 5,10,3,0,0,
-N25DECE083,II,TOTAL,TỔNG CỘNG,100,88,65,65,
-N25DECE051,I,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE051,I,1.2,Kết quả học tập trong kỳ học,10,8,8,8,
-N25DECE051,I,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE051,I,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,1,1,1,
-N25DECE051,I,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,
-N25DECE051,I,TC1,Mức điểm tối đa Tiêu chí 1,20,17,17,17,
-N25DECE051,I,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE051,I,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,4,4,
-N25DECE051,I,2.3,Tham gia các buổi hội thảo việc làm,5,1,0,0,
-N25DECE051,I,TC2,Mức điểm tối đa Tiêu chí 2,25,21,19,19,
-N25DECE051,I,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,8,8,
-N25DECE051,I,3.2,Tham gia công tác xã hội,4,0,0,0,
-N25DECE051,I,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,2,2,
-N25DECE051,I,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE051,I,TC3,Mức điểm tối đa Tiêu chí 3,20,16,13,13,
-N25DECE051,I,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE051,I,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,4,4,
-N25DECE051,I,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,3,3,
-N25DECE051,I,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,3,3,
-N25DECE051,I,4.5,Được biểu dương khen thưởng,2,2,0,0,
-N25DECE051,I,TC4,Mức điểm tối đa Tiêu chí 4,25,25,18,18,
-N25DECE051,I,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,
-N25DECE051,I,5.2,Thành viên tham gia các Câu lạc bộ,3,0,,0,
-N25DECE051,I,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,
-N25DECE051,I,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,
-N25DECE051,I,TOTAL,TỔNG CỘNG,100,79,67,67,
-N25DECE081,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE081,II,1.2,Kết quả học tập trong kỳ học,10,6,6,6,
-N25DECE081,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE081,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,1,1,
-N25DECE081,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,
-N25DECE081,II,TC1,Mức điểm tối đa Tiêu chí 1,20,16,15,15,
-N25DECE081,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE081,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,
-N25DECE081,II,2.3,Tham gia các buổi hội thảo việc làm,5,0,0,0,
-N25DECE081,II,TC2,Mức điểm tối đa Tiêu chí 2,25,20,20,20,
-N25DECE081,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,8,4,4,
-N25DECE081,II,3.2,Tham gia công tác xã hội,4,1,1,1,
-N25DECE081,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,
-N25DECE081,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE081,II,TC3,Mức điểm tối đa Tiêu chí 3,20,15,11,11,
-N25DECE081,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE081,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE081,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE081,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE081,II,4.5,Được biểu dương khen thưởng,2,0,,0,
-N25DECE081,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,
-N25DECE081,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,4,0,0,
-N25DECE081,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,0,0,
-N25DECE081,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,
-N25DECE081,II,TC5,Mức điểm tối đa Tiêu chí 5,10,4,0,0,
-N25DECE081,II,TOTAL,TỔNG CỘNG,100,78,69,69,
-N25DECE060,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE060,II,1.2,Kết quả học tập trong kỳ học,10,6,6,6,
-N25DECE060,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE060,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,2,2,
-N25DECE060,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,
-N25DECE060,II,TC1,Mức điểm tối đa Tiêu chí 1,20,16,16,16,
-N25DECE060,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE060,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,
-N25DECE060,II,2.3,Tham gia các buổi hội thảo việc làm,5,3,2,2,
-N25DECE060,II,TC2,Mức điểm tối đa Tiêu chí 2,25,23,22,22,
-N25DECE060,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,6,6,
-N25DECE060,II,3.2,Tham gia công tác xã hội,4,1,1,1,
-N25DECE060,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,
-N25DECE060,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE060,II,TC3,Mức điểm tối đa Tiêu chí 3,20,17,13,13,
-N25DECE060,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE060,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE060,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE060,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE060,II,4.5,Được biểu dương khen thưởng,2,0,,0,
-N25DECE060,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,
-N25DECE060,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,
-N25DECE060,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,,0,
-N25DECE060,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,
-N25DECE060,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,
-N25DECE060,II,TOTAL,TỔNG CỘNG,100,79,74,74,
-N25DECE063,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE063,II,1.2,Kết quả học tập trong kỳ học,10,6,6,6,
-N25DECE063,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE063,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,1.5,1.5,1.5,
-N25DECE063,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,
-N25DECE063,II,TC1,Mức điểm tối đa Tiêu chí 1,20,15.5,15.5,15.5,
-N25DECE063,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE063,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,
-N25DECE063,II,2.3,Tham gia các buổi hội thảo việc làm,5,3,2,2,
-N25DECE063,II,TC2,Mức điểm tối đa Tiêu chí 2,25,23,22,22,
-N25DECE063,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,6,6,
-N25DECE063,II,3.2,Tham gia công tác xã hội,4,1,1,1,
-N25DECE063,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,
-N25DECE063,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE063,II,TC3,Mức điểm tối đa Tiêu chí 3,20,17,13,13,
-N25DECE063,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE063,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE063,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE063,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE063,II,4.5,Được biểu dương khen thưởng,2,0,0,0,
-N25DECE063,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,
-N25DECE063,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,0,0,
-N25DECE063,II,5.2,Thành viên tham gia các Câu lạc bộ,3,3,3,3,
-N25DECE063,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,0,0,
-N25DECE063,II,TC5,Mức điểm tối đa Tiêu chí 5,10,3,3,3,
-N25DECE063,II,TOTAL,TỔNG CỘNG,100,81.5,76.5,76.5,
-N25DECE067,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE067,II,1.2,Kết quả học tập trong kỳ học,10,8,8,8,
-N25DECE067,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE067,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,1.5,1.5,
-N25DECE067,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,
-N25DECE067,II,TC1,Mức điểm tối đa Tiêu chí 1,20,18,17.5,17.5,
-N25DECE067,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE067,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,
-N25DECE067,II,2.3,Tham gia các buổi hội thảo việc làm,5,3,2,2,
-N25DECE067,II,TC2,Mức điểm tối đa Tiêu chí 2,25,23,22,22,
-N25DECE067,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,4,4,
-N25DECE067,II,3.2,Tham gia công tác xã hội,4,1,1,1,
-N25DECE067,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,
-N25DECE067,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE067,II,TC3,Mức điểm tối đa Tiêu chí 3,20,17,11,11,
-N25DECE067,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE067,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE067,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE067,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE067,II,4.5,Được biểu dương khen thưởng,2,0,0,0,
-N25DECE067,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,
-N25DECE067,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,0,0,
-N25DECE067,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,0,0,
-N25DECE067,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,0,0,
-N25DECE067,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,
-N25DECE067,II,TOTAL,TỔNG CỘNG,100,81,73.5,73.5,
-N25DECE068,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE068,II,1.2,Kết quả học tập trong kỳ học,10,8,8,8,
-N25DECE068,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE068,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,1.5,1.5,1.5,
-N25DECE068,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,
-N25DECE068,II,TC1,Mức điểm tối đa Tiêu chí 1,20,17.5,17.5,17.5,
-N25DECE068,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE068,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,
-N25DECE068,II,2.3,Tham gia các buổi hội thảo việc làm,5,3,2,2,
-N25DECE068,II,TC2,Mức điểm tối đa Tiêu chí 2,25,23,22,22,
-N25DECE068,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,8,8,
-N25DECE068,II,3.2,Tham gia công tác xã hội,4,1,1,1,
-N25DECE068,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,
-N25DECE068,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE068,II,TC3,Mức điểm tối đa Tiêu chí 3,20,17,15,15,
-N25DECE068,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE068,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE068,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE068,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE068,II,4.5,Được biểu dương khen thưởng,2,0,,0,
-N25DECE068,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,
-N25DECE068,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,
-N25DECE068,II,5.2,Thành viên tham gia các Câu lạc bộ,3,3,3,3,
-N25DECE068,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,
-N25DECE068,II,TC5,Mức điểm tối đa Tiêu chí 5,10,3,3,3,
-N25DECE068,II,TOTAL,TỔNG CỘNG,100,83.5,80.5,80.5,
-N25DECE069,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE069,II,1.2,Kết quả học tập trong kỳ học,10,8,8,8,
-N25DECE069,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE069,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,1,1,1,
-N25DECE069,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,
-N25DECE069,II,TC1,Mức điểm tối đa Tiêu chí 1,20,17,17,17,
-N25DECE069,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE069,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,
-N25DECE069,II,2.3,Tham gia các buổi hội thảo việc làm,5,2,0,0,
-N25DECE069,II,TC2,Mức điểm tối đa Tiêu chí 2,25,22,20,20,
-N25DECE069,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,4,4,
-N25DECE069,II,3.2,Tham gia công tác xã hội,4,1,1,1,
-N25DECE069,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,0,0,
-N25DECE069,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE069,II,TC3,Mức điểm tối đa Tiêu chí 3,20,17,8,8,
-N25DECE069,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE069,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE069,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE069,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE069,II,4.5,Được biểu dương khen thưởng,2,0,0,0,
-N25DECE069,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,
-N25DECE069,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,0,0,
-N25DECE069,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,0,0,
-N25DECE069,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,0,0,
-N25DECE069,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,
-N25DECE069,II,TOTAL,TỔNG CỘNG,100,79,68,68,
-N25DECE082,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE082,II,1.2,Kết quả học tập trong kỳ học,10,8,8,8,
-N25DECE082,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE082,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,1.5,1.5,
-N25DECE082,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,
-N25DECE082,II,TC1,Mức điểm tối đa Tiêu chí 1,20,18,17.5,17.5,
-N25DECE082,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE082,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,
-N25DECE082,II,2.3,Tham gia các buổi hội thảo việc làm,5,3,3,3,
-N25DECE082,II,TC2,Mức điểm tối đa Tiêu chí 2,25,23,23,23,
-N25DECE082,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,8,8,8,
-N25DECE082,II,3.2,Tham gia công tác xã hội,4,1,1,1,
-N25DECE082,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,
-N25DECE082,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE082,II,TC3,Mức điểm tối đa Tiêu chí 3,20,15,15,15,
-N25DECE082,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE082,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE082,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE082,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE082,II,4.5,Được biểu dương khen thưởng,2,0,,0,
-N25DECE082,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,
-N25DECE082,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,4,4,4,
-N25DECE082,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,,0,
-N25DECE082,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,
-N25DECE082,II,TC5,Mức điểm tối đa Tiêu chí 5,10,4,4,4,
-N25DECE082,II,TOTAL,TỔNG CỘNG,100,83,82.5,82.5,
-N25DECE079,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE079,II,1.2,Kết quả học tập trong kỳ học,10,8,8,8,
-N25DECE079,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE079,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,2,2,
-N25DECE079,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,
-N25DECE079,II,TC1,Mức điểm tối đa Tiêu chí 1,20,18,18,18,
-N25DECE079,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE079,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,
-N25DECE079,II,2.3,Tham gia các buổi hội thảo việc làm,5,5,5,5,
-N25DECE079,II,TC2,Mức điểm tối đa Tiêu chí 2,25,25,25,25,
-N25DECE079,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,10,10,
-N25DECE079,II,3.2,Tham gia công tác xã hội,4,0,0,0,
-N25DECE079,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,
-N25DECE079,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE079,II,TC3,Mức điểm tối đa Tiêu chí 3,20,16,16,16,
-N25DECE079,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE079,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE079,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE079,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE079,II,4.5,Được biểu dương khen thưởng,2,2,0,0,
-N25DECE079,II,TC4,Mức điểm tối đa Tiêu chí 4,25,25,23,23,
-N25DECE079,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,
-N25DECE079,II,5.2,Thành viên tham gia các Câu lạc bộ,3,3,,0,
-N25DECE079,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,
-N25DECE079,II,TC5,Mức điểm tối đa Tiêu chí 5,10,3,0,0,
-N25DECE079,II,TOTAL,TỔNG CỘNG,100,87,82,82,
-N25DECE073,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE073,II,1.2,Kết quả học tập trong kỳ học,10,8,8,8,
-N25DECE073,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE073,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,0,0,0,
-N25DECE073,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,
-N25DECE073,II,TC1,Mức điểm tối đa Tiêu chí 1,20,16,16,16,
-N25DECE073,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE073,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,
-N25DECE073,II,2.3,Tham gia các buổi hội thảo việc làm,5,0,0,0,
-N25DECE073,II,TC2,Mức điểm tối đa Tiêu chí 2,25,20,20,20,
-N25DECE073,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,4,4,4,
-N25DECE073,II,3.2,Tham gia công tác xã hội,4,0,0,0,
-N25DECE073,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,
-N25DECE073,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE073,II,TC3,Mức điểm tối đa Tiêu chí 3,20,10,10,10,
-N25DECE073,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE073,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE073,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE073,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE073,II,4.5,Được biểu dương khen thưởng,2,0,,0,
-N25DECE073,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,
-N25DECE073,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,
-N25DECE073,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,,0,
-N25DECE073,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,
-N25DECE073,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,
-N25DECE073,II,TOTAL,TỔNG CỘNG,100,69,69,69,
-N25DECE053,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE053,II,1.2,Kết quả học tập trong kỳ học,10,6,6,6,
-N25DECE053,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE053,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,1,1,1,
-N25DECE053,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,
-N25DECE053,II,TC1,Mức điểm tối đa Tiêu chí 1,20,15,15,15,
-N25DECE053,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE053,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,
-N25DECE053,II,2.3,Tham gia các buổi hội thảo việc làm,5,2,1,1,
-N25DECE053,II,TC2,Mức điểm tối đa Tiêu chí 2,25,22,21,21,
-N25DECE053,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,8,4,4,
-N25DECE053,II,3.2,Tham gia công tác xã hội,4,0,0,0,
-N25DECE053,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,1,1,
-N25DECE053,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE053,II,TC3,Mức điểm tối đa Tiêu chí 3,20,14,8,8,
-N25DECE053,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE053,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE053,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE053,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE053,II,4.5,Được biểu dương khen thưởng,2,0,,0,
-N25DECE053,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,
-N25DECE053,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,
-N25DECE053,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,,0,
-N25DECE053,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,
-N25DECE053,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,
-N25DECE053,II,TOTAL,TỔNG CỘNG,100,74,67,67,
-N25DECE048,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE048,II,1.2,Kết quả học tập trong kỳ học,10,10,10,10,
-N25DECE048,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE048,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,2,2,
-N25DECE048,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,
-N25DECE048,II,TC1,Mức điểm tối đa Tiêu chí 1,20,20,20,20,
-N25DECE048,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE048,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,
-N25DECE048,II,2.3,Tham gia các buổi hội thảo việc làm,5,2,2,2,
-N25DECE048,II,TC2,Mức điểm tối đa Tiêu chí 2,25,22,22,22,
-N25DECE048,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,10,10,
-N25DECE048,II,3.2,Tham gia công tác xã hội,4,0,0,0,
-N25DECE048,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,
-N25DECE048,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE048,II,TC3,Mức điểm tối đa Tiêu chí 3,20,16,16,16,
-N25DECE048,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE048,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE048,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE048,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE048,II,4.5,Được biểu dương khen thưởng,2,0,,0,
-N25DECE048,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,
-N25DECE048,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,
-N25DECE048,II,5.2,Thành viên tham gia các Câu lạc bộ,3,3,3,3,
-N25DECE048,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,
-N25DECE048,II,TC5,Mức điểm tối đa Tiêu chí 5,10,3,3,3,
-N25DECE048,II,TOTAL,TỔNG CỘNG,100,84,84,84,
-N25DECE046,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE046,II,1.2,Kết quả học tập trong kỳ học,10,8,8,8,
-N25DECE046,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE046,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,0,0,
-N25DECE046,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,
-N25DECE046,II,TC1,Mức điểm tối đa Tiêu chí 1,20,18,16,16,
-N25DECE046,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE046,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,
-N25DECE046,II,2.3,Tham gia các buổi hội thảo việc làm,5,3,0,0,
-N25DECE046,II,TC2,Mức điểm tối đa Tiêu chí 2,25,23,20,20,
-N25DECE046,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,0,0,
-N25DECE046,II,3.2,Tham gia công tác xã hội,4,1,1,1,
-N25DECE046,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,
-N25DECE046,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE046,II,TC3,Mức điểm tối đa Tiêu chí 3,20,17,7,7,
-N25DECE046,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE046,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE046,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE046,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE046,II,4.5,Được biểu dương khen thưởng,2,0,,0,
-N25DECE046,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,
-N25DECE046,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,
-N25DECE046,II,5.2,Thành viên tham gia các Câu lạc bộ,3,3,0,0,
-N25DECE046,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,
-N25DECE046,II,TC5,Mức điểm tối đa Tiêu chí 5,10,3,0,0,
-N25DECE046,II,TOTAL,TỔNG CỘNG,100,84,66,66,
-N25DECE072,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE072,II,1.2,Kết quả học tập trong kỳ học,10,8,8,8,
-N25DECE072,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE072,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,2,2,
-N25DECE072,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,
-N25DECE072,II,TC1,Mức điểm tối đa Tiêu chí 1,20,18,18,18,
-N25DECE072,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE072,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,
-N25DECE072,II,2.3,Tham gia các buổi hội thảo việc làm,5,5,5,5,
-N25DECE072,II,TC2,Mức điểm tối đa Tiêu chí 2,25,25,25,25,
-N25DECE072,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,10,10,
-N25DECE072,II,3.2,Tham gia công tác xã hội,4,2,2,2,
-N25DECE072,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,
-N25DECE072,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE072,II,TC3,Mức điểm tối đa Tiêu chí 3,20,18,18,18,
-N25DECE072,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE072,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE072,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE072,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE072,II,4.5,Được biểu dương khen thưởng,2,0,,0,
-N25DECE072,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,
-N25DECE072,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,4,4,4,
-N25DECE072,II,5.2,Thành viên tham gia các Câu lạc bộ,3,3,3,3,
-N25DECE072,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,
-N25DECE072,II,TC5,Mức điểm tối đa Tiêu chí 5,10,7,7,7,
-N25DECE072,II,TOTAL,TỔNG CỘNG,100,91,91,91,
-N25DECE086,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE086,II,1.2,Kết quả học tập trong kỳ học,10,8,8,8,
-N25DECE086,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE086,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,2,2,
-N25DECE086,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,0,0,0,
-N25DECE086,II,TC1,Mức điểm tối đa Tiêu chí 1,20,17,17,17,
-N25DECE086,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE086,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,
-N25DECE086,II,2.3,Tham gia các buổi hội thảo việc làm,5,3,3,3,
-N25DECE086,II,TC2,Mức điểm tối đa Tiêu chí 2,25,23,23,23,
-N25DECE086,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,10,10,
-N25DECE086,II,3.2,Tham gia công tác xã hội,4,,,,
-N25DECE086,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,
-N25DECE086,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE086,II,TC3,Mức điểm tối đa Tiêu chí 3,20,16,16,16,
-N25DECE086,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE086,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE086,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE086,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE086,II,4.5,Được biểu dương khen thưởng,2,0,,0,
-N25DECE086,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,
-N25DECE086,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,4,4,4,
-N25DECE086,II,5.2,Thành viên tham gia các Câu lạc bộ,3,3,3,3,
-N25DECE086,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,
-N25DECE086,II,TC5,Mức điểm tối đa Tiêu chí 5,10,7,7,7,
-N25DECE086,II,TOTAL,TỔNG CỘNG,100,86,86,86,
-N25DECE076,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE076,II,1.2,Kết quả học tập trong kỳ học,10,6,6,6,
-N25DECE076,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE076,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,0,0,
-N25DECE076,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,
-N25DECE076,II,TC1,Mức điểm tối đa Tiêu chí 1,20,16,14,14,
-N25DECE076,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE076,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,
-N25DECE076,II,2.3,Tham gia các buổi hội thảo việc làm,5,2,0,0,
-N25DECE076,II,TC2,Mức điểm tối đa Tiêu chí 2,25,22,20,20,
-N25DECE076,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,6,6,
-N25DECE076,II,3.2,Tham gia công tác xã hội,4,1,0,0,
-N25DECE076,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,0,,0,
-N25DECE076,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE076,II,TC3,Mức điểm tối đa Tiêu chí 3,20,14,9,9,
-N25DECE076,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE076,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE076,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE076,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE076,II,4.5,Được biểu dương khen thưởng,2,0,,0,
-N25DECE076,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,
-N25DECE076,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,
-N25DECE076,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,,0,
-N25DECE076,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,
-N25DECE076,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,
-N25DECE076,II,TOTAL,TỔNG CỘNG,100,75,66,66,
-N25DECE070,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE070,II,1.2,Kết quả học tập trong kỳ học,10,8,8,8,
-N25DECE070,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE070,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,2,2,
-N25DECE070,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,
-N25DECE070,II,TC1,Mức điểm tối đa Tiêu chí 1,20,18,18,18,
-N25DECE070,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE070,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,
-N25DECE070,II,2.3,Tham gia các buổi hội thảo việc làm,5,3,3,3,
-N25DECE070,II,TC2,Mức điểm tối đa Tiêu chí 2,25,23,23,23,
-N25DECE070,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,4,4,4,
-N25DECE070,II,3.2,Tham gia công tác xã hội,4,0,0,0,
-N25DECE070,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,
-N25DECE070,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE070,II,TC3,Mức điểm tối đa Tiêu chí 3,20,10,10,10,
-N25DECE070,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE070,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE070,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE070,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE070,II,4.5,Được biểu dương khen thưởng,2,0,,0,
-N25DECE070,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,
-N25DECE070,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,
-N25DECE070,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,,0,
-N25DECE070,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,
-N25DECE070,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,
-N25DECE070,II,TOTAL,TỔNG CỘNG,100,74,74,74,
-N25DECE059,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE059,II,1.2,Kết quả học tập trong kỳ học,10,6,6,6,
-N25DECE059,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE059,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,2,2,
-N25DECE059,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,
-N25DECE059,II,TC1,Mức điểm tối đa Tiêu chí 1,20,16,16,16,
-N25DECE059,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE059,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,
-N25DECE059,II,2.3,Tham gia các buổi hội thảo việc làm,5,5,5,5,
-N25DECE059,II,TC2,Mức điểm tối đa Tiêu chí 2,25,25,25,25,
-N25DECE059,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,10,10,
-N25DECE059,II,3.2,Tham gia công tác xã hội,4,1,1,1,
-N25DECE059,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,2,2,
-N25DECE059,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE059,II,TC3,Mức điểm tối đa Tiêu chí 3,20,17,16,16,
-N25DECE059,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE059,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE059,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE059,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE059,II,4.5,Được biểu dương khen thưởng,2,0,,0,
-N25DECE059,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,
-N25DECE059,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,
-N25DECE059,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,,0,
-N25DECE059,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,
-N25DECE059,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,
-N25DECE059,II,TOTAL,TỔNG CỘNG,100,81,80,80,
-N25DECE071,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE071,II,1.2,Kết quả học tập trong kỳ học,10,6,6,6,
-N25DECE071,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE071,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,0,0,0,
-N25DECE071,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,
-N25DECE071,II,TC1,Mức điểm tối đa Tiêu chí 1,20,14,14,14,
-N25DECE071,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE071,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,
-N25DECE071,II,2.3,Tham gia các buổi hội thảo việc làm,5,2,3,3,
-N25DECE071,II,TC2,Mức điểm tối đa Tiêu chí 2,25,22,23,23,
-N25DECE071,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,0,0,0,
-N25DECE071,II,3.2,Tham gia công tác xã hội,4,0,0,0,
-N25DECE071,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,
-N25DECE071,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE071,II,TC3,Mức điểm tối đa Tiêu chí 3,20,6,6,6,
-N25DECE071,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE071,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,4,4,
-N25DECE071,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE071,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE071,II,4.5,Được biểu dương khen thưởng,2,0,,0,
-N25DECE071,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,22,22,
-N25DECE071,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,
-N25DECE071,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,,0,
-N25DECE071,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,
-N25DECE071,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,
-N25DECE071,II,TOTAL,TỔNG CỘNG,100,65,65,65,
-N25DECE085,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE085,II,1.2,Kết quả học tập trong kỳ học,10,10,8,8,
-N25DECE085,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE085,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,1,1,
-N25DECE085,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,0,0,
-N25DECE085,II,TC1,Mức điểm tối đa Tiêu chí 1,20,20,16,16,
-N25DECE085,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE085,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,
-N25DECE085,II,2.3,Tham gia các buổi hội thảo việc làm,5,1,2,2,
-N25DECE085,II,TC2,Mức điểm tối đa Tiêu chí 2,25,21,22,22,
-N25DECE085,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,10,10,
-N25DECE085,II,3.2,Tham gia công tác xã hội,4,1,0,0,
-N25DECE085,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,
-N25DECE085,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE085,II,TC3,Mức điểm tối đa Tiêu chí 3,20,17,16,16,
-N25DECE085,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE085,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE085,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE085,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE085,II,4.5,Được biểu dương khen thưởng,2,0,,0,
-N25DECE085,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,
-N25DECE085,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,4,4,
-N25DECE085,II,5.2,Thành viên tham gia các Câu lạc bộ,3,,,,
-N25DECE085,II,5.3,Sinh viên đạt thành tích đặc biệt,3,,,,
-N25DECE085,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,4,4,
-N25DECE085,II,TOTAL,TỔNG CỘNG,100,81,81,81,
-N25DECE065,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE065,II,1.2,Kết quả học tập trong kỳ học,10,8,8,8,
-N25DECE065,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE065,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,1.5,1.5,
-N25DECE065,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,
-N25DECE065,II,TC1,Mức điểm tối đa Tiêu chí 1,20,18,17.5,17.5,
-N25DECE065,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE065,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,
-N25DECE065,II,2.3,Tham gia các buổi hội thảo việc làm,5,3,2,2,
-N25DECE065,II,TC2,Mức điểm tối đa Tiêu chí 2,25,23,22,22,
-N25DECE065,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,4,4,
-N25DECE065,II,3.2,Tham gia công tác xã hội,4,1,1,1,
-N25DECE065,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,
-N25DECE065,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE065,II,TC3,Mức điểm tối đa Tiêu chí 3,20,17,11,11,
-N25DECE065,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE065,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE065,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE065,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE065,II,4.5,Được biểu dương khen thưởng,2,0,,0,
-N25DECE065,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,
-N25DECE065,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,
-N25DECE065,II,5.2,Thành viên tham gia các Câu lạc bộ,3,3,3,3,
-N25DECE065,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,
-N25DECE065,II,TC5,Mức điểm tối đa Tiêu chí 5,10,3,3,3,
-N25DECE065,II,TOTAL,TỔNG CỘNG,100,84,76.5,76.5,
-N25DECE047,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE047,II,1.2,Kết quả học tập trong kỳ học,10,8,8,8,
-N25DECE047,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE047,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,1,1,
-N25DECE047,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,0,,,
-N25DECE047,II,TC1,Mức điểm tối đa Tiêu chí 1,20,17,16,16,
-N25DECE047,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE047,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,4,4,
-N25DECE047,II,2.3,Tham gia các buổi hội thảo việc làm,5,0,0,0,
-N25DECE047,II,TC2,Mức điểm tối đa Tiêu chí 2,25,20,19,19,
-N25DECE047,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,8,8,
-N25DECE047,II,3.2,Tham gia công tác xã hội,4,1,0,0,
-N25DECE047,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,0,0,
-N25DECE047,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE047,II,TC3,Mức điểm tối đa Tiêu chí 3,20,17,11,11,
-N25DECE047,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE047,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE047,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE047,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE047,II,4.5,Được biểu dương khen thưởng,2,0,,0,
-N25DECE047,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,
-N25DECE047,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,
-N25DECE047,II,5.2,Thành viên tham gia các Câu lạc bộ,3,3,0,0,
-N25DECE047,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,
-N25DECE047,II,TC5,Mức điểm tối đa Tiêu chí 5,10,3,0,0,
-N25DECE047,II,TOTAL,TỔNG CỘNG,100,80,69,69,
-N25DECE049,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE049,II,1.2,Kết quả học tập trong kỳ học,10,10,10,10,
-N25DECE049,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE049,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,2,2,
-N25DECE049,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,
-N25DECE049,II,TC1,Mức điểm tối đa Tiêu chí 1,20,20,20,20,
-N25DECE049,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE049,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,
-N25DECE049,II,2.3,Tham gia các buổi hội thảo việc làm,5,2,0,0,
-N25DECE049,II,TC2,Mức điểm tối đa Tiêu chí 2,25,22,20,20,
-N25DECE049,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,2,2,
-N25DECE049,II,3.2,Tham gia công tác xã hội,4,0,,0,
-N25DECE049,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,1,1,
-N25DECE049,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE049,II,TC3,Mức điểm tối đa Tiêu chí 3,20,16,6,6,
-N25DECE049,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE049,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE049,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE049,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE049,II,4.5,Được biểu dương khen thưởng,2,0,,0,
-N25DECE049,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,
-N25DECE049,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,
-N25DECE049,II,5.2,Thành viên tham gia các Câu lạc bộ,3,3,0,0,
-N25DECE049,II,5.3,Sinh viên đạt thành tích đặc biệt,3,,,0,
-N25DECE049,II,TC5,Mức điểm tối đa Tiêu chí 5,10,3,0,0,
-N25DECE049,II,TOTAL,TỔNG CỘNG,100,84,69,69,
-N25DECE080,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE080,II,1.2,Kết quả học tập trong kỳ học,10,10,8,8,
-N25DECE080,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE080,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,1,1,
-N25DECE080,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,,0,
-N25DECE080,II,TC1,Mức điểm tối đa Tiêu chí 1,20,20,16,16,
-N25DECE080,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE080,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,4,4,
-N25DECE080,II,2.3,Tham gia các buổi hội thảo việc làm,5,2,2,2,
-N25DECE080,II,TC2,Mức điểm tối đa Tiêu chí 2,25,22,21,21,
-N25DECE080,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,6,6,
-N25DECE080,II,3.2,Tham gia công tác xã hội,4,1,1,1,
-N25DECE080,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,
-N25DECE080,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE080,II,TC3,Mức điểm tối đa Tiêu chí 3,20,17,13,13,
-N25DECE080,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE080,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE080,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE080,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE080,II,4.5,Được biểu dương khen thưởng,2,0,0,0,
-N25DECE080,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,
-N25DECE080,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,0,0,
-N25DECE080,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,0,0,
-N25DECE080,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,0,0,
-N25DECE080,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,
-N25DECE080,II,TOTAL,TỔNG CỘNG,100,82,73,73,
-N25DECE075,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE075,II,1.2,Kết quả học tập trong kỳ học,10,6,6,6,
-N25DECE075,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE075,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,0,,0,
-N25DECE075,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,
-N25DECE075,II,TC1,Mức điểm tối đa Tiêu chí 1,20,14,14,14,
-N25DECE075,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE075,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,
-N25DECE075,II,2.3,Tham gia các buổi hội thảo việc làm,5,0,0,0,
-N25DECE075,II,TC2,Mức điểm tối đa Tiêu chí 2,25,20,20,20,
-N25DECE075,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,6,6,
-N25DECE075,II,3.2,Tham gia công tác xã hội,4,0,,0,
-N25DECE075,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,0,,0,
-N25DECE075,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE075,II,TC3,Mức điểm tối đa Tiêu chí 3,20,13,9,9,
-N25DECE075,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE075,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE075,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE075,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE075,II,4.5,Được biểu dương khen thưởng,2,0,,0,
-N25DECE075,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,
-N25DECE075,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,
-N25DECE075,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,,0,
-N25DECE075,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,
-N25DECE075,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,
-N25DECE075,II,TOTAL,TỔNG CỘNG,100,70,66,66,
-N25DECE056,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE056,II,1.2,Kết quả học tập trong kỳ học,10,6,6,6,
-N25DECE056,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE056,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,2,2,
-N25DECE056,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,,,,
-N25DECE056,II,TC1,Mức điểm tối đa Tiêu chí 1,20,15,15,15,
-N25DECE056,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE056,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,4,4,
-N25DECE056,II,2.3,Tham gia các buổi hội thảo việc làm,5,3,3,3,
-N25DECE056,II,TC2,Mức điểm tối đa Tiêu chí 2,25,23,22,22,
-N25DECE056,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,10,10,
-N25DECE056,II,3.2,Tham gia công tác xã hội,4,4,4,4,
-N25DECE056,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,
-N25DECE056,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE056,II,TC3,Mức điểm tối đa Tiêu chí 3,20,20,20,20,
-N25DECE056,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE056,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE056,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE056,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE056,II,4.5,Được biểu dương khen thưởng,2,0,,0,
-N25DECE056,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,
-N25DECE056,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,,,,
-N25DECE056,II,5.2,Thành viên tham gia các Câu lạc bộ,3,3,0,0,
-N25DECE056,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,
-N25DECE056,II,TC5,Mức điểm tối đa Tiêu chí 5,10,3,0,0,
-N25DECE056,II,TOTAL,TỔNG CỘNG,100,84,80,80,
-N25DECE077,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE077,II,1.2,Kết quả học tập trong kỳ học,10,6,6,6,
-N25DECE077,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE077,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,2,2,
-N25DECE077,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,
-N25DECE077,II,TC1,Mức điểm tối đa Tiêu chí 1,20,16,16,16,
-N25DECE077,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE077,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,
-N25DECE077,II,2.3,Tham gia các buổi hội thảo việc làm,5,5,5,5,
-N25DECE077,II,TC2,Mức điểm tối đa Tiêu chí 2,25,25,25,25,
-N25DECE077,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,10,10,
-N25DECE077,II,3.2,Tham gia công tác xã hội,4,0,0,0,
-N25DECE077,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,
-N25DECE077,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE077,II,TC3,Mức điểm tối đa Tiêu chí 3,20,16,16,16,
-N25DECE077,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE077,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE077,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE077,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE077,II,4.5,Được biểu dương khen thưởng,2,0,,0,
-N25DECE077,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,
-N25DECE077,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,
-N25DECE077,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,,0,
-N25DECE077,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,
-N25DECE077,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,
-N25DECE077,II,TOTAL,TỔNG CỘNG,100,80,80,80,
-N25DECE054,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE054,II,1.2,Kết quả học tập trong kỳ học,10,6,8,8,
-N25DECE054,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE054,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,0,0,
-N25DECE054,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,
-N25DECE054,II,TC1,Mức điểm tối đa Tiêu chí 1,20,16,16,16,
-N25DECE054,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE054,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,
-N25DECE054,II,2.3,Tham gia các buổi hội thảo việc làm,5,3,3,3,
-N25DECE054,II,TC2,Mức điểm tối đa Tiêu chí 2,25,23,23,23,
-N25DECE054,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,0,0,0,
-N25DECE054,II,3.2,Tham gia công tác xã hội,4,0,0,0,
-N25DECE054,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,0,,0,
-N25DECE054,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE054,II,TC3,Mức điểm tối đa Tiêu chí 3,20,3,3,3,
-N25DECE054,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE054,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE054,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE054,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE054,II,4.5,Được biểu dương khen thưởng,2,0,,0,
-N25DECE054,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,
-N25DECE054,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,
-N25DECE054,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,,0,
-N25DECE054,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,
-N25DECE054,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,
-N25DECE054,II,TOTAL,TỔNG CỘNG,100,65,65,65,
-N25DECE074,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE074,II,1.2,Kết quả học tập trong kỳ học,10,8,8,8,
-N25DECE074,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE074,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,2,2,
-N25DECE074,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,
-N25DECE074,II,TC1,Mức điểm tối đa Tiêu chí 1,20,18,18,18,
-N25DECE074,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE074,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,
-N25DECE074,II,2.3,Tham gia các buổi hội thảo việc làm,5,3,3,3,
-N25DECE074,II,TC2,Mức điểm tối đa Tiêu chí 2,25,23,23,23,
-N25DECE074,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,6,6,6,
-N25DECE074,II,3.2,Tham gia công tác xã hội,4,0,,0,
-N25DECE074,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,
-N25DECE074,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE074,II,TC3,Mức điểm tối đa Tiêu chí 3,20,12,12,12,
-N25DECE074,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE074,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE074,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE074,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE074,II,4.5,Được biểu dương khen thưởng,2,0,,0,
-N25DECE074,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,
-N25DECE074,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,
-N25DECE074,II,5.2,Thành viên tham gia các Câu lạc bộ,3,3,3,3,
-N25DECE074,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,
-N25DECE074,II,TC5,Mức điểm tối đa Tiêu chí 5,10,3,3,3,
-N25DECE074,II,TOTAL,TỔNG CỘNG,100,79,79,79,
-N25DECE055,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE055,II,1.2,Kết quả học tập trong kỳ học,10,8,8,8,
-N25DECE055,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE055,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,2,2,
-N25DECE055,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,
-N25DECE055,II,TC1,Mức điểm tối đa Tiêu chí 1,20,18,18,18,
-N25DECE055,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE055,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,
-N25DECE055,II,2.3,Tham gia các buổi hội thảo việc làm,5,3,3,3,
-N25DECE055,II,TC2,Mức điểm tối đa Tiêu chí 2,25,23,23,23,
-N25DECE055,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,10,10,
-N25DECE055,II,3.2,Tham gia công tác xã hội,4,1,1,1,
-N25DECE055,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,
-N25DECE055,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE055,II,TC3,Mức điểm tối đa Tiêu chí 3,20,17,17,17,
-N25DECE055,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE055,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,
-N25DECE055,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE055,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE055,II,4.5,Được biểu dương khen thưởng,2,0,,0,
-N25DECE055,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,
-N25DECE055,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,
-N25DECE055,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,,0,
-N25DECE055,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,
-N25DECE055,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,
-N25DECE055,II,TOTAL,TỔNG CỘNG,100,81,81,81,
-N25DECE078,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,
-N25DECE078,II,1.2,Kết quả học tập trong kỳ học,10,6,6,6,
-N25DECE078,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,
-N25DECE078,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,0,,0,
-N25DECE078,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,
-N25DECE078,II,TC1,Mức điểm tối đa Tiêu chí 1,20,14,14,14,
-N25DECE078,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,
-N25DECE078,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,
-N25DECE078,II,2.3,Tham gia các buổi hội thảo việc làm,5,2,3,3,
-N25DECE078,II,TC2,Mức điểm tối đa Tiêu chí 2,25,22,23,23,
-N25DECE078,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,0,0,0,
-N25DECE078,II,3.2,Tham gia công tác xã hội,4,0,,0,
-N25DECE078,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,
-N25DECE078,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,
-N25DECE078,II,TC3,Mức điểm tối đa Tiêu chí 3,20,6,6,6,
-N25DECE078,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,
-N25DECE078,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,4,4,
-N25DECE078,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,
-N25DECE078,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,
-N25DECE078,II,4.5,Được biểu dương khen thưởng,2,0,,0,
-N25DECE078,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,22,22,
-N25DECE078,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,
-N25DECE078,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,,0,
-N25DECE078,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,
-N25DECE078,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,
-N25DECE078,II,TOTAL,TỔNG CỘNG,100,65,65,65,
+student_id,semester,criterion_id,criterion_name,max_points,student_score,class_score,advisor_score,note,dob
+N25DECE061,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,10/02/2007
+N25DECE061,II,1.2,Kết quả học tập trong kỳ học,10,6,6,6,,10/02/2007
+N25DECE061,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,10/02/2007
+N25DECE061,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,0,0,0,,10/02/2007
+N25DECE061,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,,10/02/2007
+N25DECE061,II,TC1,Mức điểm tối đa Tiêu chí 1,20,14,14,14,,10/02/2007
+N25DECE061,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,10/02/2007
+N25DECE061,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,,10/02/2007
+N25DECE061,II,2.3,Tham gia các buổi hội thảo việc làm,5,0,0,0,,10/02/2007
+N25DECE061,II,TC2,Mức điểm tối đa Tiêu chí 2,25,20,20,20,,10/02/2007
+N25DECE061,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,0,4,4,,10/02/2007
+N25DECE061,II,3.2,Tham gia công tác xã hội,4,0,1,1,,10/02/2007
+N25DECE061,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,0,0,0,,10/02/2007
+N25DECE061,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,10/02/2007
+N25DECE061,II,TC3,Mức điểm tối đa Tiêu chí 3,20,3,8,8,,10/02/2007
+N25DECE061,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,10/02/2007
+N25DECE061,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,10/02/2007
+N25DECE061,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,10/02/2007
+N25DECE061,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,10/02/2007
+N25DECE061,II,4.5,Được biểu dương khen thưởng,2,0,0,0,,10/02/2007
+N25DECE061,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,,10/02/2007
+N25DECE061,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,0,0,,10/02/2007
+N25DECE061,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,0,0,,10/02/2007
+N25DECE061,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,0,0,,10/02/2007
+N25DECE061,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,,10/02/2007
+N25DECE061,II,TOTAL,TỔNG CỘNG,100,60,65,65,,10/02/2007
+N25DECE084,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,11/08/2007
+N25DECE084,II,1.2,Kết quả học tập trong kỳ học,10,8,8,8,,11/08/2007
+N25DECE084,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,11/08/2007
+N25DECE084,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,1.5,1,1,,11/08/2007
+N25DECE084,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,,11/08/2007
+N25DECE084,II,TC1,Mức điểm tối đa Tiêu chí 1,20,17.5,17,17,,11/08/2007
+N25DECE084,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,11/08/2007
+N25DECE084,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,,11/08/2007
+N25DECE084,II,2.3,Tham gia các buổi hội thảo việc làm,5,4,2,2,,11/08/2007
+N25DECE084,II,TC2,Mức điểm tối đa Tiêu chí 2,25,24,22,22,,11/08/2007
+N25DECE084,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,2,2,,11/08/2007
+N25DECE084,II,3.2,Tham gia công tác xã hội,4,0,0,0,,11/08/2007
+N25DECE084,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,,11/08/2007
+N25DECE084,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,11/08/2007
+N25DECE084,II,TC3,Mức điểm tối đa Tiêu chí 3,20,16,8,8,,11/08/2007
+N25DECE084,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,11/08/2007
+N25DECE084,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,11/08/2007
+N25DECE084,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,11/08/2007
+N25DECE084,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,11/08/2007
+N25DECE084,II,4.5,Được biểu dương khen thưởng,2,0,,0,,11/08/2007
+N25DECE084,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,,11/08/2007
+N25DECE084,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,0,0,,11/08/2007
+N25DECE084,II,5.2,Thành viên tham gia các Câu lạc bộ,3,3,0,0,,11/08/2007
+N25DECE084,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,,11/08/2007
+N25DECE084,II,TC5,Mức điểm tối đa Tiêu chí 5,10,3,0,0,,11/08/2007
+N25DECE084,II,TOTAL,TỔNG CỘNG,100,83.5,70,70,,11/08/2007
+N25DECE062,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,06/04/2007
+N25DECE062,II,1.2,Kết quả học tập trong kỳ học,10,8,8,8,,06/04/2007
+N25DECE062,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,06/04/2007
+N25DECE062,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,1,1,1,,06/04/2007
+N25DECE062,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,,06/04/2007
+N25DECE062,II,TC1,Mức điểm tối đa Tiêu chí 1,20,17,17,17,,06/04/2007
+N25DECE062,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,06/04/2007
+N25DECE062,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,,06/04/2007
+N25DECE062,II,2.3,Tham gia các buổi hội thảo việc làm,5,1,1,1,,06/04/2007
+N25DECE062,II,TC2,Mức điểm tối đa Tiêu chí 2,25,21,21,21,,06/04/2007
+N25DECE062,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,6,6,,06/04/2007
+N25DECE062,II,3.2,Tham gia công tác xã hội,4,0,0,0,,06/04/2007
+N25DECE062,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,,06/04/2007
+N25DECE062,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,06/04/2007
+N25DECE062,II,TC3,Mức điểm tối đa Tiêu chí 3,20,16,12,12,,06/04/2007
+N25DECE062,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,06/04/2007
+N25DECE062,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,06/04/2007
+N25DECE062,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,06/04/2007
+N25DECE062,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,06/04/2007
+N25DECE062,II,4.5,Được biểu dương khen thưởng,2,0,0,0,,06/04/2007
+N25DECE062,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,,06/04/2007
+N25DECE062,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,0,0,,06/04/2007
+N25DECE062,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,0,0,,06/04/2007
+N25DECE062,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,0,0,,06/04/2007
+N25DECE062,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,,06/04/2007
+N25DECE062,II,TOTAL,TỔNG CỘNG,100,77,73,73,,06/04/2007
+N25DECE057,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,02/01/2007
+N25DECE057,II,1.2,Kết quả học tập trong kỳ học,10,6,8,8,,02/01/2007
+N25DECE057,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,02/01/2007
+N25DECE057,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,,,,02/01/2007
+N25DECE057,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,,02/01/2007
+N25DECE057,II,TC1,Mức điểm tối đa Tiêu chí 1,20,16,16,16,,02/01/2007
+N25DECE057,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,02/01/2007
+N25DECE057,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,,02/01/2007
+N25DECE057,II,2.3,Tham gia các buổi hội thảo việc làm,5,3,2,2,,02/01/2007
+N25DECE057,II,TC2,Mức điểm tối đa Tiêu chí 2,25,23,22,22,,02/01/2007
+N25DECE057,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,10,10,,02/01/2007
+N25DECE057,II,3.2,Tham gia công tác xã hội,4,1,0,0,,02/01/2007
+N25DECE057,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,,02/01/2007
+N25DECE057,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,02/01/2007
+N25DECE057,II,TC3,Mức điểm tối đa Tiêu chí 3,20,17,16,16,,02/01/2007
+N25DECE057,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,02/01/2007
+N25DECE057,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,02/01/2007
+N25DECE057,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,02/01/2007
+N25DECE057,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,02/01/2007
+N25DECE057,II,4.5,Được biểu dương khen thưởng,2,0,,0,,02/01/2007
+N25DECE057,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,,02/01/2007
+N25DECE057,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,,02/01/2007
+N25DECE057,II,5.2,Thành viên tham gia các Câu lạc bộ,3,3,3,3,,02/01/2007
+N25DECE057,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,,02/01/2007
+N25DECE057,II,TC5,Mức điểm tối đa Tiêu chí 5,10,3,3,3,,02/01/2007
+N25DECE057,II,TOTAL,TỔNG CỘNG,100,82,80,80,,02/01/2007
+N25DECE058,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,17/05/2007
+N25DECE058,II,1.2,Kết quả học tập trong kỳ học,10,6,6,6,,17/05/2007
+N25DECE058,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,17/05/2007
+N25DECE058,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,2,2,,17/05/2007
+N25DECE058,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,,17/05/2007
+N25DECE058,II,TC1,Mức điểm tối đa Tiêu chí 1,20,16,16,16,,17/05/2007
+N25DECE058,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,17/05/2007
+N25DECE058,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,,17/05/2007
+N25DECE058,II,2.3,Tham gia các buổi hội thảo việc làm,5,3,3,3,,17/05/2007
+N25DECE058,II,TC2,Mức điểm tối đa Tiêu chí 2,25,23,23,23,,17/05/2007
+N25DECE058,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,10,10,,17/05/2007
+N25DECE058,II,3.2,Tham gia công tác xã hội,4,1,1,1,,17/05/2007
+N25DECE058,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,,17/05/2007
+N25DECE058,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,17/05/2007
+N25DECE058,II,TC3,Mức điểm tối đa Tiêu chí 3,20,17,17,17,,17/05/2007
+N25DECE058,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,17/05/2007
+N25DECE058,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,17/05/2007
+N25DECE058,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,17/05/2007
+N25DECE058,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,17/05/2007
+N25DECE058,II,4.5,Được biểu dương khen thưởng,2,0,,0,,17/05/2007
+N25DECE058,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,,17/05/2007
+N25DECE058,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,,17/05/2007
+N25DECE058,II,5.2,Thành viên tham gia các Câu lạc bộ,3,3,3,3,,17/05/2007
+N25DECE058,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,,17/05/2007
+N25DECE058,II,TC5,Mức điểm tối đa Tiêu chí 5,10,3,3,3,,17/05/2007
+N25DECE058,II,TOTAL,TỔNG CỘNG,100,82,82,82,,17/05/2007
+N25DECE083,II,1.1,Ý thức và thái độ trong học tập,3,3,2,2,,10/11/2007
+N25DECE083,II,1.2,Kết quả học tập trong kỳ học,10,10,8,8,,10/11/2007
+N25DECE083,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,10/11/2007
+N25DECE083,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,1,1,1,,10/11/2007
+N25DECE083,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,0,0,,10/11/2007
+N25DECE083,II,TC1,Mức điểm tối đa Tiêu chí 1,20,19,15,15,,10/11/2007
+N25DECE083,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,10/11/2007
+N25DECE083,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,4,4,,10/11/2007
+N25DECE083,II,2.3,Tham gia các buổi hội thảo việc làm,5,3,0,0,,10/11/2007
+N25DECE083,II,TC2,Mức điểm tối đa Tiêu chí 2,25,23,19,19,,10/11/2007
+N25DECE083,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,2,2,,10/11/2007
+N25DECE083,II,3.2,Tham gia công tác xã hội,4,4,0,0,,10/11/2007
+N25DECE083,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,,10/11/2007
+N25DECE083,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,10/11/2007
+N25DECE083,II,TC3,Mức điểm tối đa Tiêu chí 3,20,20,8,8,,10/11/2007
+N25DECE083,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,10/11/2007
+N25DECE083,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,10/11/2007
+N25DECE083,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,10/11/2007
+N25DECE083,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,10/11/2007
+N25DECE083,II,4.5,Được biểu dương khen thưởng,2,0,0,0,,10/11/2007
+N25DECE083,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,,10/11/2007
+N25DECE083,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,0,0,,10/11/2007
+N25DECE083,II,5.2,Thành viên tham gia các Câu lạc bộ,3,3,0,0,,10/11/2007
+N25DECE083,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,0,0,,10/11/2007
+N25DECE083,II,TC5,Mức điểm tối đa Tiêu chí 5,10,3,0,0,,10/11/2007
+N25DECE083,II,TOTAL,TỔNG CỘNG,100,88,65,65,,10/11/2007
+N25DECE051,I,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,06/04/2007
+N25DECE051,I,1.2,Kết quả học tập trong kỳ học,10,8,8,8,,06/04/2007
+N25DECE051,I,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,06/04/2007
+N25DECE051,I,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,1,1,1,,06/04/2007
+N25DECE051,I,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,,06/04/2007
+N25DECE051,I,TC1,Mức điểm tối đa Tiêu chí 1,20,17,17,17,,06/04/2007
+N25DECE051,I,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,06/04/2007
+N25DECE051,I,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,4,4,,06/04/2007
+N25DECE051,I,2.3,Tham gia các buổi hội thảo việc làm,5,1,0,0,,06/04/2007
+N25DECE051,I,TC2,Mức điểm tối đa Tiêu chí 2,25,21,19,19,,06/04/2007
+N25DECE051,I,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,8,8,,06/04/2007
+N25DECE051,I,3.2,Tham gia công tác xã hội,4,0,0,0,,06/04/2007
+N25DECE051,I,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,2,2,,06/04/2007
+N25DECE051,I,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,06/04/2007
+N25DECE051,I,TC3,Mức điểm tối đa Tiêu chí 3,20,16,13,13,,06/04/2007
+N25DECE051,I,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,06/04/2007
+N25DECE051,I,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,4,4,,06/04/2007
+N25DECE051,I,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,3,3,,06/04/2007
+N25DECE051,I,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,3,3,,06/04/2007
+N25DECE051,I,4.5,Được biểu dương khen thưởng,2,2,0,0,,06/04/2007
+N25DECE051,I,TC4,Mức điểm tối đa Tiêu chí 4,25,25,18,18,,06/04/2007
+N25DECE051,I,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,,06/04/2007
+N25DECE051,I,5.2,Thành viên tham gia các Câu lạc bộ,3,0,,0,,06/04/2007
+N25DECE051,I,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,,06/04/2007
+N25DECE051,I,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,,06/04/2007
+N25DECE051,I,TOTAL,TỔNG CỘNG,100,79,67,67,,06/04/2007
+N25DECE081,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,25/04/2007
+N25DECE081,II,1.2,Kết quả học tập trong kỳ học,10,6,6,6,,25/04/2007
+N25DECE081,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,25/04/2007
+N25DECE081,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,1,1,,25/04/2007
+N25DECE081,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,,25/04/2007
+N25DECE081,II,TC1,Mức điểm tối đa Tiêu chí 1,20,16,15,15,,25/04/2007
+N25DECE081,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,25/04/2007
+N25DECE081,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,,25/04/2007
+N25DECE081,II,2.3,Tham gia các buổi hội thảo việc làm,5,0,0,0,,25/04/2007
+N25DECE081,II,TC2,Mức điểm tối đa Tiêu chí 2,25,20,20,20,,25/04/2007
+N25DECE081,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,8,4,4,,25/04/2007
+N25DECE081,II,3.2,Tham gia công tác xã hội,4,1,1,1,,25/04/2007
+N25DECE081,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,,25/04/2007
+N25DECE081,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,25/04/2007
+N25DECE081,II,TC3,Mức điểm tối đa Tiêu chí 3,20,15,11,11,,25/04/2007
+N25DECE081,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,25/04/2007
+N25DECE081,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,25/04/2007
+N25DECE081,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,25/04/2007
+N25DECE081,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,25/04/2007
+N25DECE081,II,4.5,Được biểu dương khen thưởng,2,0,,0,,25/04/2007
+N25DECE081,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,,25/04/2007
+N25DECE081,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,4,0,0,,25/04/2007
+N25DECE081,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,0,0,,25/04/2007
+N25DECE081,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,,25/04/2007
+N25DECE081,II,TC5,Mức điểm tối đa Tiêu chí 5,10,4,0,0,,25/04/2007
+N25DECE081,II,TOTAL,TỔNG CỘNG,100,78,69,69,,25/04/2007
+N25DECE060,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,15/03/2007
+N25DECE060,II,1.2,Kết quả học tập trong kỳ học,10,6,6,6,,15/03/2007
+N25DECE060,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,15/03/2007
+N25DECE060,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,2,2,,15/03/2007
+N25DECE060,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,,15/03/2007
+N25DECE060,II,TC1,Mức điểm tối đa Tiêu chí 1,20,16,16,16,,15/03/2007
+N25DECE060,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,15/03/2007
+N25DECE060,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,,15/03/2007
+N25DECE060,II,2.3,Tham gia các buổi hội thảo việc làm,5,3,2,2,,15/03/2007
+N25DECE060,II,TC2,Mức điểm tối đa Tiêu chí 2,25,23,22,22,,15/03/2007
+N25DECE060,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,6,6,,15/03/2007
+N25DECE060,II,3.2,Tham gia công tác xã hội,4,1,1,1,,15/03/2007
+N25DECE060,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,,15/03/2007
+N25DECE060,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,15/03/2007
+N25DECE060,II,TC3,Mức điểm tối đa Tiêu chí 3,20,17,13,13,,15/03/2007
+N25DECE060,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,15/03/2007
+N25DECE060,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,15/03/2007
+N25DECE060,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,15/03/2007
+N25DECE060,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,15/03/2007
+N25DECE060,II,4.5,Được biểu dương khen thưởng,2,0,,0,,15/03/2007
+N25DECE060,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,,15/03/2007
+N25DECE060,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,,15/03/2007
+N25DECE060,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,,0,,15/03/2007
+N25DECE060,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,,15/03/2007
+N25DECE060,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,,15/03/2007
+N25DECE060,II,TOTAL,TỔNG CỘNG,100,79,74,74,,15/03/2007
+N25DECE063,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,09/06/2007
+N25DECE063,II,1.2,Kết quả học tập trong kỳ học,10,6,6,6,,09/06/2007
+N25DECE063,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,09/06/2007
+N25DECE063,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,1.5,1.5,1.5,,09/06/2007
+N25DECE063,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,,09/06/2007
+N25DECE063,II,TC1,Mức điểm tối đa Tiêu chí 1,20,15.5,15.5,15.5,,09/06/2007
+N25DECE063,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,09/06/2007
+N25DECE063,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,,09/06/2007
+N25DECE063,II,2.3,Tham gia các buổi hội thảo việc làm,5,3,2,2,,09/06/2007
+N25DECE063,II,TC2,Mức điểm tối đa Tiêu chí 2,25,23,22,22,,09/06/2007
+N25DECE063,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,6,6,,09/06/2007
+N25DECE063,II,3.2,Tham gia công tác xã hội,4,1,1,1,,09/06/2007
+N25DECE063,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,,09/06/2007
+N25DECE063,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,09/06/2007
+N25DECE063,II,TC3,Mức điểm tối đa Tiêu chí 3,20,17,13,13,,09/06/2007
+N25DECE063,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,09/06/2007
+N25DECE063,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,09/06/2007
+N25DECE063,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,09/06/2007
+N25DECE063,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,09/06/2007
+N25DECE063,II,4.5,Được biểu dương khen thưởng,2,0,0,0,,09/06/2007
+N25DECE063,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,,09/06/2007
+N25DECE063,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,0,0,,09/06/2007
+N25DECE063,II,5.2,Thành viên tham gia các Câu lạc bộ,3,3,3,3,,09/06/2007
+N25DECE063,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,0,0,,09/06/2007
+N25DECE063,II,TC5,Mức điểm tối đa Tiêu chí 5,10,3,3,3,,09/06/2007
+N25DECE063,II,TOTAL,TỔNG CỘNG,100,81.5,76.5,76.5,,09/06/2007
+N25DECE067,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,28/02/2007
+N25DECE067,II,1.2,Kết quả học tập trong kỳ học,10,8,8,8,,28/02/2007
+N25DECE067,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,28/02/2007
+N25DECE067,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,1.5,1.5,,28/02/2007
+N25DECE067,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,,28/02/2007
+N25DECE067,II,TC1,Mức điểm tối đa Tiêu chí 1,20,18,17.5,17.5,,28/02/2007
+N25DECE067,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,28/02/2007
+N25DECE067,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,,28/02/2007
+N25DECE067,II,2.3,Tham gia các buổi hội thảo việc làm,5,3,2,2,,28/02/2007
+N25DECE067,II,TC2,Mức điểm tối đa Tiêu chí 2,25,23,22,22,,28/02/2007
+N25DECE067,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,4,4,,28/02/2007
+N25DECE067,II,3.2,Tham gia công tác xã hội,4,1,1,1,,28/02/2007
+N25DECE067,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,,28/02/2007
+N25DECE067,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,28/02/2007
+N25DECE067,II,TC3,Mức điểm tối đa Tiêu chí 3,20,17,11,11,,28/02/2007
+N25DECE067,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,28/02/2007
+N25DECE067,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,28/02/2007
+N25DECE067,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,28/02/2007
+N25DECE067,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,28/02/2007
+N25DECE067,II,4.5,Được biểu dương khen thưởng,2,0,0,0,,28/02/2007
+N25DECE067,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,,28/02/2007
+N25DECE067,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,0,0,,28/02/2007
+N25DECE067,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,0,0,,28/02/2007
+N25DECE067,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,0,0,,28/02/2007
+N25DECE067,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,,28/02/2007
+N25DECE067,II,TOTAL,TỔNG CỘNG,100,81,73.5,73.5,,28/02/2007
+N25DECE068,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,30/11/2007
+N25DECE068,II,1.2,Kết quả học tập trong kỳ học,10,8,8,8,,30/11/2007
+N25DECE068,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,30/11/2007
+N25DECE068,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,1.5,1.5,1.5,,30/11/2007
+N25DECE068,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,,30/11/2007
+N25DECE068,II,TC1,Mức điểm tối đa Tiêu chí 1,20,17.5,17.5,17.5,,30/11/2007
+N25DECE068,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,30/11/2007
+N25DECE068,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,,30/11/2007
+N25DECE068,II,2.3,Tham gia các buổi hội thảo việc làm,5,3,2,2,,30/11/2007
+N25DECE068,II,TC2,Mức điểm tối đa Tiêu chí 2,25,23,22,22,,30/11/2007
+N25DECE068,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,8,8,,30/11/2007
+N25DECE068,II,3.2,Tham gia công tác xã hội,4,1,1,1,,30/11/2007
+N25DECE068,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,,30/11/2007
+N25DECE068,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,30/11/2007
+N25DECE068,II,TC3,Mức điểm tối đa Tiêu chí 3,20,17,15,15,,30/11/2007
+N25DECE068,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,30/11/2007
+N25DECE068,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,30/11/2007
+N25DECE068,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,30/11/2007
+N25DECE068,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,30/11/2007
+N25DECE068,II,4.5,Được biểu dương khen thưởng,2,0,,0,,30/11/2007
+N25DECE068,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,,30/11/2007
+N25DECE068,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,,30/11/2007
+N25DECE068,II,5.2,Thành viên tham gia các Câu lạc bộ,3,3,3,3,,30/11/2007
+N25DECE068,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,,30/11/2007
+N25DECE068,II,TC5,Mức điểm tối đa Tiêu chí 5,10,3,3,3,,30/11/2007
+N25DECE068,II,TOTAL,TỔNG CỘNG,100,83.5,80.5,80.5,,30/11/2007
+N25DECE069,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,14/06/2007
+N25DECE069,II,1.2,Kết quả học tập trong kỳ học,10,8,8,8,,14/06/2007
+N25DECE069,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,14/06/2007
+N25DECE069,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,1,1,1,,14/06/2007
+N25DECE069,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,,14/06/2007
+N25DECE069,II,TC1,Mức điểm tối đa Tiêu chí 1,20,17,17,17,,14/06/2007
+N25DECE069,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,14/06/2007
+N25DECE069,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,,14/06/2007
+N25DECE069,II,2.3,Tham gia các buổi hội thảo việc làm,5,2,0,0,,14/06/2007
+N25DECE069,II,TC2,Mức điểm tối đa Tiêu chí 2,25,22,20,20,,14/06/2007
+N25DECE069,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,4,4,,14/06/2007
+N25DECE069,II,3.2,Tham gia công tác xã hội,4,1,1,1,,14/06/2007
+N25DECE069,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,0,0,,14/06/2007
+N25DECE069,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,14/06/2007
+N25DECE069,II,TC3,Mức điểm tối đa Tiêu chí 3,20,17,8,8,,14/06/2007
+N25DECE069,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,14/06/2007
+N25DECE069,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,14/06/2007
+N25DECE069,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,14/06/2007
+N25DECE069,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,14/06/2007
+N25DECE069,II,4.5,Được biểu dương khen thưởng,2,0,0,0,,14/06/2007
+N25DECE069,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,,14/06/2007
+N25DECE069,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,0,0,,14/06/2007
+N25DECE069,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,0,0,,14/06/2007
+N25DECE069,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,0,0,,14/06/2007
+N25DECE069,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,,14/06/2007
+N25DECE069,II,TOTAL,TỔNG CỘNG,100,79,68,68,,14/06/2007
+N25DECE082,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,18/04/2006
+N25DECE082,II,1.2,Kết quả học tập trong kỳ học,10,8,8,8,,18/04/2006
+N25DECE082,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,18/04/2006
+N25DECE082,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,1.5,1.5,,18/04/2006
+N25DECE082,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,,18/04/2006
+N25DECE082,II,TC1,Mức điểm tối đa Tiêu chí 1,20,18,17.5,17.5,,18/04/2006
+N25DECE082,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,18/04/2006
+N25DECE082,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,,18/04/2006
+N25DECE082,II,2.3,Tham gia các buổi hội thảo việc làm,5,3,3,3,,18/04/2006
+N25DECE082,II,TC2,Mức điểm tối đa Tiêu chí 2,25,23,23,23,,18/04/2006
+N25DECE082,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,8,8,8,,18/04/2006
+N25DECE082,II,3.2,Tham gia công tác xã hội,4,1,1,1,,18/04/2006
+N25DECE082,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,,18/04/2006
+N25DECE082,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,18/04/2006
+N25DECE082,II,TC3,Mức điểm tối đa Tiêu chí 3,20,15,15,15,,18/04/2006
+N25DECE082,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,18/04/2006
+N25DECE082,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,18/04/2006
+N25DECE082,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,18/04/2006
+N25DECE082,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,18/04/2006
+N25DECE082,II,4.5,Được biểu dương khen thưởng,2,0,,0,,18/04/2006
+N25DECE082,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,,18/04/2006
+N25DECE082,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,4,4,4,,18/04/2006
+N25DECE082,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,,0,,18/04/2006
+N25DECE082,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,,18/04/2006
+N25DECE082,II,TC5,Mức điểm tối đa Tiêu chí 5,10,4,4,4,,18/04/2006
+N25DECE082,II,TOTAL,TỔNG CỘNG,100,83,82.5,82.5,,18/04/2006
+N25DECE079,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,12/06/2007
+N25DECE079,II,1.2,Kết quả học tập trong kỳ học,10,8,8,8,,12/06/2007
+N25DECE079,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,12/06/2007
+N25DECE079,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,2,2,,12/06/2007
+N25DECE079,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,,12/06/2007
+N25DECE079,II,TC1,Mức điểm tối đa Tiêu chí 1,20,18,18,18,,12/06/2007
+N25DECE079,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,12/06/2007
+N25DECE079,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,,12/06/2007
+N25DECE079,II,2.3,Tham gia các buổi hội thảo việc làm,5,5,5,5,,12/06/2007
+N25DECE079,II,TC2,Mức điểm tối đa Tiêu chí 2,25,25,25,25,,12/06/2007
+N25DECE079,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,10,10,,12/06/2007
+N25DECE079,II,3.2,Tham gia công tác xã hội,4,0,0,0,,12/06/2007
+N25DECE079,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,,12/06/2007
+N25DECE079,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,12/06/2007
+N25DECE079,II,TC3,Mức điểm tối đa Tiêu chí 3,20,16,16,16,,12/06/2007
+N25DECE079,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,12/06/2007
+N25DECE079,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,12/06/2007
+N25DECE079,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,12/06/2007
+N25DECE079,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,12/06/2007
+N25DECE079,II,4.5,Được biểu dương khen thưởng,2,2,0,0,,12/06/2007
+N25DECE079,II,TC4,Mức điểm tối đa Tiêu chí 4,25,25,23,23,,12/06/2007
+N25DECE079,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,,12/06/2007
+N25DECE079,II,5.2,Thành viên tham gia các Câu lạc bộ,3,3,,0,,12/06/2007
+N25DECE079,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,,12/06/2007
+N25DECE079,II,TC5,Mức điểm tối đa Tiêu chí 5,10,3,0,0,,12/06/2007
+N25DECE079,II,TOTAL,TỔNG CỘNG,100,87,82,82,,12/06/2007
+N25DECE073,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,05/03/2007
+N25DECE073,II,1.2,Kết quả học tập trong kỳ học,10,8,8,8,,05/03/2007
+N25DECE073,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,05/03/2007
+N25DECE073,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,0,0,0,,05/03/2007
+N25DECE073,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,,05/03/2007
+N25DECE073,II,TC1,Mức điểm tối đa Tiêu chí 1,20,16,16,16,,05/03/2007
+N25DECE073,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,05/03/2007
+N25DECE073,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,,05/03/2007
+N25DECE073,II,2.3,Tham gia các buổi hội thảo việc làm,5,0,0,0,,05/03/2007
+N25DECE073,II,TC2,Mức điểm tối đa Tiêu chí 2,25,20,20,20,,05/03/2007
+N25DECE073,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,4,4,4,,05/03/2007
+N25DECE073,II,3.2,Tham gia công tác xã hội,4,0,0,0,,05/03/2007
+N25DECE073,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,,05/03/2007
+N25DECE073,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,05/03/2007
+N25DECE073,II,TC3,Mức điểm tối đa Tiêu chí 3,20,10,10,10,,05/03/2007
+N25DECE073,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,05/03/2007
+N25DECE073,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,05/03/2007
+N25DECE073,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,05/03/2007
+N25DECE073,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,05/03/2007
+N25DECE073,II,4.5,Được biểu dương khen thưởng,2,0,,0,,05/03/2007
+N25DECE073,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,,05/03/2007
+N25DECE073,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,,05/03/2007
+N25DECE073,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,,0,,05/03/2007
+N25DECE073,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,,05/03/2007
+N25DECE073,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,,05/03/2007
+N25DECE073,II,TOTAL,TỔNG CỘNG,100,69,69,69,,05/03/2007
+N25DECE053,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,16/09/2007
+N25DECE053,II,1.2,Kết quả học tập trong kỳ học,10,6,6,6,,16/09/2007
+N25DECE053,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,16/09/2007
+N25DECE053,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,1,1,1,,16/09/2007
+N25DECE053,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,,16/09/2007
+N25DECE053,II,TC1,Mức điểm tối đa Tiêu chí 1,20,15,15,15,,16/09/2007
+N25DECE053,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,16/09/2007
+N25DECE053,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,,16/09/2007
+N25DECE053,II,2.3,Tham gia các buổi hội thảo việc làm,5,2,1,1,,16/09/2007
+N25DECE053,II,TC2,Mức điểm tối đa Tiêu chí 2,25,22,21,21,,16/09/2007
+N25DECE053,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,8,4,4,,16/09/2007
+N25DECE053,II,3.2,Tham gia công tác xã hội,4,0,0,0,,16/09/2007
+N25DECE053,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,1,1,,16/09/2007
+N25DECE053,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,16/09/2007
+N25DECE053,II,TC3,Mức điểm tối đa Tiêu chí 3,20,14,8,8,,16/09/2007
+N25DECE053,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,16/09/2007
+N25DECE053,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,16/09/2007
+N25DECE053,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,16/09/2007
+N25DECE053,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,16/09/2007
+N25DECE053,II,4.5,Được biểu dương khen thưởng,2,0,,0,,16/09/2007
+N25DECE053,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,,16/09/2007
+N25DECE053,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,,16/09/2007
+N25DECE053,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,,0,,16/09/2007
+N25DECE053,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,,16/09/2007
+N25DECE053,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,,16/09/2007
+N25DECE053,II,TOTAL,TỔNG CỘNG,100,74,67,67,,16/09/2007
+N25DECE048,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,18/12/2007
+N25DECE048,II,1.2,Kết quả học tập trong kỳ học,10,10,10,10,,18/12/2007
+N25DECE048,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,18/12/2007
+N25DECE048,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,2,2,,18/12/2007
+N25DECE048,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,,18/12/2007
+N25DECE048,II,TC1,Mức điểm tối đa Tiêu chí 1,20,20,20,20,,18/12/2007
+N25DECE048,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,18/12/2007
+N25DECE048,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,,18/12/2007
+N25DECE048,II,2.3,Tham gia các buổi hội thảo việc làm,5,2,2,2,,18/12/2007
+N25DECE048,II,TC2,Mức điểm tối đa Tiêu chí 2,25,22,22,22,,18/12/2007
+N25DECE048,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,10,10,,18/12/2007
+N25DECE048,II,3.2,Tham gia công tác xã hội,4,0,0,0,,18/12/2007
+N25DECE048,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,,18/12/2007
+N25DECE048,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,18/12/2007
+N25DECE048,II,TC3,Mức điểm tối đa Tiêu chí 3,20,16,16,16,,18/12/2007
+N25DECE048,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,18/12/2007
+N25DECE048,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,18/12/2007
+N25DECE048,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,18/12/2007
+N25DECE048,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,18/12/2007
+N25DECE048,II,4.5,Được biểu dương khen thưởng,2,0,,0,,18/12/2007
+N25DECE048,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,,18/12/2007
+N25DECE048,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,,18/12/2007
+N25DECE048,II,5.2,Thành viên tham gia các Câu lạc bộ,3,3,3,3,,18/12/2007
+N25DECE048,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,,18/12/2007
+N25DECE048,II,TC5,Mức điểm tối đa Tiêu chí 5,10,3,3,3,,18/12/2007
+N25DECE048,II,TOTAL,TỔNG CỘNG,100,84,84,84,,18/12/2007
+N25DECE046,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,01/09/2007
+N25DECE046,II,1.2,Kết quả học tập trong kỳ học,10,8,8,8,,01/09/2007
+N25DECE046,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,01/09/2007
+N25DECE046,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,0,0,,01/09/2007
+N25DECE046,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,,01/09/2007
+N25DECE046,II,TC1,Mức điểm tối đa Tiêu chí 1,20,18,16,16,,01/09/2007
+N25DECE046,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,01/09/2007
+N25DECE046,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,,01/09/2007
+N25DECE046,II,2.3,Tham gia các buổi hội thảo việc làm,5,3,0,0,,01/09/2007
+N25DECE046,II,TC2,Mức điểm tối đa Tiêu chí 2,25,23,20,20,,01/09/2007
+N25DECE046,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,0,0,,01/09/2007
+N25DECE046,II,3.2,Tham gia công tác xã hội,4,1,1,1,,01/09/2007
+N25DECE046,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,,01/09/2007
+N25DECE046,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,01/09/2007
+N25DECE046,II,TC3,Mức điểm tối đa Tiêu chí 3,20,17,7,7,,01/09/2007
+N25DECE046,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,01/09/2007
+N25DECE046,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,01/09/2007
+N25DECE046,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,01/09/2007
+N25DECE046,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,01/09/2007
+N25DECE046,II,4.5,Được biểu dương khen thưởng,2,0,,0,,01/09/2007
+N25DECE046,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,,01/09/2007
+N25DECE046,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,,01/09/2007
+N25DECE046,II,5.2,Thành viên tham gia các Câu lạc bộ,3,3,0,0,,01/09/2007
+N25DECE046,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,,01/09/2007
+N25DECE046,II,TC5,Mức điểm tối đa Tiêu chí 5,10,3,0,0,,01/09/2007
+N25DECE046,II,TOTAL,TỔNG CỘNG,100,84,66,66,,01/09/2007
+N25DECE072,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,05/01/2007
+N25DECE072,II,1.2,Kết quả học tập trong kỳ học,10,8,8,8,,05/01/2007
+N25DECE072,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,05/01/2007
+N25DECE072,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,2,2,,05/01/2007
+N25DECE072,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,,05/01/2007
+N25DECE072,II,TC1,Mức điểm tối đa Tiêu chí 1,20,18,18,18,,05/01/2007
+N25DECE072,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,05/01/2007
+N25DECE072,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,,05/01/2007
+N25DECE072,II,2.3,Tham gia các buổi hội thảo việc làm,5,5,5,5,,05/01/2007
+N25DECE072,II,TC2,Mức điểm tối đa Tiêu chí 2,25,25,25,25,,05/01/2007
+N25DECE072,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,10,10,,05/01/2007
+N25DECE072,II,3.2,Tham gia công tác xã hội,4,2,2,2,,05/01/2007
+N25DECE072,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,,05/01/2007
+N25DECE072,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,05/01/2007
+N25DECE072,II,TC3,Mức điểm tối đa Tiêu chí 3,20,18,18,18,,05/01/2007
+N25DECE072,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,05/01/2007
+N25DECE072,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,05/01/2007
+N25DECE072,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,05/01/2007
+N25DECE072,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,05/01/2007
+N25DECE072,II,4.5,Được biểu dương khen thưởng,2,0,,0,,05/01/2007
+N25DECE072,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,,05/01/2007
+N25DECE072,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,4,4,4,,05/01/2007
+N25DECE072,II,5.2,Thành viên tham gia các Câu lạc bộ,3,3,3,3,,05/01/2007
+N25DECE072,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,,05/01/2007
+N25DECE072,II,TC5,Mức điểm tối đa Tiêu chí 5,10,7,7,7,,05/01/2007
+N25DECE072,II,TOTAL,TỔNG CỘNG,100,91,91,91,,05/01/2007
+N25DECE086,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,03/07/2007
+N25DECE086,II,1.2,Kết quả học tập trong kỳ học,10,8,8,8,,03/07/2007
+N25DECE086,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,03/07/2007
+N25DECE086,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,2,2,,03/07/2007
+N25DECE086,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,0,0,0,,03/07/2007
+N25DECE086,II,TC1,Mức điểm tối đa Tiêu chí 1,20,17,17,17,,03/07/2007
+N25DECE086,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,03/07/2007
+N25DECE086,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,,03/07/2007
+N25DECE086,II,2.3,Tham gia các buổi hội thảo việc làm,5,3,3,3,,03/07/2007
+N25DECE086,II,TC2,Mức điểm tối đa Tiêu chí 2,25,23,23,23,,03/07/2007
+N25DECE086,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,10,10,,03/07/2007
+N25DECE086,II,3.2,Tham gia công tác xã hội,4,,,,,03/07/2007
+N25DECE086,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,,03/07/2007
+N25DECE086,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,03/07/2007
+N25DECE086,II,TC3,Mức điểm tối đa Tiêu chí 3,20,16,16,16,,03/07/2007
+N25DECE086,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,03/07/2007
+N25DECE086,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,03/07/2007
+N25DECE086,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,03/07/2007
+N25DECE086,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,03/07/2007
+N25DECE086,II,4.5,Được biểu dương khen thưởng,2,0,,0,,03/07/2007
+N25DECE086,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,,03/07/2007
+N25DECE086,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,4,4,4,,03/07/2007
+N25DECE086,II,5.2,Thành viên tham gia các Câu lạc bộ,3,3,3,3,,03/07/2007
+N25DECE086,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,,03/07/2007
+N25DECE086,II,TC5,Mức điểm tối đa Tiêu chí 5,10,7,7,7,,03/07/2007
+N25DECE086,II,TOTAL,TỔNG CỘNG,100,86,86,86,,03/07/2007
+N25DECE076,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,16/04/2007
+N25DECE076,II,1.2,Kết quả học tập trong kỳ học,10,6,6,6,,16/04/2007
+N25DECE076,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,16/04/2007
+N25DECE076,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,0,0,,16/04/2007
+N25DECE076,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,,16/04/2007
+N25DECE076,II,TC1,Mức điểm tối đa Tiêu chí 1,20,16,14,14,,16/04/2007
+N25DECE076,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,16/04/2007
+N25DECE076,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,,16/04/2007
+N25DECE076,II,2.3,Tham gia các buổi hội thảo việc làm,5,2,0,0,,16/04/2007
+N25DECE076,II,TC2,Mức điểm tối đa Tiêu chí 2,25,22,20,20,,16/04/2007
+N25DECE076,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,6,6,,16/04/2007
+N25DECE076,II,3.2,Tham gia công tác xã hội,4,1,0,0,,16/04/2007
+N25DECE076,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,0,,0,,16/04/2007
+N25DECE076,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,16/04/2007
+N25DECE076,II,TC3,Mức điểm tối đa Tiêu chí 3,20,14,9,9,,16/04/2007
+N25DECE076,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,16/04/2007
+N25DECE076,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,16/04/2007
+N25DECE076,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,16/04/2007
+N25DECE076,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,16/04/2007
+N25DECE076,II,4.5,Được biểu dương khen thưởng,2,0,,0,,16/04/2007
+N25DECE076,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,,16/04/2007
+N25DECE076,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,,16/04/2007
+N25DECE076,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,,0,,16/04/2007
+N25DECE076,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,,16/04/2007
+N25DECE076,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,,16/04/2007
+N25DECE076,II,TOTAL,TỔNG CỘNG,100,75,66,66,,16/04/2007
+N25DECE070,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,12/06/2007
+N25DECE070,II,1.2,Kết quả học tập trong kỳ học,10,8,8,8,,12/06/2007
+N25DECE070,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,12/06/2007
+N25DECE070,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,2,2,,12/06/2007
+N25DECE070,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,,12/06/2007
+N25DECE070,II,TC1,Mức điểm tối đa Tiêu chí 1,20,18,18,18,,12/06/2007
+N25DECE070,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,12/06/2007
+N25DECE070,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,,12/06/2007
+N25DECE070,II,2.3,Tham gia các buổi hội thảo việc làm,5,3,3,3,,12/06/2007
+N25DECE070,II,TC2,Mức điểm tối đa Tiêu chí 2,25,23,23,23,,12/06/2007
+N25DECE070,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,4,4,4,,12/06/2007
+N25DECE070,II,3.2,Tham gia công tác xã hội,4,0,0,0,,12/06/2007
+N25DECE070,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,,12/06/2007
+N25DECE070,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,12/06/2007
+N25DECE070,II,TC3,Mức điểm tối đa Tiêu chí 3,20,10,10,10,,12/06/2007
+N25DECE070,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,12/06/2007
+N25DECE070,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,12/06/2007
+N25DECE070,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,12/06/2007
+N25DECE070,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,12/06/2007
+N25DECE070,II,4.5,Được biểu dương khen thưởng,2,0,,0,,12/06/2007
+N25DECE070,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,,12/06/2007
+N25DECE070,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,,12/06/2007
+N25DECE070,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,,0,,12/06/2007
+N25DECE070,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,,12/06/2007
+N25DECE070,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,,12/06/2007
+N25DECE070,II,TOTAL,TỔNG CỘNG,100,74,74,74,,12/06/2007
+N25DECE059,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,01/06/2007
+N25DECE059,II,1.2,Kết quả học tập trong kỳ học,10,6,6,6,,01/06/2007
+N25DECE059,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,01/06/2007
+N25DECE059,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,2,2,,01/06/2007
+N25DECE059,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,,01/06/2007
+N25DECE059,II,TC1,Mức điểm tối đa Tiêu chí 1,20,16,16,16,,01/06/2007
+N25DECE059,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,01/06/2007
+N25DECE059,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,,01/06/2007
+N25DECE059,II,2.3,Tham gia các buổi hội thảo việc làm,5,5,5,5,,01/06/2007
+N25DECE059,II,TC2,Mức điểm tối đa Tiêu chí 2,25,25,25,25,,01/06/2007
+N25DECE059,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,10,10,,01/06/2007
+N25DECE059,II,3.2,Tham gia công tác xã hội,4,1,1,1,,01/06/2007
+N25DECE059,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,2,2,,01/06/2007
+N25DECE059,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,01/06/2007
+N25DECE059,II,TC3,Mức điểm tối đa Tiêu chí 3,20,17,16,16,,01/06/2007
+N25DECE059,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,01/06/2007
+N25DECE059,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,01/06/2007
+N25DECE059,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,01/06/2007
+N25DECE059,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,01/06/2007
+N25DECE059,II,4.5,Được biểu dương khen thưởng,2,0,,0,,01/06/2007
+N25DECE059,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,,01/06/2007
+N25DECE059,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,,01/06/2007
+N25DECE059,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,,0,,01/06/2007
+N25DECE059,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,,01/06/2007
+N25DECE059,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,,01/06/2007
+N25DECE059,II,TOTAL,TỔNG CỘNG,100,81,80,80,,01/06/2007
+N25DECE071,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,
+N25DECE071,II,1.2,Kết quả học tập trong kỳ học,10,6,6,6,,
+N25DECE071,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,
+N25DECE071,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,0,0,0,,
+N25DECE071,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,,
+N25DECE071,II,TC1,Mức điểm tối đa Tiêu chí 1,20,14,14,14,,
+N25DECE071,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,
+N25DECE071,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,,
+N25DECE071,II,2.3,Tham gia các buổi hội thảo việc làm,5,2,3,3,,
+N25DECE071,II,TC2,Mức điểm tối đa Tiêu chí 2,25,22,23,23,,
+N25DECE071,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,0,0,0,,
+N25DECE071,II,3.2,Tham gia công tác xã hội,4,0,0,0,,
+N25DECE071,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,,
+N25DECE071,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,
+N25DECE071,II,TC3,Mức điểm tối đa Tiêu chí 3,20,6,6,6,,
+N25DECE071,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,
+N25DECE071,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,4,4,,
+N25DECE071,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,
+N25DECE071,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,
+N25DECE071,II,4.5,Được biểu dương khen thưởng,2,0,,0,,
+N25DECE071,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,22,22,,
+N25DECE071,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,,
+N25DECE071,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,,0,,
+N25DECE071,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,,
+N25DECE071,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,,
+N25DECE071,II,TOTAL,TỔNG CỘNG,100,65,65,65,,
+N25DECE085,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,16/07/2007
+N25DECE085,II,1.2,Kết quả học tập trong kỳ học,10,10,8,8,,16/07/2007
+N25DECE085,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,16/07/2007
+N25DECE085,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,1,1,,16/07/2007
+N25DECE085,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,0,0,,16/07/2007
+N25DECE085,II,TC1,Mức điểm tối đa Tiêu chí 1,20,20,16,16,,16/07/2007
+N25DECE085,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,16/07/2007
+N25DECE085,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,,16/07/2007
+N25DECE085,II,2.3,Tham gia các buổi hội thảo việc làm,5,1,2,2,,16/07/2007
+N25DECE085,II,TC2,Mức điểm tối đa Tiêu chí 2,25,21,22,22,,16/07/2007
+N25DECE085,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,10,10,,16/07/2007
+N25DECE085,II,3.2,Tham gia công tác xã hội,4,1,0,0,,16/07/2007
+N25DECE085,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,,16/07/2007
+N25DECE085,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,16/07/2007
+N25DECE085,II,TC3,Mức điểm tối đa Tiêu chí 3,20,17,16,16,,16/07/2007
+N25DECE085,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,16/07/2007
+N25DECE085,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,16/07/2007
+N25DECE085,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,16/07/2007
+N25DECE085,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,16/07/2007
+N25DECE085,II,4.5,Được biểu dương khen thưởng,2,0,,0,,16/07/2007
+N25DECE085,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,,16/07/2007
+N25DECE085,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,4,4,,16/07/2007
+N25DECE085,II,5.2,Thành viên tham gia các Câu lạc bộ,3,,,,,16/07/2007
+N25DECE085,II,5.3,Sinh viên đạt thành tích đặc biệt,3,,,,,16/07/2007
+N25DECE085,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,4,4,,16/07/2007
+N25DECE085,II,TOTAL,TỔNG CỘNG,100,81,81,81,,16/07/2007
+N25DECE065,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,21/03/2007
+N25DECE065,II,1.2,Kết quả học tập trong kỳ học,10,8,8,8,,21/03/2007
+N25DECE065,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,21/03/2007
+N25DECE065,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,1.5,1.5,,21/03/2007
+N25DECE065,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,,21/03/2007
+N25DECE065,II,TC1,Mức điểm tối đa Tiêu chí 1,20,18,17.5,17.5,,21/03/2007
+N25DECE065,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,21/03/2007
+N25DECE065,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,,21/03/2007
+N25DECE065,II,2.3,Tham gia các buổi hội thảo việc làm,5,3,2,2,,21/03/2007
+N25DECE065,II,TC2,Mức điểm tối đa Tiêu chí 2,25,23,22,22,,21/03/2007
+N25DECE065,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,4,4,,21/03/2007
+N25DECE065,II,3.2,Tham gia công tác xã hội,4,1,1,1,,21/03/2007
+N25DECE065,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,,21/03/2007
+N25DECE065,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,21/03/2007
+N25DECE065,II,TC3,Mức điểm tối đa Tiêu chí 3,20,17,11,11,,21/03/2007
+N25DECE065,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,21/03/2007
+N25DECE065,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,21/03/2007
+N25DECE065,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,21/03/2007
+N25DECE065,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,21/03/2007
+N25DECE065,II,4.5,Được biểu dương khen thưởng,2,0,,0,,21/03/2007
+N25DECE065,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,,21/03/2007
+N25DECE065,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,,21/03/2007
+N25DECE065,II,5.2,Thành viên tham gia các Câu lạc bộ,3,3,3,3,,21/03/2007
+N25DECE065,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,,21/03/2007
+N25DECE065,II,TC5,Mức điểm tối đa Tiêu chí 5,10,3,3,3,,21/03/2007
+N25DECE065,II,TOTAL,TỔNG CỘNG,100,84,76.5,76.5,,21/03/2007
+N25DECE047,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,22/06/2007
+N25DECE047,II,1.2,Kết quả học tập trong kỳ học,10,8,8,8,,22/06/2007
+N25DECE047,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,22/06/2007
+N25DECE047,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,1,1,,22/06/2007
+N25DECE047,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,0,,,,22/06/2007
+N25DECE047,II,TC1,Mức điểm tối đa Tiêu chí 1,20,17,16,16,,22/06/2007
+N25DECE047,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,22/06/2007
+N25DECE047,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,4,4,,22/06/2007
+N25DECE047,II,2.3,Tham gia các buổi hội thảo việc làm,5,0,0,0,,22/06/2007
+N25DECE047,II,TC2,Mức điểm tối đa Tiêu chí 2,25,20,19,19,,22/06/2007
+N25DECE047,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,8,8,,22/06/2007
+N25DECE047,II,3.2,Tham gia công tác xã hội,4,1,0,0,,22/06/2007
+N25DECE047,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,0,0,,22/06/2007
+N25DECE047,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,22/06/2007
+N25DECE047,II,TC3,Mức điểm tối đa Tiêu chí 3,20,17,11,11,,22/06/2007
+N25DECE047,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,22/06/2007
+N25DECE047,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,22/06/2007
+N25DECE047,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,22/06/2007
+N25DECE047,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,22/06/2007
+N25DECE047,II,4.5,Được biểu dương khen thưởng,2,0,,0,,22/06/2007
+N25DECE047,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,,22/06/2007
+N25DECE047,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,,22/06/2007
+N25DECE047,II,5.2,Thành viên tham gia các Câu lạc bộ,3,3,0,0,,22/06/2007
+N25DECE047,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,,22/06/2007
+N25DECE047,II,TC5,Mức điểm tối đa Tiêu chí 5,10,3,0,0,,22/06/2007
+N25DECE047,II,TOTAL,TỔNG CỘNG,100,80,69,69,,22/06/2007
+N25DECE049,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,03/02/2007
+N25DECE049,II,1.2,Kết quả học tập trong kỳ học,10,10,10,10,,03/02/2007
+N25DECE049,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,03/02/2007
+N25DECE049,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,2,2,,03/02/2007
+N25DECE049,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,,03/02/2007
+N25DECE049,II,TC1,Mức điểm tối đa Tiêu chí 1,20,20,20,20,,03/02/2007
+N25DECE049,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,03/02/2007
+N25DECE049,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,,03/02/2007
+N25DECE049,II,2.3,Tham gia các buổi hội thảo việc làm,5,2,0,0,,03/02/2007
+N25DECE049,II,TC2,Mức điểm tối đa Tiêu chí 2,25,22,20,20,,03/02/2007
+N25DECE049,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,2,2,,03/02/2007
+N25DECE049,II,3.2,Tham gia công tác xã hội,4,0,,0,,03/02/2007
+N25DECE049,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,1,1,,03/02/2007
+N25DECE049,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,03/02/2007
+N25DECE049,II,TC3,Mức điểm tối đa Tiêu chí 3,20,16,6,6,,03/02/2007
+N25DECE049,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,03/02/2007
+N25DECE049,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,03/02/2007
+N25DECE049,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,03/02/2007
+N25DECE049,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,03/02/2007
+N25DECE049,II,4.5,Được biểu dương khen thưởng,2,0,,0,,03/02/2007
+N25DECE049,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,,03/02/2007
+N25DECE049,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,,03/02/2007
+N25DECE049,II,5.2,Thành viên tham gia các Câu lạc bộ,3,3,0,0,,03/02/2007
+N25DECE049,II,5.3,Sinh viên đạt thành tích đặc biệt,3,,,0,,03/02/2007
+N25DECE049,II,TC5,Mức điểm tối đa Tiêu chí 5,10,3,0,0,,03/02/2007
+N25DECE049,II,TOTAL,TỔNG CỘNG,100,84,69,69,,03/02/2007
+N25DECE080,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,15/01/2007
+N25DECE080,II,1.2,Kết quả học tập trong kỳ học,10,10,8,8,,15/01/2007
+N25DECE080,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,15/01/2007
+N25DECE080,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,1,1,,15/01/2007
+N25DECE080,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,,0,,15/01/2007
+N25DECE080,II,TC1,Mức điểm tối đa Tiêu chí 1,20,20,16,16,,15/01/2007
+N25DECE080,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,15/01/2007
+N25DECE080,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,4,4,,15/01/2007
+N25DECE080,II,2.3,Tham gia các buổi hội thảo việc làm,5,2,2,2,,15/01/2007
+N25DECE080,II,TC2,Mức điểm tối đa Tiêu chí 2,25,22,21,21,,15/01/2007
+N25DECE080,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,6,6,,15/01/2007
+N25DECE080,II,3.2,Tham gia công tác xã hội,4,1,1,1,,15/01/2007
+N25DECE080,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,,15/01/2007
+N25DECE080,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,15/01/2007
+N25DECE080,II,TC3,Mức điểm tối đa Tiêu chí 3,20,17,13,13,,15/01/2007
+N25DECE080,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,15/01/2007
+N25DECE080,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,15/01/2007
+N25DECE080,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,15/01/2007
+N25DECE080,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,15/01/2007
+N25DECE080,II,4.5,Được biểu dương khen thưởng,2,0,0,0,,15/01/2007
+N25DECE080,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,,15/01/2007
+N25DECE080,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,0,0,,15/01/2007
+N25DECE080,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,0,0,,15/01/2007
+N25DECE080,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,0,0,,15/01/2007
+N25DECE080,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,,15/01/2007
+N25DECE080,II,TOTAL,TỔNG CỘNG,100,82,73,73,,15/01/2007
+N25DECE075,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,25/05/2007
+N25DECE075,II,1.2,Kết quả học tập trong kỳ học,10,6,6,6,,25/05/2007
+N25DECE075,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,25/05/2007
+N25DECE075,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,0,,0,,25/05/2007
+N25DECE075,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,,25/05/2007
+N25DECE075,II,TC1,Mức điểm tối đa Tiêu chí 1,20,14,14,14,,25/05/2007
+N25DECE075,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,25/05/2007
+N25DECE075,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,,25/05/2007
+N25DECE075,II,2.3,Tham gia các buổi hội thảo việc làm,5,0,0,0,,25/05/2007
+N25DECE075,II,TC2,Mức điểm tối đa Tiêu chí 2,25,20,20,20,,25/05/2007
+N25DECE075,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,6,6,,25/05/2007
+N25DECE075,II,3.2,Tham gia công tác xã hội,4,0,,0,,25/05/2007
+N25DECE075,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,0,,0,,25/05/2007
+N25DECE075,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,25/05/2007
+N25DECE075,II,TC3,Mức điểm tối đa Tiêu chí 3,20,13,9,9,,25/05/2007
+N25DECE075,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,25/05/2007
+N25DECE075,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,25/05/2007
+N25DECE075,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,25/05/2007
+N25DECE075,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,25/05/2007
+N25DECE075,II,4.5,Được biểu dương khen thưởng,2,0,,0,,25/05/2007
+N25DECE075,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,,25/05/2007
+N25DECE075,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,,25/05/2007
+N25DECE075,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,,0,,25/05/2007
+N25DECE075,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,,25/05/2007
+N25DECE075,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,,25/05/2007
+N25DECE075,II,TOTAL,TỔNG CỘNG,100,70,66,66,,25/05/2007
+N25DECE056,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,22/04/2007
+N25DECE056,II,1.2,Kết quả học tập trong kỳ học,10,6,6,6,,22/04/2007
+N25DECE056,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,22/04/2007
+N25DECE056,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,2,2,,22/04/2007
+N25DECE056,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,,,,,22/04/2007
+N25DECE056,II,TC1,Mức điểm tối đa Tiêu chí 1,20,15,15,15,,22/04/2007
+N25DECE056,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,22/04/2007
+N25DECE056,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,4,4,,22/04/2007
+N25DECE056,II,2.3,Tham gia các buổi hội thảo việc làm,5,3,3,3,,22/04/2007
+N25DECE056,II,TC2,Mức điểm tối đa Tiêu chí 2,25,23,22,22,,22/04/2007
+N25DECE056,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,10,10,,22/04/2007
+N25DECE056,II,3.2,Tham gia công tác xã hội,4,4,4,4,,22/04/2007
+N25DECE056,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,,22/04/2007
+N25DECE056,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,22/04/2007
+N25DECE056,II,TC3,Mức điểm tối đa Tiêu chí 3,20,20,20,20,,22/04/2007
+N25DECE056,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,22/04/2007
+N25DECE056,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,22/04/2007
+N25DECE056,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,22/04/2007
+N25DECE056,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,22/04/2007
+N25DECE056,II,4.5,Được biểu dương khen thưởng,2,0,,0,,22/04/2007
+N25DECE056,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,,22/04/2007
+N25DECE056,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,,,,,22/04/2007
+N25DECE056,II,5.2,Thành viên tham gia các Câu lạc bộ,3,3,0,0,,22/04/2007
+N25DECE056,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,,22/04/2007
+N25DECE056,II,TC5,Mức điểm tối đa Tiêu chí 5,10,3,0,0,,22/04/2007
+N25DECE056,II,TOTAL,TỔNG CỘNG,100,84,80,80,,22/04/2007
+N25DECE077,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,16/01/2007
+N25DECE077,II,1.2,Kết quả học tập trong kỳ học,10,6,6,6,,16/01/2007
+N25DECE077,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,16/01/2007
+N25DECE077,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,2,2,,16/01/2007
+N25DECE077,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,,16/01/2007
+N25DECE077,II,TC1,Mức điểm tối đa Tiêu chí 1,20,16,16,16,,16/01/2007
+N25DECE077,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,16/01/2007
+N25DECE077,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,,16/01/2007
+N25DECE077,II,2.3,Tham gia các buổi hội thảo việc làm,5,5,5,5,,16/01/2007
+N25DECE077,II,TC2,Mức điểm tối đa Tiêu chí 2,25,25,25,25,,16/01/2007
+N25DECE077,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,10,10,,16/01/2007
+N25DECE077,II,3.2,Tham gia công tác xã hội,4,0,0,0,,16/01/2007
+N25DECE077,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,,16/01/2007
+N25DECE077,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,16/01/2007
+N25DECE077,II,TC3,Mức điểm tối đa Tiêu chí 3,20,16,16,16,,16/01/2007
+N25DECE077,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,16/01/2007
+N25DECE077,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,16/01/2007
+N25DECE077,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,16/01/2007
+N25DECE077,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,16/01/2007
+N25DECE077,II,4.5,Được biểu dương khen thưởng,2,0,,0,,16/01/2007
+N25DECE077,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,,16/01/2007
+N25DECE077,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,,16/01/2007
+N25DECE077,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,,0,,16/01/2007
+N25DECE077,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,,16/01/2007
+N25DECE077,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,,16/01/2007
+N25DECE077,II,TOTAL,TỔNG CỘNG,100,80,80,80,,16/01/2007
+N25DECE054,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,01/03/2007
+N25DECE054,II,1.2,Kết quả học tập trong kỳ học,10,6,8,8,,01/03/2007
+N25DECE054,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,01/03/2007
+N25DECE054,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,0,0,,01/03/2007
+N25DECE054,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,,01/03/2007
+N25DECE054,II,TC1,Mức điểm tối đa Tiêu chí 1,20,16,16,16,,01/03/2007
+N25DECE054,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,01/03/2007
+N25DECE054,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,,01/03/2007
+N25DECE054,II,2.3,Tham gia các buổi hội thảo việc làm,5,3,3,3,,01/03/2007
+N25DECE054,II,TC2,Mức điểm tối đa Tiêu chí 2,25,23,23,23,,01/03/2007
+N25DECE054,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,0,0,0,,01/03/2007
+N25DECE054,II,3.2,Tham gia công tác xã hội,4,0,0,0,,01/03/2007
+N25DECE054,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,0,,0,,01/03/2007
+N25DECE054,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,01/03/2007
+N25DECE054,II,TC3,Mức điểm tối đa Tiêu chí 3,20,3,3,3,,01/03/2007
+N25DECE054,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,01/03/2007
+N25DECE054,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,01/03/2007
+N25DECE054,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,01/03/2007
+N25DECE054,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,01/03/2007
+N25DECE054,II,4.5,Được biểu dương khen thưởng,2,0,,0,,01/03/2007
+N25DECE054,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,,01/03/2007
+N25DECE054,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,,01/03/2007
+N25DECE054,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,,0,,01/03/2007
+N25DECE054,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,,01/03/2007
+N25DECE054,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,,01/03/2007
+N25DECE054,II,TOTAL,TỔNG CỘNG,100,65,65,65,,01/03/2007
+N25DECE074,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,05/02/2007
+N25DECE074,II,1.2,Kết quả học tập trong kỳ học,10,8,8,8,,05/02/2007
+N25DECE074,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,05/02/2007
+N25DECE074,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,2,2,,05/02/2007
+N25DECE074,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,,05/02/2007
+N25DECE074,II,TC1,Mức điểm tối đa Tiêu chí 1,20,18,18,18,,05/02/2007
+N25DECE074,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,05/02/2007
+N25DECE074,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,,05/02/2007
+N25DECE074,II,2.3,Tham gia các buổi hội thảo việc làm,5,3,3,3,,05/02/2007
+N25DECE074,II,TC2,Mức điểm tối đa Tiêu chí 2,25,23,23,23,,05/02/2007
+N25DECE074,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,6,6,6,,05/02/2007
+N25DECE074,II,3.2,Tham gia công tác xã hội,4,0,,0,,05/02/2007
+N25DECE074,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,,05/02/2007
+N25DECE074,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,05/02/2007
+N25DECE074,II,TC3,Mức điểm tối đa Tiêu chí 3,20,12,12,12,,05/02/2007
+N25DECE074,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,05/02/2007
+N25DECE074,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,05/02/2007
+N25DECE074,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,05/02/2007
+N25DECE074,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,05/02/2007
+N25DECE074,II,4.5,Được biểu dương khen thưởng,2,0,,0,,05/02/2007
+N25DECE074,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,,05/02/2007
+N25DECE074,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,,05/02/2007
+N25DECE074,II,5.2,Thành viên tham gia các Câu lạc bộ,3,3,3,3,,05/02/2007
+N25DECE074,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,,05/02/2007
+N25DECE074,II,TC5,Mức điểm tối đa Tiêu chí 5,10,3,3,3,,05/02/2007
+N25DECE074,II,TOTAL,TỔNG CỘNG,100,79,79,79,,05/02/2007
+N25DECE055,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,07/08/2007
+N25DECE055,II,1.2,Kết quả học tập trong kỳ học,10,8,8,8,,07/08/2007
+N25DECE055,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,07/08/2007
+N25DECE055,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,2,2,,07/08/2007
+N25DECE055,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,,07/08/2007
+N25DECE055,II,TC1,Mức điểm tối đa Tiêu chí 1,20,18,18,18,,07/08/2007
+N25DECE055,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,07/08/2007
+N25DECE055,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,,07/08/2007
+N25DECE055,II,2.3,Tham gia các buổi hội thảo việc làm,5,3,3,3,,07/08/2007
+N25DECE055,II,TC2,Mức điểm tối đa Tiêu chí 2,25,23,23,23,,07/08/2007
+N25DECE055,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,10,10,,07/08/2007
+N25DECE055,II,3.2,Tham gia công tác xã hội,4,1,1,1,,07/08/2007
+N25DECE055,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,,07/08/2007
+N25DECE055,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,07/08/2007
+N25DECE055,II,TC3,Mức điểm tối đa Tiêu chí 3,20,17,17,17,,07/08/2007
+N25DECE055,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,07/08/2007
+N25DECE055,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,07/08/2007
+N25DECE055,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,07/08/2007
+N25DECE055,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,07/08/2007
+N25DECE055,II,4.5,Được biểu dương khen thưởng,2,0,,0,,07/08/2007
+N25DECE055,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,23,23,,07/08/2007
+N25DECE055,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,,07/08/2007
+N25DECE055,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,,0,,07/08/2007
+N25DECE055,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,,07/08/2007
+N25DECE055,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,,07/08/2007
+N25DECE055,II,TOTAL,TỔNG CỘNG,100,81,81,81,,07/08/2007
+N25DECE078,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,
+N25DECE078,II,1.2,Kết quả học tập trong kỳ học,10,6,6,6,,
+N25DECE078,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,
+N25DECE078,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,0,,0,,
+N25DECE078,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,,
+N25DECE078,II,TC1,Mức điểm tối đa Tiêu chí 1,20,14,14,14,,
+N25DECE078,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,
+N25DECE078,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,,
+N25DECE078,II,2.3,Tham gia các buổi hội thảo việc làm,5,2,3,3,,
+N25DECE078,II,TC2,Mức điểm tối đa Tiêu chí 2,25,22,23,23,,
+N25DECE078,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,0,0,0,,
+N25DECE078,II,3.2,Tham gia công tác xã hội,4,0,,0,,
+N25DECE078,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,3,3,,
+N25DECE078,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,3,3,,
+N25DECE078,II,TC3,Mức điểm tối đa Tiêu chí 3,20,6,6,6,,
+N25DECE078,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,
+N25DECE078,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,4,4,,
+N25DECE078,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,
+N25DECE078,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,
+N25DECE078,II,4.5,Được biểu dương khen thưởng,2,0,,0,,
+N25DECE078,II,TC4,Mức điểm tối đa Tiêu chí 4,25,23,22,22,,
+N25DECE078,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,,0,,
+N25DECE078,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,,0,,
+N25DECE078,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,,0,,
+N25DECE078,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,,
+N25DECE078,II,TOTAL,TỔNG CỘNG,100,65,65,65,,
