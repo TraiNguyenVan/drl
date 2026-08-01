@@ -33,6 +33,10 @@ At the end of each semester, students submit training point evaluation documents
 | `HV_Mau 2_Tong hop KQRL cua SV.xlsx` | **Source of truth** — official final scores (do not modify) |
 | `HV_Mau 2_Chi tiet KQRL.xlsx` | *(Generated)* Detailed sub-section report |
 | `process_and_generate.py` | Main pipeline script |
+| `render_charts.py` | Module for generating static DRL chart images |
+| `render_html.py` | Module for generating the interactive DRL HTML dashboard |
+| `drl_dashboard.html` | *(Generated)* Interactive performance analytics dashboard |
+| `charts/` | *(Generated)* Folder containing static DRL statistic charts |
 | `STRUCTURE.md` | Document layout map (paragraph/table indices, cell mappings) |
 | `GEMINI.md` | AI agent rules and constraints for this project |
 | `students/` | Raw student papers (`.doc` / `.docx`) |
@@ -76,28 +80,24 @@ Uses a compatibility-wrapped shape textbox in drawing container (`##STUDENT` / `
 
 ## ⚙️ Pipeline Workflow
 
-### Step 1 — Conversion
-Scans `students/` and batch-converts `.doc` → `.docx` using `soffice --headless`.
+### Step 1 — Database and Score Loading
+- Reads the official student roster and final totals from `HV_Mau 2_Tong hop KQRL cua SV.xlsx`.
+- Loads specific sub-criterion scores and student Date of Birth (DOB) data from `ai_studio_code.csv`.
 
-### Step 2 — Database and Score CSV Loading
-- Reads roster from `HV_Mau 2_Tong hop KQRL cua SV.xlsx`.
-- Loads specific sub-criterion scores from `ai_studio_code.csv`.
+### Step 2 — Per-student processing
+1. Make a copy of `master.docx`.
+2. Clear template info runs and insert student name, MSV, and DOB using custom tab stops.
+3. Write subscores from the CSV data into the grading criteria table (Table 1) columns (Student, Class, Advisor).
+4. Overwrite section totals and grand totals (Rows 20, 30, 37, 45, 52, 53) using values from the master Excel file to ensure 100% mathematical consistency.
+5. Split the student name into the signature textbox (`##STUDENT` / `_NAME##`).
+6. Save the final document in `generated_students/`.
 
-### Step 3 — Per-student processing
-
-**Present students** (file found):
-1. Parse DOB from student's raw file paragraph text
-2. Clear template info runs and insert name, MSV, and DOB using custom tab stops
-3. Write subscores from CSV to the grading criteria table (Table 1)
-4. Overwrite totals and grand totals (Rows 20, 30, 37, 45, 52, 53) using values from the master Excel file to ensure 100% mathematical consistency
-5. Split student name into the signature textbox (`##STUDENT` / `_NAME##`)
-6. Save file in `generated_students/`
-
-**Absent students** (no file):
-1. Perform the same template-filling process, leaving DOB blank and writing `0` for all individual subscores, then copying the official totals from the master Excel.
-
-### Step 4 — Excel report
+### Step 3 — Excel report
 Compiles all 22 sub-sections and distribution statistics (ratings, percentages, signature blocks) into `HV_Mau 2_Chi tiet KQRL.xlsx`.
+
+### Step 4 — Charts & Dashboard Generation
+- Unless `--disable-charts` is passed, runs `render_charts.py` to generate statistical charts (score distribution, rating breakdown, criteria averages) in `charts/`.
+- Runs `render_html.py` to generate the interactive, highly optimized `drl_dashboard.html`.
 
 ---
 
@@ -113,16 +113,11 @@ Totals and Grand Totals are overwritten from the master Excel summary file, guar
 
 ## 🛠️ Setup & Installation
 
-Requires Python 3 and LibreOffice.
-
-### System dependencies (Debian/Ubuntu)
-```bash
-sudo apt update && sudo apt install libreoffice
-```
+Requires Python 3.
 
 ### Python packages
 ```bash
-pip3 install python-docx openpyxl lxml pillow
+pip3 install python-docx openpyxl lxml pillow matplotlib numpy
 ```
 
 ---
@@ -136,10 +131,11 @@ python3 process_and_generate.py
 
 ### Command Line Flags
 You can customize the pipeline run using the following flags:
-* `--disable-excel`: Skip generating the detailed Excel sub-section report (`HV_Mau 2_Chi tiet KQRL.xlsx`).
+* `--disable-charts`: Skip generating statistic charts and the interactive HTML dashboard.
 * `--disable-gdrive`: Skip syncing the generated student files to Google Drive.
+* `--disable-excel`: Deprecated alias for `--disable-charts`.
 
 **Example:**
 ```bash
-python3 process_and_generate.py --disable-excel --disable-gdrive
+python3 process_and_generate.py --disable-charts --disable-gdrive
 ```
