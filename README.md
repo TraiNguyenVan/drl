@@ -15,7 +15,7 @@ quick result can be found here on [Google Drive](https://drive.google.com/drive/
 
 ## 🔍 Overview
 
-At the end of each semester, students submit training point evaluation documents (`.doc` or `.docx`). This pipeline automates:
+At the end of each semester, students submit training point evaluation documents (`.doc` or `.docx`). The process of converting doc/docx to csv might be public in another project, yet this pipeline automates:
 
 1. **Loads scores & DOB** directly from `ai_studio_code.csv` and the official roster summary.
 2. **Generates** final formatted Word documents for all 37 students (present and absent) using custom tab stops for info alignment.
