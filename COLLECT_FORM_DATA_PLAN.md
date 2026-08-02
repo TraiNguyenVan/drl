@@ -67,22 +67,143 @@ graph TD
     D --> E[Update ai_studio_code.csv]
     E --> F[process_and_generate.py]
 ```
-
 ### Google Sheet Worksheet Layout
 
 1. **`1_Student_Self`**: 
    * Linked directly to the Google Form. Collects student self-scores.
 2. **`2_Class_Review`**: 
-   * Implements a cell-by-cell reference to Sheet 1: `=1_Student_Self!A1`.
-   * During the class meeting, the monitor reviews the scores. If a student's score needs adjustment, the monitor simply overwrites the formula in that cell with the new hardcoded value.
-3. **`3_Advisor_Review`**:
-   * Implements reference to Sheet 2: `=2_Class_Review!A1`.
-   * The academic advisor reviews and overwrites cell values to make adjustments.
+   * Starts as a copy of `1_Student_Self` (via cell formulas or copy-paste).
+   * During the class meeting, the monitor reviews the scores. If a student's score needs adjustment, the monitor simply overwrites that cell with the new adjusted value.
+   * This worksheet also acts as the advisor's final score database (as they are merged).
+
+### 🛠️ Click-by-Click Setup Guide
+
+Choose one of the two methods below to set up your Google Form and link it to your Google Sheet:
+
+---
+
+#### 🟢 Option A: Programmatic Generation via Google Apps Script (Fast & Accurate)
+Use this option to automatically build the form, set up character validation for the MSV field, populate all 22 questions with their exact valid dropdown choices, and link it back to your active spreadsheet in seconds.
+
+1. Create a new Google Sheet (or open your existing evaluation spreadsheet).
+2. From the top menu, go to **Extensions > Apps Script**.
+3. Clear any default code in the editor, and paste the following Google Apps Script:
+
+```javascript
+function generateDRLForm() {
+  // 1. Create a new Google Form
+  var form = FormApp.create('Phiếu Đánh Giá Rèn Luyện E25CQCE02-N');
+  form.setDescription('Phiếu tự đánh giá điểm rèn luyện của sinh viên - Học kỳ II.');
+  form.setCollectEmail(false);
+  
+  // 2. Add Required Personal Info
+  form.addTextItem().setTitle('Họ và tên').setRequired(true);
+  
+  // 3. Add MSV with exact Regex Validation matching roster
+  var msvItem = form.addTextItem().setTitle('Mã số sinh viên (MSV)').setRequired(true);
+  var msvValidation = FormApp.createTextValidation()
+    .requireTextMatchesPattern('^N25[A-Z]{4}\\d{3}$') // Enforces: N25 + 4 uppercase letters + 3 digits
+    .setHelpText('MSV phải đúng định dạng (Ví dụ: N25DCCN001)')
+    .build();
+  msvItem.setValidation(msvValidation);
+  
+  // 4. Add Date of Birth (standard Form date format)
+  form.addDateItem().setTitle('Ngày sinh').setRequired(true);
+  
+  // 5. Build list of all 22 criteria questions with correct score bounds
+  var criteria = [
+    { id: '1.1', title: '1.1 Ý thức và thái độ trong học tập', max: 3, choices: ['0', '1', '2', '3'] },
+    { id: '1.2', title: '1.2 Kết quả học tập trong kỳ học (GPA)', max: 10, choices: ['0', '4', '6', '8', '10'] },
+    { id: '1.3', title: '1.3 Ý thức chấp hành tốt nội quy về các kỳ thi', max: 4, choices: ['0', '1', '2', '3', '4'] },
+    { id: '1.4', title: '1.4 Ý thức và thái độ tham gia các hoạt động ngoại khóa', max: 2, choices: ['0', '0.5', '1', '1.5', '2'] },
+    { id: '1.5', title: '1.5 Tinh thần vượt khó phấn đấu vươn lên trong học tập', max: 1, choices: ['0', '1'] },
+    { id: '2.1', title: '2.1 Thực hiện nghiêm túc các nội quy quy chế', max: 15, choices: ['0', '5', '10', '15'] },
+    { id: '2.2', title: '2.2 Thực hiện nghiêm túc các buổi họp lớp', max: 5, choices: ['0', '1', '2', '3', '4', '5'] },
+    { id: '2.3', title: '2.3 Tham gia các buổi hội thảo việc làm (1 điểm/buổi)', max: 5, choices: ['0', '1', '2', '3', '4', '5'] },
+    { id: '3.1', title: '3.1 Tham gia đầy đủ các hoạt động chính trị xã hội (2 điểm/hoạt động)', max: 10, choices: ['0', '2', '4', '6', '8', '10'] },
+    { id: '3.2', title: '3.2 Tham gia công tác xã hội (1 điểm/hoạt động)', max: 4, choices: ['0', '1', '2', '3', '4'] },
+    { id: '3.3', title: '3.3 Tuyên truyền tích cực hình ảnh về Trường/Khoa (1 điểm/hoạt động)', max: 3, choices: ['0', '1', '2', '3'] },
+    { id: '3.4', title: '3.4 Tích cực tham gia các hoạt động phòng chống tội phạm', max: 3, choices: ['0', '1', '2', '3'] },
+    { id: '3.5', title: '3.5 Đưa các thông tin sai lệch thiếu tích cực về Học viện (Bị cảnh cáo)', max: 0, choices: ['0', '-10'] },
+    { id: '4.1', title: '4.1 Chấp hành nghiêm chỉnh chủ trương của Đảng', max: 8, choices: ['0', '2', '4', '6', '8'] },
+    { id: '4.2', title: '4.2 Tích cực tham gia tuyên truyền chủ trương của Đảng', max: 5, choices: ['0', '1', '2', '3', '4', '5'] },
+    { id: '4.3', title: '4.3 Có mối quan hệ đúng mực với Thầy/ Cô', max: 5, choices: ['0', '1', '2', '3', '4', '5'] },
+    { id: '4.4', title: '4.4 Có mối quan hệ tốt với bạn bè trong lớp', max: 5, choices: ['0', '1', '2', '3', '4', '5'] },
+    { id: '4.5', title: '4.5 Được biểu dương khen thưởng', max: 2, choices: ['0', '1', '2'] },
+    { id: '4.6', title: '4.6 Vi phạm an ninh trật tự xã hội an toàn giao thông (Bị cảnh cáo)', max: 0, choices: ['0', '-5'] },
+    { id: '5.1', title: '5.1 Sinh viên làm lớp trưởng lớp phó', max: 4, choices: ['0', '4'] },
+    { id: '5.2', title: '5.2 Thành viên tham gia các Câu lạc bộ', max: 3, choices: ['0', '1', '2', '3'] },
+    { id: '5.3', title: '5.3 Sinh viên đạt thành tích đặc biệt', max: 3, choices: ['0', '1', '2', '3'] }
+  ];
+  
+  // 6. Loop to generate each Dropdown question
+  for (var i = 0; i < criteria.length; i++) {
+    var c = criteria[i];
+    var item = form.addListItem();
+    item.setTitle(c.title + ' (Tối đa: ' + c.max + ' điểm)')
+        .setChoiceValues(c.choices)
+        .setRequired(true);
+  }
+  
+  // 7. Link Form Responses back to this active Google Sheet
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  form.setDestination(FormApp.DestinationType.SPREADSHEET, ss.getId());
+  
+  Logger.log('Form created successfully!');
+  Logger.log('Form Edit URL: ' + form.getEditUrl());
+}
+```
+4. Click the **Save (Disk)** icon, then select `generateDRLForm` from the dropdown list next to the **Debug** button, and click **Run**.
+5. Give the script permission to access your Google Drive/Forms. 
+6. Once complete, check the Apps Script log: it will print the edit URL of the newly created form. Close Apps Script and return to your Google Sheet: a new sheet (tab) named `Form Responses 1` will have been added.
+7. Rename `Form Responses 1` to **`1_Student_Self`**.
+
+---
+
+#### 🔵 Option B: Manual Construction (Traditional)
+Use this if you prefer to build the Google Form step-by-step in the browser interface.
+
+1. Go to [Google Forms](https://forms.google.com) and click **Blank form**.
+2. Name the form: `Phiếu Đánh Giá Rèn Luyện E25CQCE02-N`.
+3. Add the **Personal Info** questions (Set all to **Required**):
+   * **Họ và tên**: Short Answer
+   * **Mã số sinh viên (MSV)**: Short Answer
+     * Click the 3 dots (bottom right of the question box) > select **Response validation**.
+     * Set rule to: **Regular expression** > **Matches** > Pattern: `^N25[A-Z]{4}\d{3}$`. (Ensures correct MSV format).
+   * **Ngày sinh**: Date
+4. Add the **22 criteria questions** as **Dropdown** questions. Make sure you use the exact option values specified in the scoring rules table (e.g. `0, 1, 2, 3` for 1.1; `10, 8, 6, 4, 0` for 1.2; `0, 0.5, 1.0, 1.5, 2.0` for 1.4).
+5. **Link the Form to Sheets**:
+   * Open the Form in editor mode, click the **Responses** tab at the top.
+   * Click the green **Sheets icon** (or select **Link to Sheets**).
+   * Choose **Create a new spreadsheet** (or select your active sheet) and click **Create**.
+   * In the resulting spreadsheet, rename the default sheet from `Form Responses 1` to **`1_Student_Self`**.
+
+---
+
+#### ⚙️ Post-Creation Spreadsheet Steps (Applies to both Options)
+
+##### Step 1: Set up the Class Review Worksheet
+1. In your linked spreadsheet, click the **`+`** icon (bottom left) to add a new tab.
+2. Rename this new tab to **`2_Class_Review`**.
+3. Select one of the methods below to duplicate data for editing:
+   * **Method A (Cell-by-cell formulas)**:
+     * In cell A1 of `2_Class_Review`, type: `=IF('1_Student_Self'!A1="","",'1_Student_Self'!A1)`.
+     * Drag/fill this formula across columns A to AB and down for your class roster's length.
+     * During review, simply select any cell you want to adjust (e.g., E5) and type the new value. It replaces the formula for that cell only.
+   * **Method B (Copy-Paste Values)**:
+     * When form submissions close, copy the entire `1_Student_Self` sheet (`Ctrl+A` then `Ctrl+C`).
+     * Go to `2_Class_Review` cell A1, right-click, and select **Paste special > Values only**. Edit cells directly.
+
+##### Step 2: Share and Get Spreadsheet ID
+1. Click the **Share** button (top right of Google Sheets).
+2. Under "General access", select **Anyone with the link**. Set the role as **Viewer** (view-only is safe and prevents students from changing reviews).
+3. Copy the Spreadsheet ID from the URL:
+   `https://docs.google.com/spreadsheets/d/` **`1A2B3C4D5E_SpreadsheetID_Here`** `/edit#gid=0`
 
 ### How it Syncs
-By sharing the sheet with **"Anyone with link can view"**, we can query the export URL to download the entire multi-sheet workbook as an Excel file (`.xlsx` format) without requiring complex OAuth/Google API credentials:
+By sharing the sheet, the Python sync script downloads the entire multi-sheet workbook as an Excel file (`.xlsx`) using:
 ```
-https://docs.google.com/spreadsheets/d/<SHEET_ID>/export?format=xlsx
+https://docs.google.com/spreadsheets/d/<SPREADSHEET_ID>/export?format=xlsx
 ```
 
 ---
@@ -90,8 +211,7 @@ https://docs.google.com/spreadsheets/d/<SHEET_ID>/export?format=xlsx
 ## 🛠️ Proposed Changes
 
 ### 1. `sync_form_data.py` [NEW]
-This script downloads the Excel workbook from Google Sheets, extracts the three worksheets, parses the student info, updates `student_score`, `class_score`, and `advisor_score` columns in `ai_studio_code.csv` separately, and runs the pipeline.
-
+This script downloads the Excel workbook from Google Sheets
 ```python
 import os
 import re
@@ -101,8 +221,18 @@ import argparse
 import urllib.request
 import openpyxl
 
-# List of criteria
-CRITERIA = ["1.1", "1.2", "1.3", "1.4", "1.5", "2.1", "2.2", "2.3", "3.1", "3.2", "3.3", "3.4", "3.5", "4.1", "4.2", "4.3", "4.4", "4.5", "4.6", "5.1", "5.2", "5.3"]
+# All criteria in the exact order expected by the pipeline and Word template
+CRITERIA_ORDER = [
+    "1.1", "1.2", "1.3", "1.4", "1.5", "TC1",
+    "2.1", "2.2", "2.3", "TC2",
+    "3.1", "3.2", "3.3", "3.4", "3.5", "TC3",
+    "4.1", "4.2", "4.3", "4.4", "4.5", "4.6", "TC4",
+    "5.1", "5.2", "5.3", "TC5",
+    "TOTAL"
+]
+
+CRITERIA_LEAVES = ["1.1", "1.2", "1.3", "1.4", "1.5", "2.1", "2.2", "2.3", "3.1", "3.2", "3.3", "3.4", "3.5", "4.1", "4.2", "4.3", "4.4", "4.5", "4.6", "5.1", "5.2", "5.3"]
+
 TC_GROUPS = {
     "TC1": ["1.1", "1.2", "1.3", "1.4", "1.5"],
     "TC2": ["2.1", "2.2", "2.3"],
@@ -111,11 +241,51 @@ TC_GROUPS = {
     "TC5": ["5.1", "5.2", "5.3"]
 }
 
+CRITERION_NAMES = {
+    "1.1": "Ý thức và thái độ trong học tập",
+    "1.2": "Kết quả học tập trong kỳ học",
+    "1.3": "Ý thức chấp hành tốt nội quy về các kỳ thi",
+    "1.4": "Ý thức và thái độ tham gia các hoạt động ngoại khóa",
+    "1.5": "Tinh thần vượt khó phấn đấu vươn lên trong học tập",
+    "TC1": "Mức điểm tối đa Tiêu chí 1",
+    "2.1": "Thực hiện nghiêm túc các nội quy quy chế",
+    "2.2": "Thực hiện nghiêm túc các buổi họp lớp",
+    "2.3": "Tham gia các buổi hội thảo việc làm",
+    "TC2": "Mức điểm tối đa Tiêu chí 2",
+    "3.1": "Tham gia đầy đủ các hoạt động chính trị xã hội",
+    "3.2": "Tham gia công tác xã hội",
+    "3.3": "Tuyên truyền tích cực hình ảnh về Trường/Khoa",
+    "3.4": "Tích cực tham gia các hoạt động phòng chống tội phạm",
+    "3.5": "Đưa các thông tin sai lệch thiếu tích cực về Học viện",
+    "TC3": "Mức điểm tối đa Tiêu chí 3",
+    "4.1": "Chấp hành nghiêm chỉnh chủ trương của Đảng",
+    "4.2": "Tích cực tham gia tuyên truyền chủ trương của Đảng",
+    "4.3": "Có mối quan hệ đúng mực với Thầy/ Cô",
+    "4.4": "Có mối quan hệ tốt với bạn bè trong lớp",
+    "4.5": "Được biểu dung khen thưởng",
+    "4.6": "Vi phạm an ninh trật tự xã hội an toàn giao thông",
+    "TC4": "Mức điểm tối đa Tiêu chí 4",
+    "5.1": "Sinh viên làm lớp trưởng lớp phó",
+    "5.2": "Thành viên tham gia các Câu lạc bộ",
+    "5.3": "Sinh viên đạt thành tích đặc biệt",
+    "TC5": "Mức điểm tối đa Tiêu chí 5",
+    "TOTAL": "TỔNG CỘNG"
+}
+
+CRITERION_MAX = {
+    "1.1": 3, "1.2": 10, "1.3": 4, "1.4": 2, "1.5": 1, "TC1": 20,
+    "2.1": 15, "2.2": 5, "2.3": 5, "TC2": 25,
+    "3.1": 10, "3.2": 4, "3.3": 3, "3.4": 3, "3.5": 0, "TC3": 20,
+    "4.1": 8, "4.2": 5, "4.3": 5, "4.4": 5, "4.5": 2, "4.6": 0, "TC4": 25,
+    "5.1": 4, "5.2": 3, "5.3": 3, "TC5": 10,
+    "TOTAL": 100
+}
+
 def parse_dob(dob_str):
     if not dob_str:
         return ""
-    dob_str = dob_str.strip()
-    # Handle YYYY-MM-DD format (standard ISO format from Google Forms date field)
+    dob_str = str(dob_str).strip()
+    # Handle YYYY-MM-DD format
     match_ymd = re.search(r"^(\d{4})[/-](\d{1,2})[/-](\d{1,2})", dob_str)
     if match_ymd:
         year, month, day = int(match_ymd.group(1)), int(match_ymd.group(2)), int(match_ymd.group(3))
@@ -128,7 +298,6 @@ def parse_dob(dob_str):
     return dob_str
 
 def map_headers(headers):
-    # Map raw headers to student metadata and criteria codes
     mapping = {}
     for idx, header in enumerate(headers):
         if not header:
@@ -139,8 +308,7 @@ def map_headers(headers):
         elif "ngày sinh" in header_lower or "dob" in header_lower:
             mapping["dob"] = idx
         else:
-            for crit in CRITERIA:
-                # Matches patterns like "1.1" or "1.1." or "Criteria 1.1"
+            for crit in CRITERIA_LEAVES:
                 if re.search(r"\b" + re.escape(crit) + r"\b", str(header)):
                     mapping[crit] = idx
                     break
@@ -150,7 +318,6 @@ def read_sheet_rows(sheet):
     rows = []
     for r in range(1, sheet.max_row + 1):
         row_vals = [sheet.cell(r, c).value for c in range(1, sheet.max_column + 1)]
-        # If the entire row is empty, skip it
         if any(v is not None for v in row_vals):
             rows.append([str(v) if v is not None else "" for v in row_vals])
     return rows
@@ -174,7 +341,7 @@ def extract_scores_from_rows(rows):
             continue
             
         scores = {}
-        for crit in CRITERIA:
+        for crit in CRITERIA_LEAVES:
             val_str = row[mapping[crit]].strip() if crit in mapping else "0"
             try:
                 scores[crit] = float(val_str.replace(",", "."))
@@ -214,7 +381,6 @@ def sync_data(xlsx_path, workspace):
         elif "class" in name_lower or "lop" in name_lower or "evaluation" in name_lower:
             lop_rows = read_sheet_rows(wb[name])
             
-    # Fallback to the first sheet as SV if none found
     if not sv_rows and len(sheet_names) > 0:
         sv_rows = read_sheet_rows(wb[sheet_names[0]])
         
@@ -225,82 +391,122 @@ def sync_data(xlsx_path, workspace):
         print("No student self-evaluation data parsed.")
         return
 
-    # Load existing CSV to preserve formatting and fields
+    # Load existing CSV database to preserve manual fields (notes, and class/advisor scores of unadjusted students)
     target_csv = os.path.join(workspace, "ai_studio_code.csv")
-    existing_rows = []
+    existing_db = {} # msv -> crit_id -> {sv, class, advisor, note, dob}
     if os.path.exists(target_csv):
         with open(target_csv, "r", encoding="utf-8") as f:
-            reader = csv.DictReader(f)
-            existing_fields = reader.fieldnames
-            existing_rows = list(reader)
-    else:
-        existing_fields = ["student_id", "semester", "criterion_id", "criterion_name", "max_points", "student_score", "class_score", "advisor_score", "note", "dob"]
+            for row in csv.DictReader(f):
+                msv = row["student_id"].strip().upper()
+                crit_id = row["criterion_id"].strip()
+                if msv not in existing_db:
+                    existing_db[msv] = {}
+                existing_db[msv][crit_id] = {
+                    "sv": row.get("student_score", ""),
+                    "lop": row.get("class_score", ""),
+                    "cvht": row.get("advisor_score", ""),
+                    "note": row.get("note", ""),
+                    "dob": row.get("dob", "")
+                }
 
-    # Load roster from Excel to verify valid student IDs
-    excel_path = os.path.join(workspace, "HV_Mau 2_Tong hop KQRL cua SV.xlsx")
-    wb_roster = openpyxl.load_workbook(excel_path, data_only=True)
-    sheet_roster = wb_roster.active
-    
-    valid_msvs = set()
-    for r in range(14, sheet_roster.max_row + 1):
-        msv = sheet_roster.cell(r, 4).value
-        if msv:
-            valid_msvs.add(str(msv).strip().upper())
-
-    # Build updated database
-    updated_rows = []
-    updated_msvs = set()
-    
-    for row in existing_rows:
-        msv = row["student_id"].strip().upper()
-        crit_id = row["criterion_id"].strip()
-        
-        if msv in sv_data:
-            updated_msvs.add(msv)
-            # 1. Update Student self score
-            resp_sv = sv_data[msv]
-            if crit_id in resp_sv["scores"]:
-                row["student_score"] = str(resp_sv["scores"][crit_id]).replace(".0", "")
-            if resp_sv["dob"]:
-                row["dob"] = resp_sv["dob"]
-                
-            # 2. Update Class and Advisor evaluation score (both set to Class Review score)
-            if msv in lop_data:
-                resp_lop = lop_data[msv]
-                if crit_id in resp_lop["scores"]:
-                    val = str(resp_lop["scores"][crit_id]).replace(".0", "")
-                    row["class_score"] = val
-                    row["advisor_score"] = val
-                    
-        updated_rows.append(row)
-
-    # If new student entries are found
-    for msv in sv_data:
-        if msv not in updated_msvs and msv in valid_msvs:
-            print(f"Creating new entries for MSV {msv}")
-            resp_sv = sv_data[msv]
-            resp_lop = lop_data.get(msv, {"scores": {}})
+    # Load official roster from Excel
+    roster_path = os.path.join(workspace, "HV_Mau 2_Tong hop KQRL cua SV.xlsx")
+    valid_students = [] # list of {tt, last_name, first_name, name, msv}
+    if os.path.exists(roster_path):
+        wb_roster = openpyxl.load_workbook(roster_path, data_only=True)
+        sheet_roster = wb_roster.active
+        for r in range(14, sheet_roster.max_row + 1):
+            tt = sheet_roster.cell(r, 1).value
+            last_name = sheet_roster.cell(r, 2).value
+            first_name = sheet_roster.cell(r, 3).value
+            msv = sheet_roster.cell(r, 4).value
             
-            for crit_id in CRITERIA + list(TC_GROUPS.keys()) + ["TOTAL"]:
-                sv_val = str(resp_sv["scores"].get(crit_id, 0.0)).replace(".0", "")
-                lop_val = str(resp_lop["scores"].get(crit_id, "")).replace(".0", "")
-                
-                updated_rows.append({
-                    "student_id": msv,
-                    "semester": "II",
-                    "criterion_id": crit_id,
-                    "criterion_name": f"Criterion {crit_id}",
-                    "max_points": "",
-                    "student_score": sv_val,
-                    "class_score": lop_val,
-                    "advisor_score": lop_val, # Advisor score matches Class score
-                    "note": "",
-                    "dob": resp_sv["dob"]
-                })
+            is_valid_tt = False
+            if isinstance(tt, (int, float)):
+                is_valid_tt = True
+            elif isinstance(tt, str):
+                try:
+                    float(tt)
+                    is_valid_tt = True
+                except ValueError:
+                    pass
+                    
+            if is_valid_tt and last_name and first_name and msv:
+                msv_str = str(msv).strip().upper()
+                if msv_str.startswith("N25"):
+                    full_name = f"{str(last_name).strip()} {str(first_name).strip()}"
+                    full_name = " ".join(full_name.split())
+                    valid_students.append({
+                        "tt": int(float(tt)),
+                        "msv": msv_str,
+                        "name": full_name
+                    })
 
-    # Write out
+    # If roster could not be loaded, use keys from existing db
+    if not valid_students:
+        print("Warning: Roster Excel not loaded. Using existing CSV keys.")
+        for msv in sorted(existing_db.keys()):
+            valid_students.append({"msv": msv})
+
+    # Rebuild database rows
+    updated_rows = []
+    
+    for s in valid_students:
+        msv = s["msv"]
+        
+        # Determine dob (prioritize Form responses over existing db)
+        dob_val = ""
+        if msv in sv_data and sv_data[msv]["dob"]:
+            dob_val = sv_data[msv]["dob"]
+        elif msv in existing_db:
+            # Get any non-empty dob
+            for c_id in CRITERIA_ORDER:
+                if c_id in existing_db[msv] and existing_db[msv][c_id]["dob"]:
+                    dob_val = existing_db[msv][c_id]["dob"]
+                    break
+        
+        # Build all 28 rows in exact criteria order
+        for crit_id in CRITERIA_ORDER:
+            # Default fallbacks
+            sv_score = ""
+            lop_score = ""
+            cvht_score = ""
+            note = ""
+            
+            # Load existing scores
+            if msv in existing_db and crit_id in existing_db[msv]:
+                sv_score = existing_db[msv][crit_id]["sv"]
+                lop_score = existing_db[msv][crit_id]["lop"]
+                cvht_score = existing_db[msv][crit_id]["cvht"]
+                note = existing_db[msv][crit_id]["note"]
+            
+            # Overwrite with student self evaluation from Google Form
+            if msv in sv_data:
+                sv_score = str(sv_data[msv]["scores"].get(crit_id, 0.0)).replace(".0", "")
+                
+            # Overwrite with Class evaluation review sheet (also populates Advisor)
+            if msv in lop_data:
+                val = str(lop_data[msv]["scores"].get(crit_id, 0.0)).replace(".0", "")
+                lop_score = val
+                cvht_score = val
+                
+            updated_rows.append({
+                "student_id": msv,
+                "semester": "II",
+                "criterion_id": crit_id,
+                "criterion_name": CRITERION_NAMES[crit_id],
+                "max_points": str(CRITERION_MAX[crit_id]),
+                "student_score": sv_score,
+                "class_score": lop_score,
+                "advisor_score": cvht_score,
+                "note": note,
+                "dob": dob_val
+            })
+
+    # Write the rebuilt database
+    fields = ["student_id", "semester", "criterion_id", "criterion_name", "max_points", "student_score", "class_score", "advisor_score", "note", "dob"]
     with open(target_csv, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=existing_fields)
+        writer = csv.DictWriter(f, fieldnames=fields)
         writer.writeheader()
         writer.writerows(updated_rows)
         
