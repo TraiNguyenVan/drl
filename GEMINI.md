@@ -1,7 +1,7 @@
 # Project Rules & Constraints (GEMINI.md)
 
 ## 🚫 Critical Constraints
-* **Source of Truth**: You will not modify [HV_Mau 2_Tong hop KQRL cua SV.xlsx](HV_Mau%202_Tong%20hop%20KQRL%20cua%20SV.xlsx), scores here always true.
+* **Source of Truth**: The Google Sheet (synchronized to [ai_studio_code.csv](ai_studio_code.csv)) is the absolute source of truth for all student scores, category totals (TC1-TC5), and grand totals. The Excel file [HV_Mau 2_Tong hop KQRL cua SV.xlsx](HV_Mau%202_Tong%20hop%20KQRL%20cua%20SV.xlsx) is strictly used as the official roster list for student names and MSVs; its score columns are ignored by the pipeline.
 
 ## 📄 Template & Document Management (`master.docx`)
 * [master.docx](master.docx) is the active template — it uses paragraph-based info lines with a custom tab stop at 3.8 inches for names and DOBs, and a shape textbox for the student name signature. Read [STRUCTURE.md](STRUCTURE.md) to understand the structure of the template.

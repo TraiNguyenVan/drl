@@ -53,6 +53,8 @@ A static line chart displaying the subcriteria training points evaluation across
 | `master.docx` | **Active template** — Google Docs-compatible, uses paragraph-based info block and shape-wrapped textbox for name |
 | `HV_Mau 2_Tong hop KQRL cua SV.xlsx` | **Source of truth** — official final scores (do not modify) |
 | `ai_studio_code.csv` | CSV database containing student subcriteria scores and dates of birth |
+| `sync_form_data.py` | Script to synchronize student self-evaluations and class review from Google Sheets |
+| `COLLECT_FORM_DATA_PLAN.md` | Detailed setup plan for Google Form structure and spreadsheet worksheets |
 | `process_and_generate.py` | Main pipeline script |
 | `render_charts.py` | Module for generating static DRL chart images |
 | `render_html.py` | Module for generating the interactive DRL HTML dashboard |
@@ -123,15 +125,30 @@ uv pip install python-docx openpyxl lxml pillow matplotlib numpy
 
 ## 🚀 Usage
 
-Run the complete pipeline:
+### Step 1: Synchronize Form & Class Review Data
+Before running the generator, synchronize the Google Sheet (which contains the student form responses and class review tabs) using `sync_form_data.py`.
+
+* **Option A: Auto-sync via Sheets ID** (Recommended):
+  Share the Google Sheet as "Anyone with link can view" (View-only is fine), and copy the Sheet ID from the URL:
+  ```bash
+  python3 sync_form_data.py --sheet-id <YOUR_SHEET_ID>
+  ```
+* **Option B: Manual Sync** (100% Private):
+  Export the Google Sheet as `.xlsx` (`File > Download > Microsoft Excel (.xlsx)`), save it in the workspace, and run:
+  ```bash
+  python3 sync_form_data.py --xlsx <path_to_excel_file>
+  ```
+
+### Step 2: Run the Document & Dashboard Generator
+Once the database is updated, run the complete document, chart, and HTML dashboard generator:
 ```bash
 python3 process_and_generate.py
 ```
 
-### Command Line Flags
-You can customize the pipeline run using the following flags:
+#### Command Line Flags
+Customize the generator run using:
 * `--disable-charts`: Skip generating statistic charts and the interactive HTML dashboard.
-* `--gdrive-dir <path>`: Specify a path to Google Drive to enable syncing. If not specified, sync is disabled by default to avoid hangs on machines without the mount.
+* `--gdrive-dir <path>`: Sync generated Word documents directly to Google Drive.
 
 **Example:**
 ```bash
