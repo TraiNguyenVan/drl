@@ -52,7 +52,6 @@ A static line chart displaying the subcriteria training points evaluation across
 |---|---|
 | `master.docx` | **Active template** — Google Docs-compatible, uses paragraph-based info block and shape-wrapped textbox for name |
 | `HV_Mau 2_Tong hop KQRL cua SV.xlsx` | **Source of truth** — official final scores (do not modify) |
-| `HV_Mau 2_Chi tiet KQRL.xlsx` | *(Legacy)* Detailed sub-section report (no longer generated) |
 | `ai_studio_code.csv` | CSV database containing student subcriteria scores and dates of birth |
 | `process_and_generate.py` | Main pipeline script |
 | `render_charts.py` | Module for generating static DRL chart images |
@@ -63,7 +62,6 @@ A static line chart displaying the subcriteria training points evaluation across
 | `assets/` | Folder containing static README preview assets and the HTML dashboard |
 | `STRUCTURE.md` | Document layout map (paragraph/table indices, cell mappings) |
 | `GEMINI.md` | AI agent rules and constraints for this project |
-| `students/` | Raw student papers (`.doc` / `.docx`) |
 | `generated_students/` | *(Generated)* Final output Word files |
 
 ---
@@ -106,9 +104,20 @@ For a comprehensive structural breakdown of the template's paragraphs, tables, c
 Requires Python 3.
 
 ### Python packages
+
+Choose one of the following options to install the required Python packages:
+
+#### Option 1: Using standard `pip`
 ```bash
 pip3 install python-docx openpyxl lxml pillow matplotlib numpy
 ```
+
+#### Option 2: Using `uv` (Recommended - Fast)
+If you use [uv](https://docs.astral.sh/uv/) (see the [installation guide](https://docs.astral.sh/uv/getting-started/installation/)), you can install the dependencies much faster:
+```bash
+uv pip install python-docx openpyxl lxml pillow matplotlib numpy
+```
+*(Note: If you are using a virtual environment, activate it first before running `uv pip install`.)*
 
 ---
 
