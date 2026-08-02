@@ -11,14 +11,10 @@ import docx
 import argparse
 
 parser = argparse.ArgumentParser(description="Process and generate DRL scores.")
-parser.add_argument("--disable-excel", action="store_true", help="Deprecated alias for --disable-charts.")
 parser.add_argument("--disable-charts", action="store_true", help="Disable generating DRL charts.")
-parser.add_argument("--disable-gdrive", action="store_true", help="Disable syncing to Google Drive.")
+parser.add_argument("--gdrive-dir", type=str, default=None, help="Path to Google Drive directory for syncing (disabled by default).")
 args = parser.parse_args()
 
-# Backwards compatibility: alias --disable-excel to --disable-charts
-if args.disable_excel:
-    args.disable_charts = True
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 
@@ -118,7 +114,7 @@ def fill_info(doc, name, msv, dob_val):
                 r.text = r.text.replace("_NAME##", line2)
 
 # Directories
-workspace = "/home/trai/workspace/drl"
+workspace = os.path.dirname(os.path.abspath(__file__))
 output_dir = os.path.join(workspace, "generated_students")
 os.makedirs(output_dir, exist_ok=True)
 
@@ -476,28 +472,29 @@ if not args.disable_charts:
 # 7. Cleanup temp files (no-op as temp directory is not used anymore)
 
 # 8. Sync generated files to Google Drive if mounted
-gdrive_dir = "/mnt/googledrive/generated_students"
-if not args.disable_gdrive and os.path.exists(gdrive_dir):
-    print("\nSyncing generated student files to Google Drive...")
-    try:
-        # Clear existing files in the GDrive directory to prevent duplicates/obsolete entries
-        for filename in os.listdir(gdrive_dir):
-            file_path = os.path.join(gdrive_dir, filename)
-            if os.path.isfile(file_path):
-                os.remove(file_path)
-            elif os.path.isdir(file_path):
-                shutil.rmtree(file_path)
-        
-        # Copy newly generated files
-        for filename in os.listdir(output_dir):
-            src_file = os.path.join(output_dir, filename)
-            dest_file = os.path.join(gdrive_dir, filename)
-            if os.path.isfile(src_file):
-                shutil.copy2(src_file, dest_file)
-        print("Sync to Google Drive completed successfully.")
-    except Exception as e:
-        print(f"Warning: Failed to sync with Google Drive: {e}")
-else:
-    print("\nNote: Google Drive mount point at /mnt/googledrive/generated_students not found. Skipping sync.")
+if args.gdrive_dir:
+    gdrive_dir = args.gdrive_dir
+    if os.path.exists(gdrive_dir):
+        print(f"\nSyncing generated student files to Google Drive at '{gdrive_dir}'...")
+        try:
+            # Clear existing files in the GDrive directory to prevent duplicates/obsolete entries
+            for filename in os.listdir(gdrive_dir):
+                file_path = os.path.join(gdrive_dir, filename)
+                if os.path.isfile(file_path):
+                    os.remove(file_path)
+                elif os.path.isdir(file_path):
+                    shutil.rmtree(file_path)
+            
+            # Copy newly generated files
+            for filename in os.listdir(output_dir):
+                src_file = os.path.join(output_dir, filename)
+                dest_file = os.path.join(gdrive_dir, filename)
+                if os.path.isfile(src_file):
+                    shutil.copy2(src_file, dest_file)
+            print("Sync to Google Drive completed successfully.")
+        except Exception as e:
+            print(f"Warning: Failed to sync with Google Drive: {e}")
+    else:
+        print(f"\nWarning: Google Drive sync directory at '{gdrive_dir}' not found. Skipping sync.")
 
 print("Pipeline run finished successfully!")

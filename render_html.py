@@ -19,7 +19,7 @@ def generate_html_dashboard(students, workspace_dir, chart_base64_images=None):
     incorporating Chart.js for data visualization and a modern, 
     glassmorphic corporate light design.
     """
-    dashboard_path = os.path.join(workspace_dir, "drl_dashboard.html")
+    dashboard_path = os.path.join(workspace_dir, "assets", "drl_dashboard.html")
     students_json = json.dumps(students, ensure_ascii=False)
     
     if not chart_base64_images:
