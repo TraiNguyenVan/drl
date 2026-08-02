@@ -191,9 +191,23 @@ def parse_score_val(val):
     except ValueError:
         return 0.0
 
-# 4. Load Excel database (Ground Truth)
+# Helper to classify training point scores into DRL rating tiers
+def get_rating(score):
+    if score >= 90:
+        return "Xuất sắc"
+    elif score >= 80:
+        return "Tốt"
+    elif score >= 65:
+        return "Khá"
+    elif score >= 50:
+        return "Trung bình"
+    else:
+        return "Yêu"
+
+# 4. Load Excel database (Official Roster List)
 db_path = os.path.join(workspace, "HV_Mau 2_Tong hop KQRL cua SV.xlsx")
-wb_db = openpyxl.load_workbook(db_path, data_only=True)
+# Open without data_only=True to preserve formulas and styling on save
+wb_db = openpyxl.load_workbook(db_path)
 sheet_db = wb_db.active
 
 students_db = []
@@ -219,24 +233,18 @@ for r in range(14, sheet_db.max_row + 1):
             full_name = f"{str(last_name).strip()} {str(first_name).strip()}"
             full_name = " ".join(full_name.split())
             
-            # Extract criteria totals from Excel
-            tc_scores = [sheet_db.cell(r, c).value for c in range(5, 10)]
-            tc_scores = [float(x) if x is not None else 0.0 for x in tc_scores]
-            total_score = sheet_db.cell(r, 10).value
-            total_score = float(total_score) if total_score is not None else 0.0
-            rating = sheet_db.cell(r, 11).value
-            notes = sheet_db.cell(r, 12).value
-            
+            # Initialize empty defaults and keep row index for saving updates later
             students_db.append({
                 "tt": int(float(tt)),
                 "last_name": str(last_name).strip(),
                 "first_name": str(first_name).strip(),
                 "name": full_name,
                 "msv": msv_str,
-                "excel_tc": tc_scores,
-                "excel_total": total_score,
-                "excel_rating": rating,
-                "excel_notes": notes
+                "excel_tc": [0.0] * 5,
+                "excel_total": 0.0,
+                "excel_rating": "",
+                "excel_notes": "",
+                "row_idx": r
             })
 
 # 4b. Load new vertical format ai_studio_code.csv
@@ -253,7 +261,8 @@ if os.path.exists(csv_path):
             csv_scores_by_msv[msv][crit_id] = {
                 "sv": row["student_score"].strip() if row.get("student_score") is not None else "",
                 "lop": row["class_score"].strip() if row.get("class_score") is not None else "",
-                "cvht": row["advisor_score"].strip() if row.get("advisor_score") is not None else ""
+                "cvht": row["advisor_score"].strip() if row.get("advisor_score") is not None else "",
+                "note": row["note"].strip() if row.get("note") is not None else ""
             }
             if row.get("dob"):
                 csv_dob_by_msv[msv] = row["dob"].strip()
@@ -345,6 +354,8 @@ def write_csv_score_to_table(table, criterion_id, role_col, score_str):
         write_centered_score(table.rows[34].cells[role_col], val_str)
     elif criterion_id == "3.4":
         write_centered_score(table.rows[35].cells[role_col], val_str)
+    elif criterion_id == "3.5":
+        write_centered_score(table.rows[36].cells[role_col], val_str)
     elif criterion_id == "4.1":
         write_centered_score(table.rows[39].cells[role_col], val_str)
     elif criterion_id == "4.2":
@@ -355,6 +366,8 @@ def write_csv_score_to_table(table, criterion_id, role_col, score_str):
         write_centered_score(table.rows[42].cells[role_col], val_str)
     elif criterion_id == "4.5":
         write_centered_score(table.rows[43].cells[role_col], val_str)
+    elif criterion_id == "4.6":
+        write_centered_score(table.rows[44].cells[role_col], val_str)
     elif criterion_id == "5.1":
         write_centered_score(table.rows[47].cells[role_col], val_str)
     elif criterion_id == "5.2":
@@ -382,6 +395,38 @@ print("\nProcessing student files...")
 processed_students = []
 
 for s in students_db:
+    # 1. Retrieve DRL totals, rating, and notes dynamically from the CSV instead of Excel
+    student_csv = csv_scores_by_msv.get(s["msv"])
+    tc_scores = [0.0] * 5
+    total_score = 0.0
+    rating = "Yếu"
+    notes = ""
+    
+    if student_csv:
+        for idx, tc in enumerate(["TC1", "TC2", "TC3", "TC4", "TC5"]):
+            val_str = student_csv.get(tc, {}).get("cvht", "0")
+            tc_scores[idx] = parse_score_val(val_str)
+            
+        total_str = student_csv.get("TOTAL", {}).get("cvht", "0")
+        total_score = parse_score_val(total_str)
+        rating = get_rating(total_score)
+        
+        # Pull note from TOTAL row if present
+        notes = student_csv.get("TOTAL", {}).get("note", "")
+        
+    s["excel_tc"] = tc_scores
+    s["excel_total"] = total_score
+    s["excel_rating"] = rating
+    s["excel_notes"] = notes
+    
+    # 2. Write scores back to the source Excel worksheet to compile the final summary
+    r_idx = s["row_idx"]
+    for idx, score in enumerate(tc_scores):
+        sheet_db.cell(r_idx, 5 + idx).value = score
+    sheet_db.cell(r_idx, 10).value = total_score
+    sheet_db.cell(r_idx, 11).value = rating
+    sheet_db.cell(r_idx, 12).value = notes
+    
     student_record = copy.deepcopy(s)
     student_record["dob"] = ""
     for sub in subsection_mapping.keys():
@@ -392,7 +437,6 @@ for s in students_db:
     student_record["dob"] = dob_val
     
     # Check if student is present (has scores in the CSV)
-    student_csv = csv_scores_by_msv.get(s["msv"])
     if not student_csv:
         print(f"  TT={s['tt']}: {s['name']} ({s['msv']}) -> MISSING CSV DATA (Absent)")
     
@@ -426,7 +470,6 @@ for s in students_db:
             if max_idx + 3 < len(unique_cells): unique_cells[max_idx + 3].text = ""
             
     # Write scores from CSV
-    student_csv = csv_scores_by_msv.get(s["msv"])
     if student_csv:
         for crit_id, roles in student_csv.items():
             write_csv_score_to_table(table_out, crit_id, 7, roles["sv"])
@@ -442,21 +485,15 @@ for s in students_db:
             sub_sum = parse_score_val(final_val)
         student_record[f"sub_{sub}"] = sub_sum
         
-    # Overwrite Class and Advisor totals/grand totals with master Excel values
-    totals_rows = [20, 30, 37, 45, 52]
-    for idx, r_idx in enumerate(totals_rows):
-        val_str = str(s["excel_tc"][idx]).replace(".0", "")
-        write_centered_score(table_out.rows[r_idx].cells[8], val_str)   # Class column
-        write_centered_score(table_out.rows[r_idx].cells[11], val_str)  # Advisor column
-        
-    gt_str = str(s["excel_total"]).replace(".0", "")
-    write_centered_score(table_out.rows[53].cells[8], gt_str)   # Class column
-    write_centered_score(table_out.rows[53].cells[11], gt_str)  # Advisor column
-        
     doc_out.save(dest_doc_path)
     processed_students.append(student_record)
 
 print(f"Successfully generated {len(processed_students)} student Word files.")
+
+# Save the updated final summarized Excel roster
+print("Saving final summarized Excel roster...")
+wb_db.save(db_path)
+print("Roster Excel file saved successfully!")
 
 if not args.disable_charts:
     # 6. Generate DRL statistics charts
