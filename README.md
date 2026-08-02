@@ -1,4 +1,4 @@
-Automated pipeline for processing student training evaluation sheets (*Phiếu đánh giá kết quả rèn luyện*) for class **E25CQCE02-N**. Parses student self-evaluations, cross-references official scores, generates final Word documents for all 37 students, and compiles a detailed sub-section Excel report.
+Automated pipeline for processing student training evaluation sheets (*Phiếu đánh giá kết quả rèn luyện*) for class **E25CQCE02-N**. Parses student self-evaluations, cross-references official scores, and generates final Word documents, statistical charts, and an interactive HTML dashboard for all 37 students.
 
 quick result can be found here on [Google Drive](https://drive.google.com/drive/folders/16J6rIboK8c9o4W_eTQlUI6b4l9qazNNB?usp=sharing)
 
@@ -53,6 +53,7 @@ A static line chart displaying the subcriteria training points evaluation across
 | `master.docx` | **Active template** — Google Docs-compatible, uses paragraph-based info block and shape-wrapped textbox for name |
 | `HV_Mau 2_Tong hop KQRL cua SV.xlsx` | **Source of truth** — official final scores (do not modify) |
 | `HV_Mau 2_Chi tiet KQRL.xlsx` | *(Legacy)* Detailed sub-section report (no longer generated) |
+| `ai_studio_code.csv` | CSV database containing student subcriteria scores and dates of birth |
 | `process_and_generate.py` | Main pipeline script |
 | `render_charts.py` | Module for generating static DRL chart images |
 | `render_html.py` | Module for generating the interactive DRL HTML dashboard |
@@ -60,6 +61,8 @@ A static line chart displaying the subcriteria training points evaluation across
 | `charts/` | *(Generated)* Folder containing static DRL statistic charts |
 | `combined/` | *(Generated)* Folder containing generated student sheet previews (PNG format) |
 | `assets/` | Folder containing static README preview assets and the HTML dashboard |
+| `advisor_sig.png` | Advisor signature image (referenced inside the template) |
+| `bithu_sig.png` | Chi Doan secretary signature image (referenced inside the template) |
 | `STRUCTURE.md` | Document layout map (paragraph/table indices, cell mappings) |
 | `GEMINI.md` | AI agent rules and constraints for this project |
 | `students/` | Raw student papers (`.doc` / `.docx`) |
@@ -126,4 +129,10 @@ You can customize the pipeline run using the following flags:
 **Example:**
 ```bash
 python3 process_and_generate.py --disable-charts
+```
+
+### Generating Student Sheet Previews (Optional)
+To convert the final generated student Word documents into side-by-side PNG page previews in the `combined/` directory, use the `doc_to_images.py` script:
+```bash
+python3 .agents/skills/doc-to-combined-images/scripts/doc_to_images.py generated_students/ --out combined/
 ```
