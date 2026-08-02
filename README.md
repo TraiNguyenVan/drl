@@ -61,8 +61,6 @@ A static line chart displaying the subcriteria training points evaluation across
 | `charts/` | *(Generated)* Folder containing static DRL statistic charts |
 | `combined/` | *(Generated)* Folder containing generated student sheet previews (PNG format) |
 | `assets/` | Folder containing static README preview assets and the HTML dashboard |
-| `advisor_sig.png` | Advisor signature image (referenced inside the template) |
-| `bithu_sig.png` | Chi Doan secretary signature image (referenced inside the template) |
 | `STRUCTURE.md` | Document layout map (paragraph/table indices, cell mappings) |
 | `GEMINI.md` | AI agent rules and constraints for this project |
 | `students/` | Raw student papers (`.doc` / `.docx`) |
