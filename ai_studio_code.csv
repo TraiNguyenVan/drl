@@ -979,34 +979,34 @@ N25DECE084,II,5.2,Thành viên tham gia các Câu lạc bộ,3,0,0,0,,11/08/2007
 N25DECE084,II,5.3,Sinh viên đạt thành tích đặc biệt,3,0,0,0,,11/08/2007
 N25DECE084,II,TC5,Mức điểm tối đa Tiêu chí 5,10,0,0,0,,11/08/2007
 N25DECE084,II,TOTAL,TỔNG CỘNG,100,0,0,0,,11/08/2007
-N25DECE085,II,1.1,Ý thức và thái độ trong học tập,3,3,0,0,,07/12/2007
-N25DECE085,II,1.2,Kết quả học tập trong kỳ học,10,10,0,0,,07/12/2007
-N25DECE085,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,0,0,,07/12/2007
-N25DECE085,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,0,0,,07/12/2007
-N25DECE085,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,0,0,,07/12/2007
-N25DECE085,II,TC1,Mức điểm tối đa Tiêu chí 1,20,20,0,0,,07/12/2007
-N25DECE085,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,0,0,,07/12/2007
-N25DECE085,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,0,0,,07/12/2007
-N25DECE085,II,2.3,Tham gia các buổi hội thảo việc làm,5,5,0,0,,07/12/2007
-N25DECE085,II,TC2,Mức điểm tối đa Tiêu chí 2,25,25,0,0,,07/12/2007
-N25DECE085,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,10,0,0,,07/12/2007
-N25DECE085,II,3.2,Tham gia công tác xã hội,4,4,0,0,,07/12/2007
-N25DECE085,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,3,0,0,,07/12/2007
-N25DECE085,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,3,0,0,,07/12/2007
+N25DECE085,II,1.1,Ý thức và thái độ trong học tập,3,3,3,3,,07/12/2007
+N25DECE085,II,1.2,Kết quả học tập trong kỳ học,10,10,10,10,,07/12/2007
+N25DECE085,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,4,4,4,,07/12/2007
+N25DECE085,II,1.4,Ý thức và thái độ tham gia các hoạt động ngoại khóa,2,2,2,2,,07/12/2007
+N25DECE085,II,1.5,Tinh thần vượt khó phấn đấu vươn lên trong học tập,1,1,1,1,,07/12/2007
+N25DECE085,II,TC1,Mức điểm tối đa Tiêu chí 1,20,20,20,20,,07/12/2007
+N25DECE085,II,2.1,Thực hiện nghiêm túc các nội quy quy chế,15,15,15,15,,07/12/2007
+N25DECE085,II,2.2,Thực hiện nghiêm túc các buổi họp lớp,5,5,5,5,,07/12/2007
+N25DECE085,II,2.3,Tham gia các buổi hội thảo việc làm,5,3,5,5,,07/12/2007
+N25DECE085,II,TC2,Mức điểm tối đa Tiêu chí 2,25,23,25,25,,07/12/2007
+N25DECE085,II,3.1,Tham gia đầy đủ các hoạt động chính trị xã hội,10,4,10,10,,07/12/2007
+N25DECE085,II,3.2,Tham gia công tác xã hội,4,4,4,4,,07/12/2007
+N25DECE085,II,3.3,Tuyên truyền tích cực hình ảnh về Trường/Khoa,3,2,3,3,,07/12/2007
+N25DECE085,II,3.4,Tích cực tham gia các hoạt động phòng chống tội phạm,3,2,3,3,,07/12/2007
 N25DECE085,II,3.5,Đưa các thông tin sai lệch thiếu tích cực về Học viện,0,0,0,0,,07/12/2007
-N25DECE085,II,TC3,Mức điểm tối đa Tiêu chí 3,20,20,0,0,,07/12/2007
-N25DECE085,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,0,0,,07/12/2007
-N25DECE085,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,0,0,,07/12/2007
-N25DECE085,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,0,0,,07/12/2007
-N25DECE085,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,0,0,,07/12/2007
-N25DECE085,II,4.5,Được biểu dung khen thưởng,2,2,0,0,,07/12/2007
+N25DECE085,II,TC3,Mức điểm tối đa Tiêu chí 3,20,12,20,20,,07/12/2007
+N25DECE085,II,4.1,Chấp hành nghiêm chỉnh chủ trương của Đảng,8,8,8,8,,07/12/2007
+N25DECE085,II,4.2,Tích cực tham gia tuyên truyền chủ trương của Đảng,5,5,5,5,,07/12/2007
+N25DECE085,II,4.3,Có mối quan hệ đúng mực với Thầy/ Cô,5,5,5,5,,07/12/2007
+N25DECE085,II,4.4,Có mối quan hệ tốt với bạn bè trong lớp,5,5,5,5,,07/12/2007
+N25DECE085,II,4.5,Được biểu dung khen thưởng,2,2,2,2,,07/12/2007
 N25DECE085,II,4.6,Vi phạm an ninh trật tự xã hội an toàn giao thông,0,0,0,0,,07/12/2007
-N25DECE085,II,TC4,Mức điểm tối đa Tiêu chí 4,25,25,0,0,,07/12/2007
-N25DECE085,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,4,0,0,,07/12/2007
-N25DECE085,II,5.2,Thành viên tham gia các Câu lạc bộ,3,3,0,0,,07/12/2007
-N25DECE085,II,5.3,Sinh viên đạt thành tích đặc biệt,3,3,0,0,,07/12/2007
-N25DECE085,II,TC5,Mức điểm tối đa Tiêu chí 5,10,10,0,0,,07/12/2007
-N25DECE085,II,TOTAL,TỔNG CỘNG,100,100,0,0,,07/12/2007
+N25DECE085,II,TC4,Mức điểm tối đa Tiêu chí 4,25,25,25,25,,07/12/2007
+N25DECE085,II,5.1,Sinh viên làm lớp trưởng lớp phó,4,0,4,4,,07/12/2007
+N25DECE085,II,5.2,Thành viên tham gia các Câu lạc bộ,3,2,3,3,,07/12/2007
+N25DECE085,II,5.3,Sinh viên đạt thành tích đặc biệt,3,3,3,3,,07/12/2007
+N25DECE085,II,TC5,Mức điểm tối đa Tiêu chí 5,10,5,10,10,,07/12/2007
+N25DECE085,II,TOTAL,TỔNG CỘNG,100,85,100,100,,07/12/2007
 N25DECE086,II,1.1,Ý thức và thái độ trong học tập,3,0,0,0,,03/07/2007
 N25DECE086,II,1.2,Kết quả học tập trong kỳ học,10,0,0,0,,03/07/2007
 N25DECE086,II,1.3,Ý thức chấp hành tốt nội quy về các kỳ thi,4,0,0,0,,03/07/2007
