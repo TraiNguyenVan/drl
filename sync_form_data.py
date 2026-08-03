@@ -197,7 +197,7 @@ def sync_data(xlsx_path, workspace):
                 }
 
     # Load official roster from Excel
-    roster_path = os.path.join(workspace, "HV_Mau 2_Tong hop KQRL cua SV.xlsx")
+    roster_path = os.path.join(workspace, "master.xlsx")
     valid_students = [] # list of {tt, last_name, first_name, name, msv}
     if os.path.exists(roster_path):
         wb_roster = openpyxl.load_workbook(roster_path, data_only=True)
@@ -254,14 +254,17 @@ def sync_data(xlsx_path, workspace):
         
         # Build all 28 rows in exact criteria order
         for crit_id in CRITERIA_ORDER:
-            # Default to "0" (absolute 0) for students not in the Google Sheet
+            # Default to "0" (absolute 0) for new student entries
             sv_score = "0"
             lop_score = "0"
             cvht_score = "0"
             note = ""
             
-            # Load note if student existed in database (preserving comments)
+            # Preserve existing scores and notes from the CSV database
             if msv in existing_db and crit_id in existing_db[msv]:
+                sv_score = existing_db[msv][crit_id]["sv"]
+                lop_score = existing_db[msv][crit_id]["lop"]
+                cvht_score = existing_db[msv][crit_id]["cvht"]
                 note = existing_db[msv][crit_id]["note"]
             
             # Overwrite with student self evaluation from Google Form

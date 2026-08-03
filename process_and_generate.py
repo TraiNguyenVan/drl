@@ -204,8 +204,13 @@ def get_rating(score):
     else:
         return "Yêu"
 
-# 4. Load Excel database (Official Roster List)
+# 4. Copy master.xlsx to generated path and load it
+master_path = os.path.join(workspace, "master.xlsx")
 db_path = os.path.join(workspace, "HV_Mau 2_Tong hop KQRL cua SV.xlsx")
+
+# Copy the master roster/template to keep the original untouched
+shutil.copy2(master_path, db_path)
+
 # Open without data_only=True to preserve formulas and styling on save
 wb_db = openpyxl.load_workbook(db_path)
 sheet_db = wb_db.active
@@ -332,10 +337,17 @@ def write_csv_score_to_table(table, criterion_id, role_col, score_str):
     elif criterion_id == "1.5":
         write_centered_score(table.rows[19].cells[role_col], val_str)
     elif criterion_id == "2.1":
-        write_centered_score(table.rows[22].cells[role_col], "15")
-        if val < 15:
-            penalty = int(val - 15)
-            write_centered_score(table.rows[24].cells[role_col], str(penalty))
+        val_capped = max(0.0, val)
+        val_capped_str = str(int(val_capped)) if val_capped.is_integer() else str(val_capped)
+        write_centered_score(table.rows[22].cells[role_col], val_capped_str)
+        if val_capped < 15:
+            penalty = int(val_capped - 15)
+            if penalty == -5:
+                write_centered_score(table.rows[25].cells[role_col], "-5")
+            elif penalty == -15:
+                write_centered_score(table.rows[24].cells[role_col], "-15")
+            else:
+                write_centered_score(table.rows[24].cells[role_col], str(penalty))
     elif criterion_id == "2.2":
         write_centered_score(table.rows[26].cells[role_col], "5")
         if val < 5:
@@ -423,8 +435,6 @@ for s in students_db:
     r_idx = s["row_idx"]
     for idx, score in enumerate(tc_scores):
         sheet_db.cell(r_idx, 5 + idx).value = score
-    sheet_db.cell(r_idx, 10).value = total_score
-    sheet_db.cell(r_idx, 11).value = rating
     sheet_db.cell(r_idx, 12).value = notes
     
     student_record = copy.deepcopy(s)
@@ -465,9 +475,9 @@ for s in students_db:
                 max_idx = idx
                 break
         if max_idx is not None and max_idx > 0:
-            if max_idx + 1 < len(unique_cells): unique_cells[max_idx + 1].text = ""
-            if max_idx + 2 < len(unique_cells): unique_cells[max_idx + 2].text = ""
-            if max_idx + 3 < len(unique_cells): unique_cells[max_idx + 3].text = ""
+            table_out.rows[r_idx].cells[7].text = ""
+            table_out.rows[r_idx].cells[8].text = ""
+            table_out.rows[r_idx].cells[11].text = ""
             
     # Write scores from CSV
     if student_csv:
